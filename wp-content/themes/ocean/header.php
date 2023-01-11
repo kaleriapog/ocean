@@ -9,7 +9,12 @@
  * @package ocean
  */
 
+$header = get_field('header', 'options');
+$social = $header['header_social'];
+$header_button = $header['button'];
+
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -18,42 +23,64 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ocean' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ocean_description = get_bloginfo( 'description', 'display' );
-			if ( $ocean_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ocean_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="header">
+        <div class="size-main">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <div class="logo">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ocean' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+                        <?php the_custom_logo(); ?>
+
+                    </div>
+                    <nav id="site-navigation" class="header__navigation">
+
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'menu-main',
+                                'menu_id'        => 'primary-menu',
+                                'menu_class'          => 'header__menu-list'
+                            )
+                        );
+                        ?>
+
+                    </nav>
+                </div>
+                <div class="header__right">
+                    <div class="header__button">
+                        <a class="button" href="<?php echo $header_button['url'] ?>"><?php echo $header_button['title']?></a>
+                    </div>
+                    <div class="header__social">
+
+                        <a href="<?php echo $social['url'] ?>">
+
+                            <?php
+                                if(!empty($social['custom_icon'])) { ?>
+                                    <img src="<?php echo $social['custom_icon']['url'] ?>" alt="<?php echo $social['name'] ?>">
+
+                            <?php
+                                } elseif (!empty($social['icon'])) { ?>
+
+                                    <span><?php echo $social['icon']?></span>
+
+                                <?php }
+
+                            ?>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</header>
+

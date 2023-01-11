@@ -49,7 +49,7 @@ function ocean_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'ocean' ),
+			'menu-main' => esc_html__( 'Primary', 'ocean' ),
 		)
 	);
 
@@ -175,4 +175,19 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/* ACF theme options START */
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(
+        array(
+            'page_title' => 'Options',
+            'menu_title' => 'Options',
+            'menu_slug' => 'theme-options',
+            'capability' => 'edit_posts',
+            'parent_slug' => '',
+            'position' => false,
+        )
+    );
+}
+/* ACF theme options END */
 

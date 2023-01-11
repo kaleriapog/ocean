@@ -1,0 +1,24 @@
+.footer {
+  background-color: $color-black;
+  color: #fff;
+
+  &__top {
+    padding: 85px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+
+    input[type="email"] {
+      @extend %form-footer-input;
+      background-color: transparent;
+      max-width: 675px;
+      margin-right: 40px;
+    }
+  }
+}

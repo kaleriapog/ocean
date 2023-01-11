@@ -1,0 +1,118 @@
+//colors
+$color-black: #0F1010;
+$color-black-light: #1D252D;
+$color-blue: #5092A4;
+$color-red: #DC6761;
+$color-yellow: #FFEB84;
+$color-pink: #FFC9C9;
+$color-blue-light: #CADCE0;
+$color-wisp-pink : #F8EDEB;
+$color-yellow-light: #FFF7CF;
+$color-mandys-pink: #F6D2C7;
+
+
+//media
+$mediaWidthMobileSmall: 350px;
+$mediaWidthMobile: 767px;
+$mediaWidthTablet: 991px;
+$mediaWidthLaptop: 1024px;
+
+@mixin media-desktop-small {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin media-large-laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $mediaWidthLaptop) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $mediaWidthTablet) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mediaWidthMobile) {
+    @content;
+  }
+}
+
+@mixin media-mobile-landscape {
+  @media (max-width: $mediaWidthMobile) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin media-mobile-small {
+  @media (max-width: $mediaWidthMobileSmall) {
+    @content;
+  }
+}
+
+@mixin media-height-desk-low {
+  @media (max-height: 800px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-height-desk-extra-low {
+  @media (max-height: 600px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-height-desk-low {
+  @media (max-height: 800px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-height-desk-large {
+  @media (min-height: 1050px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+//typography
+%font-nav {
+  font-family: Avenir Next;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+}
+
+%social {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+%form-footer-input {
+  font-family: Avenir;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.37;
+  letter-spacing: -1px;
+  color: rgba(255, 255, 255, .3)
+}
