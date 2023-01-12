@@ -69,6 +69,14 @@
   }
 }
 
+//body
+body{
+  &.open-menu {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
 //other
 .logo {
   max-width: 40px;

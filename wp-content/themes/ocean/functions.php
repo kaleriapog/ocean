@@ -50,6 +50,8 @@ function ocean_setup() {
 	register_nav_menus(
 		array(
 			'menu-main' => esc_html__( 'Primary', 'ocean' ),
+			'menu-footer' => esc_html__( 'Footer', 'ocean' ),
+
 		)
 	);
 

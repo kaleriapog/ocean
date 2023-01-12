@@ -3,15 +3,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
     let closeMenu = document.querySelector('.header .icon-menu-close')
     let headerNavigation = document.querySelector('.header .header__navigation')
     let buttonSubmit = document.querySelector('.button-submit input[type="submit"]')
+    let body = document.querySelector('body')
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
             headerNavigation.classList.add('open')
+            body.classList.add('open-menu')
         })
 
         if(closeMenu) {
             closeMenu.addEventListener('click', () => {
                 headerNavigation.classList.remove('open')
+                body.classList.remove('open-menu')
             })
         }
     }

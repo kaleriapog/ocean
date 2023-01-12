@@ -12,19 +12,27 @@
 $social = get_field('social', 'options');
 $footer = get_field('footer', 'options');
 $form = $footer['form'];
+$logo = $footer['logo'];
+$address = $footer['address'];
+$emails = $footer['email'];
+$endorsed = $footer['endorsed'];
+$text = $footer['text'];
 
 ?>
 
 	<footer id="colophon" class="footer">
 		<div class="size-main">
             <div class="footer__wrapper">
+                <div class="footer-logo footer-logo-mobile">
+                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
+                </div>
                 <div class="footer__top">
                     <div>
                         <?php if(!empty($form)) {
                             echo $form;
                         } ?>
                     </div>
-                    <div class="footer__social">
+                    <div class="footer__social social-desktop">
                         <ul class="social-list">
                             <?php foreach($social as $key=>$item) :
                                 $url = $item['link'];
@@ -60,10 +68,91 @@ $form = $footer['form'];
                     </div>
                 </div>
                 <div class="footer__content">
+                    <div class="footer__content-left">
+                        <div class="footer__content-address">
+                            <div class="footer-logo footer-logo-desktop">
+                                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
+                            </div>
+                            <div class="address-text">
 
-                </div>
-                <div class="footer__bottom">
+                                <?php echo $address; ?>
 
+                            </div>
+                        </div>
+                        <ul class="footer__content-emails">
+
+                            <?php foreach($emails as $key=>$item) {
+                                $email = $item['email'];
+                                $title = $item['title'];
+                            ?>
+
+                                <li class="footer-email">
+                                    <span class="footer-email__title"><?php echo $title; ?></span>
+                                    <a href="mailto: <?php echo $email; ?>" class="footer-email__link"><?php echo $email; ?></a>
+                                </li>
+
+                            <?php } ?>
+
+                        </ul>
+                        <div class="footer__bottom">
+                            <div class="footer__endorsed">
+                                <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
+                                <div class="endorsed-image">
+                                    <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+                                </div>
+                            </div>
+                            <div class="footer__text"><?php echo $text ?></div>
+                        </div>
+                    </div>
+                    <div class="footer__content-right">
+                        <nav class="footer__navigation">
+
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'menu-footer',
+                                    'menu_id'        => 'footer-menu',
+                                    'menu_class'     => 'footer__menu-list'
+                                )
+                            );
+                            ?>
+
+                        </nav>
+                    </div>
+                    <div class="footer__social social-mobile">
+                        <ul class="social-list">
+                            <?php foreach($social as $key=>$item) :
+                                $url = $item['link'];
+                                $icon = $item['icon'];
+                                $name = $item['name'];
+                                $custom_icon = $item['custom_icon'];
+                                ?>
+
+                                <li class="social-list__item">
+                                    <a class="social-list__item-link <?php if(!empty($name)) { ?>social-list__item-link-text<?php } elseif(!empty($custom_icon)) { ?>social-list__item-link-custom_icon<?php } ?>" href="<?php echo $url ?>">
+
+                                        <?php
+                                        if(!empty($name)) { ?>
+
+                                            <span><?php echo $name ?></span>
+
+                                        <?php } elseif (!empty($icon)) {  ?>
+
+                                            <span><?php echo $icon ?></span>
+
+                                        <?php } elseif (!empty($custom_icon)) {  ?>
+
+                                            <img src="<?php echo $custom_icon['url'] ?>" alt="<?php echo $custom_icon['name'] ?>">
+
+                                        <?php }
+
+                                        ?>
+                                    </a>
+                                </li>
+
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
 		</div>
