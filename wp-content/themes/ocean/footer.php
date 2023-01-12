@@ -13,7 +13,6 @@ $social = get_field('social', 'options');
 $footer = get_field('footer', 'options');
 $form = $footer['form'];
 
-
 ?>
 
 	<footer id="colophon" class="footer">

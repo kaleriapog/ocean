@@ -16,9 +16,11 @@ $mediaWidthMobileSmall: 350px;
 $mediaWidthMobile: 767px;
 $mediaWidthTablet: 991px;
 $mediaWidthLaptop: 1024px;
+$mediaWidthDesktopSmall: 1300px;
 
-@mixin media-desktop-small {
-  @media (max-width: 1100px) {
+//for menu mobile
+@mixin media-mobile-menu {
+  @media (max-width: $mediaWidthDesktopSmall) {
     @content;
   }
 }
@@ -96,6 +98,14 @@ $mediaWidthLaptop: 1024px;
   font-weight: 500;
   line-height: 1;
   color: #fff;
+
+  @include media-mobile {
+    font-family: Avenir Next;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
 }
 
 %social {
@@ -113,6 +123,6 @@ $mediaWidthLaptop: 1024px;
   font-size: 54px;
   font-weight: 900;
   line-height: 1.37;
-  letter-spacing: -1px;
+  letter-spacing: -0.025em;
   color: rgba(255, 255, 255, .3)
 }

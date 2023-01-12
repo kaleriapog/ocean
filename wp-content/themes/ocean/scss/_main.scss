@@ -6,15 +6,19 @@
   padding: 0 40px;
 
   @include media-large-laptop {
-    padding: 20px;
+    padding: 0 20px;
     max-width: 1320px;
+  }
+
+  @include media-mobile {
+    padding: 0 15px;
   }
 }
 
 //buttons
 .button {
   background-color: #fff;
-  padding: 16px 32px;
+  padding: 13px 32px;
   border-radius: 40px;
   @extend %font-nav;
   color: $color-black;
@@ -31,6 +35,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  color: #fff;
 
   &__item-link {
     border: 1px solid #fff;
@@ -43,6 +48,10 @@
     justify-content: center;
     transition: all .3s;
     @extend %social;
+
+    @include media-mobile {
+      padding: 14px;
+    }
 
     &.social-list__item-link-text {
       width: auto;

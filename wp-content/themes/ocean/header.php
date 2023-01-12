@@ -10,8 +10,11 @@
  */
 
 $header = get_field('header', 'options');
-$social = $header['header_social'];
+$header_social = $header['header_social'];
 $header_button = $header['button'];
+$decorative_element = $header['decorative_element'];
+$social = get_field('social', 'options');
+
 
 ?>
 
@@ -43,6 +46,12 @@ $header_button = $header['button'];
 
                     </div>
                     <nav id="site-navigation" class="header__navigation">
+                        <div class="icon-menu-close">
+                            <svg class="icon-menu-close__icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.6665 12.6665L25.3332 25.3332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.3332 12.6665L12.6665 25.3332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
 
                         <?php
                         wp_nav_menu(
@@ -54,6 +63,43 @@ $header_button = $header['button'];
                         );
                         ?>
 
+                        <div class="header__subnav">
+                            <div class="header__decor">
+                                <img src="<?php echo $decorative_element['url'] ?>" alt="<?php echo $decorative_element['title'] ?>">
+                            </div>
+                            <ul class="social-list">
+                                <?php foreach($social as $key=>$item) :
+                                    $url = $item['link'];
+                                    $icon = $item['icon'];
+                                    $name = $item['name'];
+                                    $custom_icon = $item['custom_icon'];
+                                    ?>
+
+                                    <li class="social-list__item">
+                                        <a class="social-list__item-link <?php if(!empty($name)) { ?>social-list__item-link-text<?php } elseif(!empty($custom_icon)) { ?>social-list__item-link-custom_icon<?php } ?>" href="<?php echo $url ?>">
+
+                                            <?php
+                                            if(!empty($name)) { ?>
+
+                                                <span><?php echo $name ?></span>
+
+                                            <?php } elseif (!empty($icon)) {  ?>
+
+                                                <span><?php echo $icon ?></span>
+
+                                            <?php } elseif (!empty($custom_icon)) {  ?>
+
+                                                <img src="<?php echo $custom_icon['url'] ?>" alt="<?php echo $custom_icon['name'] ?>">
+
+                                            <?php }
+
+                                            ?>
+                                        </a>
+                                    </li>
+
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
                 <div class="header__right">
@@ -62,16 +108,16 @@ $header_button = $header['button'];
                     </div>
                     <div class="header__social">
 
-                        <a href="<?php echo $social['url'] ?>">
+                        <a href="<?php echo $header_social['url'] ?>">
 
                             <?php
-                                if(!empty($social['custom_icon'])) { ?>
-                                    <img src="<?php echo $social['custom_icon']['url'] ?>" alt="<?php echo $social['name'] ?>">
+                                if(!empty($header_social['custom_icon'])) { ?>
+                                    <img src="<?php echo $header_social['custom_icon']['url'] ?>" alt="<?php echo $header_social['name'] ?>">
 
                             <?php
-                                } elseif (!empty($social['icon'])) { ?>
+                                } elseif (!empty($header_social['icon'])) { ?>
 
-                                    <span><?php echo $social['icon']?></span>
+                                    <span><?php echo $header_social['icon']?></span>
 
                                 <?php }
 
@@ -80,6 +126,7 @@ $header_button = $header['button'];
                         </a>
                     </div>
                 </div>
+                <div class="icon-menu"></div>
             </div>
         </div>
 	</header>

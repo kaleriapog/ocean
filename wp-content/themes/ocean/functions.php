@@ -142,6 +142,7 @@ function ocean_scripts() {
 	wp_style_add_data( 'ocean-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ocean-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'ocean-scripts', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
