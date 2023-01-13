@@ -1,0 +1,265 @@
+//section-about
+.section-about {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 98px;
+
+    @include media-desktop-small {
+      gap: 40px;
+    }
+
+    @include media-large-laptop {
+      gap: 20px;
+    }
+
+    @include media-tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .text {
+    margin-bottom: 64px;
+
+    @include media-mobile {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__text {
+    max-width: 640px;
+
+    @include media-large-laptop {
+      max-width: 570px;
+    }
+
+    @include media-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__endorsed {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include media-mobile {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 12px;
+  }
+}
+
+//section-video-and-cards
+.section-video-and-cards {
+  background-color: $color-black;
+  color: #fff;
+
+  .subtitle {
+    color: #fff;
+    margin-bottom: 0;
+    padding-top: 8px;
+
+    @include media-mobile {
+      padding-top: 0;
+    }
+  }
+
+  .title {
+    color: #fff;
+    max-width: 925px;
+    width: 100%;
+  }
+
+  &__headline {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+
+    @include media-mobile {
+      flex-direction: column;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__video {
+    padding: 100px 0 90px;
+
+    @include media-mobile {
+      max-width: 356px;
+      margin: auto;
+      padding: 35px 0;
+    }
+
+    video {
+      max-height: 636px;
+      object-fit: cover;
+
+      @include media-main-size {
+        max-height: 44.167vw;
+      }
+
+      @include media-laptop {
+        max-height: 636px;
+      }
+
+      @include media-mobile {
+        max-width: 356px;
+        margin: auto;
+        height: 185vw;
+        max-height: 716px;
+      }
+    }
+  }
+
+  &__video-inner {
+    position: relative;
+  }
+
+  .cards-regular {
+    &__text {
+      color: #fff;
+    }
+  }
+}
+
+//section-program-preview
+.section-program-preview {
+  &__title {
+    @extend %title-extra-small;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__item-content {
+    max-width: 345px;
+    width: 100%;
+    font-family: Avenir Next;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__item-image {
+    max-width: 630px;
+    width: 100%;
+    max-height: 400px;
+    position: relative;
+
+    @include media-large-laptop {
+      max-width: 600px;
+    }
+
+    @include media-laptop {
+      max-width: 53%;
+    }
+
+    @include media-mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__item-decor {
+    max-width: 150px;
+    max-height: 150px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    right: 25%;
+
+    @include media-laptop {
+      max-width: 130px;
+      max-height: 130px;
+    }
+
+    @include media-tablet {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    @include media-mobile {
+      max-width: 70px;
+      max-height: 70px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+
+    @include media-mobile {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+
+      @include media-mobile {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+//section-donate
+.section-donate {
+  background-color: $color-black;
+  color: #fff;
+  position: relative;
+  height: 750px;
+
+  .size-main {
+    height: 100%;
+  }
+
+  .title {
+    color:#fff;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    max-width: 320px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    max-width: 590px;
+    height: 100%;
+  }
+
+  &__image {
+    max-width: 720px;
+    width: 100%;
+    max-height: 750px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+  }
+}

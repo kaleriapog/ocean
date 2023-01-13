@@ -49,3 +49,12 @@ button {
   background-color: transparent;
   display: block;
 }
+
+svg path {
+  transition: all .3s;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+}
