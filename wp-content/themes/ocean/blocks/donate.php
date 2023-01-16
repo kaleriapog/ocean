@@ -23,7 +23,7 @@ $image = $fields['image'];
                             </svg>
                         </div>
                     </a>
-                    <div class="section-donate__text"><?php echo $text ?></div>
+                    <div class="section-donate__text text"><?php echo $text ?></div>
                 </div>
             </div>
             <div class="section-donate__image">

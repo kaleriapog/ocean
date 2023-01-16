@@ -4,6 +4,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     let headerNavigation = document.querySelector('.header .header__navigation')
     let buttonSubmit = document.querySelector('.button-submit input[type="submit"]')
     let body = document.querySelector('body')
+    let sliderAchievements = document.querySelector('.swiper-achievements')
+    let verticalSliders = document.querySelector('.section-vertical-sliders__sliders')
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
@@ -27,6 +29,39 @@ document.addEventListener( 'DOMContentLoaded', function() {
             '</svg>';
         buttonSubmit.parentNode.prepend(div)
         buttonSubmit.parentNode.style.position = 'relative'
+    }
+
+    if(sliderAchievements) {
+        new Swiper('.swiper-achievements', {
+            direction: 'horizontal',
+            slidesPerView: 'auto',
+            spaceBetween: 100,
+        });
+    }
+
+    if(verticalSliders) {
+        new Swiper('.vertical-slider-left', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            loop: true,
+            speed: 7000,
+            autoplay: {
+                delay: 1,
+            },
+        });
+
+        new Swiper('.vertical-slider-right', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            loop: true,
+            speed: 7000,
+            autoplay: {
+                delay: 1,
+                reverseDirection: true,
+            },
+        });
     }
 
 } );

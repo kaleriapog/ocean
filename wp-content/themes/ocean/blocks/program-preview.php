@@ -19,7 +19,7 @@ $cards = $fields['cards'];
                     <li class="section-program-preview__item">
                         <div class="section-program-preview__item-content">
                             <h3 class="section-program-preview__title"><?php echo $title ?></h3>
-                            <div class="section-program-preview__text"><?php echo $text ?></div>
+                            <div class="section-program-preview__text text"><?php echo $text ?></div>
                             <a class="button-link" href="<?php echo $link['url'] ?>">
 
                                 <?php echo $link['title'] ?>
@@ -32,7 +32,7 @@ $cards = $fields['cards'];
                             </a>
                         </div>
                         <div class="section-program-preview__item-image">
-                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                            <img class="item-image" src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
 
                             <?php if(!empty($decor)) : ?>
                                 <div class="section-program-preview__item-decor">

@@ -178,3 +178,29 @@ $mediaWidthDesktopExtraSmall: 1200px;
   line-height: 120%;
   text-transform: uppercase;
 }
+
+%slide-title {
+  font-family: Avenir Next;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 120%;
+
+  @include media-mobile {
+    font-size: 44px;
+  }
+}
+
+%post-info {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+%title-small-extra {
+  font-family: Avenir Next;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}

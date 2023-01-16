@@ -51,7 +51,6 @@ function ocean_setup() {
 		array(
 			'menu-main' => esc_html__( 'Primary', 'ocean' ),
 			'menu-footer' => esc_html__( 'Footer', 'ocean' ),
-
 		)
 	);
 
@@ -140,9 +139,11 @@ add_action( 'widgets_init', 'ocean_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ocean_scripts() {
+    wp_enqueue_style( 'ocean-style-swiper-bundle', get_template_directory_uri() . '/swiper-bundle.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'ocean-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'ocean-style', 'rtl', 'replace' );
 
+    wp_enqueue_script( 'ocean-swiper', get_template_directory_uri() . '/js/libraries/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'ocean-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'ocean-scripts', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true );
 
