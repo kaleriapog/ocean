@@ -13,6 +13,7 @@ $color-mandys-pink: #F6D2C7;
 
 //media
 $mediaWidthMobileSmall: 350px;
+$mediaWidthMobileRegular: 380px;
 $mediaWidthMobileLarge: 400px;
 $mediaWidthMobile: 767px;
 $mediaWidthLargeMobile: 700px;
@@ -20,7 +21,6 @@ $mediaWidthTablet: 991px;
 $mediaWidthLaptop: 1024px;
 $mediaWidthDesktopSmall: 1400px;
 $mediaWidthDesktopExtraSmall: 1200px;
-
 
 //for menu mobile
 @mixin media-mobile-menu {
@@ -66,8 +66,8 @@ $mediaWidthDesktopExtraSmall: 1200px;
   }
 }
 
-@mixin media-mobile-large {
-  @media (max-width: $mediaWidthLargeMobile) {
+@mixin media-mobile-regular {
+  @media (max-width: $mediaWidthMobileRegular) {
     @content;
   }
 }
@@ -203,4 +203,8 @@ $mediaWidthDesktopExtraSmall: 1200px;
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
+
+  @include media-mobile {
+    font-size: 22px;
+  }
 }

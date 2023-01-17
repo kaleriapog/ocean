@@ -1,4 +1,4 @@
-document.addEventListener( 'DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     let openMenu = document.querySelector('.header .icon-menu')
     let closeMenu = document.querySelector('.header .icon-menu-close')
     let headerNavigation = document.querySelector('.header .header__navigation')
@@ -6,6 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     let body = document.querySelector('body')
     let sliderAchievements = document.querySelector('.swiper-achievements')
     let verticalSliders = document.querySelector('.section-vertical-sliders__sliders')
+    let showMore = document.querySelector('.section-mission .show-more')
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
@@ -64,4 +65,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
         });
     }
 
-} );
+    if(showMore) {
+        let text = document.querySelector('.section-mission__text-inner')
+        let showMoreName = document.querySelector('.section-mission .show-more__name')
+
+        showMore.addEventListener('click', () => {
+            showMoreName.classList.toggle('open')
+            text.classList.toggle('open')
+        })
+    }
+
+})

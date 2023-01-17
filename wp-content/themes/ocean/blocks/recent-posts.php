@@ -21,7 +21,7 @@ $link = $fields['link'];
                 <?php } ?>
                 <?php if(!empty($text)) { ?>
 
-                    <div class="text"><?php echo $text?></div>
+                    <div class=" section-recent-posts__text text"><?php echo $text?></div>
 
                 <?php } ?>
 
@@ -55,12 +55,13 @@ $link = $fields['link'];
                         $data = get_the_date();
                         $excerpt = get_the_excerpt();
                         $thumbnail = get_the_post_thumbnail_url();
+                        $permalink = get_permalink();
 
                         wp_reset_postdata();
 
                         ?>
 
-                        <div class="post-big">
+                        <a class="post-big" href="<?php echo $permalink ?>">
                             <div class="post-big__image">
                                 <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>">
                             </div>
@@ -70,7 +71,7 @@ $link = $fields['link'];
                             </div>
                             <h3 class="post-big__title"><?php echo $title ?></h3>
                             <div class="post-big__text text"><?php echo $excerpt ?></div>
-                        </div>
+                        </a>
 
                     <?php } ?>
 
@@ -99,18 +100,19 @@ $link = $fields['link'];
                         $author = get_the_author();
                         $data = get_the_date();
                         $excerpt = get_the_excerpt();
-                        wp_reset_postdata();
+                        $permalink = get_permalink();
 
+                        wp_reset_postdata();
                         ?>
 
-                        <div class="post-regular">
+                        <a class="post-regular" href="<?php echo $permalink ?>">
                             <div class="post-regular__info">
                                 <span class="post-regular__data"><?php echo $data ?></span>
                                 <span class="post-regular__author"><?php echo $author ?></span>
                             </div>
                             <h3 class="post-regular__title"><?php echo $title ?></h3>
                             <div class="post-regular__text text"><?php echo $excerpt ?></div>
-                        </div>
+                        </a>
 
                     <?php } ?>
 

@@ -190,3 +190,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Flow Circular';
+  src: url('./fonts/FlowCircular-Regular.eot');
+  src: url('./fonts/FlowCircular-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/FlowCircular-Regular.woff2') format('woff2'),
+  url('./fonts/FlowCircular-Regular.woff') format('woff'),
+  url('./fonts/FlowCircular-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
