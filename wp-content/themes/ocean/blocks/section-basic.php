@@ -4,15 +4,16 @@ $title = $fields['title'];
 $link = $fields['link'];
 $text = $fields['text'];
 $image = $fields['image'];
+$color_bg = $fields['background_color'];
 
 ?>
 
-<section class="section-donate">
+<section class="section-basic" style="background-color: <?php echo $color_bg ?>">
     <div class="size-main">
-        <div class="section-donate__wrapper">
-            <div class="section-donate__content">
+        <div class="section-basic__wrapper">
+            <div class="section-basic__content">
                 <h2 class="title"><?php echo $title ?></h2>
-                <div class="section-donate__description">
+                <div class="section-basic__description">
                     <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
 
                         <?php echo $link['title'] ?>
@@ -23,10 +24,10 @@ $image = $fields['image'];
                             </svg>
                         </div>
                     </a>
-                    <div class="section-donate__text text"><?php echo $text ?></div>
+                    <div class="section-basic__text text"><?php echo $text ?></div>
                 </div>
             </div>
-            <div class="section-donate__image">
+            <div class="section-basic__image">
                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
             </div>
         </div>

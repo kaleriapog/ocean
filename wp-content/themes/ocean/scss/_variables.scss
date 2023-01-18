@@ -9,6 +9,7 @@ $color-blue-light: #CADCE0;
 $color-wisp-pink : #F8EDEB;
 $color-yellow-light: #FFF7CF;
 $color-mandys-pink: #F6D2C7;
+$color-purple-light: #9596FF;
 
 
 //media
@@ -73,7 +74,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 @mixin media-mobile-landscape {
-  @media (max-width: $mediaWidthMobile) and (orientation: landscape) {
+  @media (max-width: $mediaWidthTablet) and (orientation: landscape) {
     @content;
   }
 }

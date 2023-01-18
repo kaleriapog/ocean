@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let openMenu = document.querySelector('.header .icon-menu')
+    let header = document.querySelector('.header')
     let closeMenu = document.querySelector('.header .icon-menu-close')
     let headerNavigation = document.querySelector('.header .header__navigation')
     let buttonSubmit = document.querySelector('.button-submit input[type="submit"]')
@@ -7,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let sliderAchievements = document.querySelector('.swiper-achievements')
     let verticalSliders = document.querySelector('.section-vertical-sliders__sliders')
     let showMore = document.querySelector('.section-mission .show-more')
+    let teamSlider = document.querySelector('.team-slider')
+    let sectionHeroAnimate = document.querySelector('.section-hero-animate')
+
+    // media
+    let mediaMobile = (window.innerWidth < 768)
+    let mediaMobileLandscape = (window.innerHeight < 768)
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
@@ -73,6 +80,45 @@ document.addEventListener('DOMContentLoaded', function() {
             showMoreName.classList.toggle('open')
             text.classList.toggle('open')
         })
+    }
+
+    if(teamSlider) {
+        let teamSliderLeft = new Swiper('.team-slider-left', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            loop: !mediaMobile,
+            speed: 7000,
+            autoplay: {
+                delay: 1,
+            },
+        });
+
+        let teamSliderRight = new Swiper('.team-slider-right', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            speed: 7000,
+            loop: !mediaMobile,
+            autoplay: {
+                delay: 1,
+                reverseDirection: true,
+            },
+
+        });
+
+        if(mediaMobile || mediaMobileLandscape) {
+            teamSliderLeft.disable()
+            teamSliderRight.disable()
+        }
+    }
+
+    if(sectionHeroAnimate) {
+        let headerHeight = header.offsetHeight
+        let getprop = window.getComputedStyle(sectionHeroAnimate, null).getPropertyValue('padding-top').slice(0, -2) * 1;
+
+        header.classList.add('header-transparent')
+        sectionHeroAnimate.style.paddingTop = `${getprop + headerHeight}px`
     }
 
 })

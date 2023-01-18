@@ -227,6 +227,7 @@ mark {
   font-size: 85px;
   font-weight: 900;
   line-height: 110%;
+  text-transform: uppercase;
 
   @include media-tablet {
     font-size: 70px;
@@ -299,6 +300,18 @@ mark {
 
   h3 {
     font-size: 22px;
+  }
+}
+
+.text-medium {
+  font-family: Avenir Next;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+
+  @include media-mobile {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 

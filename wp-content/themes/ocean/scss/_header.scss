@@ -1,6 +1,15 @@
 .header {
   background-color: $color-black;
 
+  &.header-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;
+  }
+
   &__wrapper {
     padding: 27px 0;
     display: flex;
