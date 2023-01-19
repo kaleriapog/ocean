@@ -48,6 +48,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
   @extend %text-regular;
 
   &:hover {
@@ -152,7 +153,7 @@ body {
 
 //endorsed
 .endorsed-title {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -165,7 +166,7 @@ body {
 
 //title
 .title {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 45px;
   font-weight: 900;
   line-height: 120%;
@@ -199,7 +200,7 @@ mark {
 }
 
 .title-big {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 100px;
   font-weight: 900;
   line-height: 120%;
@@ -223,7 +224,7 @@ mark {
 }
 
 .title-hero {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 85px;
   font-weight: 900;
   line-height: 110%;
@@ -243,7 +244,7 @@ mark {
 }
 
 .title-card {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 120%;
@@ -251,7 +252,7 @@ mark {
 }
 
 .title-big-card {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 85px;
   font-weight: 900;
   line-height: 120%;
@@ -272,7 +273,7 @@ mark {
 
 .subtitle {
   display: block;
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -301,10 +302,22 @@ mark {
   h3 {
     font-size: 22px;
   }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
 }
 
 .text-medium {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 150%;
@@ -316,7 +329,7 @@ mark {
 }
 
 .text-hero {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 150%;
@@ -596,7 +609,7 @@ mark {
 
   &__name {
     display: block;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;

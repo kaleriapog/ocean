@@ -151,7 +151,7 @@
   &__item-content {
     max-width: 345px;
     width: 100%;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
   }
 
   &__text {
@@ -337,7 +337,7 @@
     align-items: center;
     justify-content: start;
     gap: 40px;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
 
     @include media-laptop {
       flex-direction: column-reverse;
@@ -964,7 +964,7 @@
   }
 
   &__title {
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 85px;
     font-weight: 900;
     line-height: 120%;
@@ -1373,6 +1373,232 @@
 
     @include media-mobile {
       padding-left: 0;
+    }
+  }
+}
+
+//section-content-full
+.section-content-full {
+  & + & {
+    padding-top: 0;
+  }
+
+  &__title {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $color-black-light;
+    max-width: 1200px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 100px;
+
+    @include media-tablet {
+      flex-direction: column;
+      padding-top: 60px;
+      gap: 50px;
+    }
+
+    @include media-mobile {
+      padding-top: 40px;
+      gap: 40px;
+    }
+  }
+
+  &__right {
+    max-width: 640px;
+    width: 100%;
+  }
+
+  &__image {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 100px;
+
+    @include media-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+
+    &.mobile {
+      display: none;
+
+      @include media-tablet {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+
+    &.desktop {
+      @include media-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    @include media-tablet {
+      margin-bottom: 0;
+    }
+
+    h3, h4, h5, h6 {
+      margin-top: -9px;
+      font-weight: 900;
+      line-height: 120%;
+      margin-bottom: 6px;
+
+      @include media-mobile {
+        margin-top: -18px;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 78px 20px;
+
+    @include media-tablet {
+      margin-top: 80px;
+    }
+
+    @include media-mobile {
+      margin-top: 38px;
+      gap: 38px 20px;
+    }
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    padding: 18px 14px 0 0;
+    border-top: 1px solid $color-black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media-mobile {
+      max-width: 100%;
+      padding: 20px 0;
+    }
+  }
+
+  &__item-title-big {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 120%;
+
+    @include media-mobile {
+      font-size: 36px;
+    }
+  }
+
+  &__item-title-regular {
+    @extend %title-extra-small;
+  }
+}
+
+//section-events
+.section-events {
+  background-color: $color-black;
+  color: #fff;
+
+  .subtitle {
+    color: #fff;
+  }
+
+  &__title {
+    color: #fff;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 100px;
+    max-width: 1000px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:first-child) {
+      .section-events__item-content {
+        width: 100%;
+        border-top: 1px solid #FFFFFF;
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &__item-image {
+    max-width: 715px;
+    width: 100%;
+  }
+
+  &__item-content {
+    max-width: 485px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item-title {
+    @extend %title-extra-small;
+    margin-bottom: 30px;
+  }
+
+  &__item-text {
+    color: #fff;
+    max-width: 345px;
+    width: 100%;
+  }
+
+  &__item-links {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item-link {
+    &:not(:last-child) {
+      padding-right: 32px;
+      position: relative;
+
+      &:after {
+        content: '';
+        height: 30px;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        right: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      color: $color-red;
     }
   }
 }

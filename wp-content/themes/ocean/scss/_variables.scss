@@ -94,14 +94,14 @@ $mediaWidthDesktopExtraSmall: 1200px;
 
 //typography
 %font-nav {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #fff;
 
   @include media-mobile {
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 20px;
     font-weight: 900;
     line-height: 110%;
@@ -110,7 +110,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 %social {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
@@ -165,7 +165,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 %text-regular {
-  font-family: Avenir Next;
+  font-family: ''Avenir Next', sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -173,7 +173,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 %title-extra-small {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 120%;
@@ -181,7 +181,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 %slide-title {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 75px;
   font-weight: 900;
   line-height: 120%;
@@ -192,14 +192,14 @@ $mediaWidthDesktopExtraSmall: 1200px;
 }
 
 %post-info {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 120%;
 }
 
 %title-small-extra {
-  font-family: Avenir Next;
+  font-family: 'Avenir Next', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
