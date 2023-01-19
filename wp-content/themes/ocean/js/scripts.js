@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // media
     let mediaMobile = (window.innerWidth < 768)
-    let mediaMobileLandscape = (window.innerHeight < 768)
+    // let mediaMobileLandscape = (window.innerHeight < 500)
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         });
 
-        if(mediaMobile || mediaMobileLandscape) {
+        if(mediaMobile) {
             teamSliderLeft.disable()
             teamSliderRight.disable()
         }
