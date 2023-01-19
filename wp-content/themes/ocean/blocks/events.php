@@ -13,7 +13,7 @@ $items = $fields['items'];
 
             <?php if(!empty($title)) { ?>
 
-                <h1 class="section-events__title title"><?php echo $title ?></h1>
+                <h2 class="section-events__title title"><?php echo $title ?></h2>
 
             <?php } ?>
             <?php if(!empty($items)) { ?>

@@ -48,8 +48,11 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
   @extend %text-regular;
+
+  @include media-mobile {
+    flex-wrap: wrap;
+  }
 
   &:hover {
     .button-link__icon {

@@ -754,7 +754,12 @@ video {
 	display: flex;
 	align-items: center;
 	gap: 30px;
-	flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+	.button-link {
+		flex-wrap: wrap;
+	}
 }
 
 .button-link:hover .button-link__icon {
@@ -3380,10 +3385,22 @@ mark {
 	max-width: 1000px;
 }
 
+@media (max-width: 767px) {
+	.section-events__title {
+		margin-bottom: 40px;
+	}
+}
+
 .section-events__items {
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
+}
+
+@media (max-width: 767px) {
+	.section-events__items {
+		gap: 65px;
+	}
 }
 
 .section-events__item {
@@ -3392,19 +3409,62 @@ mark {
 	gap: 30px;
 }
 
+@media (max-width: 767px) {
+	.section-events__item {
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
 .section-events__item:nth-child(2n) {
 	flex-direction: row-reverse;
 }
 
-.section-events__item:not(:first-child) .section-events__item-content {
+@media (max-width: 767px) {
+	.section-events__item:nth-child(2n) {
+		flex-direction: column;
+	}
+}
+
+.section-events__item .section-events__item-content {
 	width: 100%;
 	border-top: 1px solid #FFFFFF;
 	padding-top: 40px;
 }
 
+.section-events__item:first-child .section-events__item-content {
+	border-top: none;
+	padding-top: 0;
+}
+
+@media (max-width: 767px) {
+	.section-events__item:first-child .section-events__item-content {
+		border-top: 1px solid #FFFFFF;
+		padding-top: 40px;
+	}
+}
+
 .section-events__item-image {
 	max-width: 715px;
 	width: 100%;
+}
+
+@media (max-width: 767px) {
+	.section-events__item-image {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-events__item-image img {
+		min-height: 450px;
+	}
+}
+
+@media (max-width: 350px) {
+	.section-events__item-image img {
+		min-height: 350px;
+	}
 }
 
 .section-events__item-content {
@@ -3414,6 +3474,12 @@ mark {
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 30px;
+}
+
+@media (max-width: 767px) {
+	.section-events__item-content {
+		gap: 40px;
+	}
 }
 
 .section-events__item-title {
@@ -3429,6 +3495,13 @@ mark {
 .section-events__item-links {
 	display: flex;
 	gap: 30px;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+	.section-events__item-links {
+		justify-content: center;
+	}
 }
 
 .section-events__item-link:not(:last-child) {
