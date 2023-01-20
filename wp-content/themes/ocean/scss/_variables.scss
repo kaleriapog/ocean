@@ -11,7 +11,6 @@ $color-yellow-light: #FFF7CF;
 $color-mandys-pink: #F6D2C7;
 $color-purple-light: #9596FF;
 
-
 //media
 $mediaWidthMobileSmall: 350px;
 $mediaWidthMobileRegular: 380px;
@@ -204,6 +203,16 @@ $mediaWidthDesktopExtraSmall: 1200px;
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
+
+  @include media-mobile {
+    font-size: 22px;
+  }
+}
+
+%message {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
 
   @include media-mobile {
     font-size: 22px;

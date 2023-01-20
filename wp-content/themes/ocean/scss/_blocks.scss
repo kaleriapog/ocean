@@ -754,23 +754,6 @@
       max-height: 360px;
       overflow: hidden;
       transition: all 0.5s ease-in;
-
-      &.open {
-        transition: all 0.5s ease-out;
-        max-height: 2000px;
-
-        & ~ .show-more .show-more__icon {
-          transform: rotate(180deg);
-        }
-
-        & ~ .show-more .show-more__name-more {
-          display: none;
-        }
-
-        & ~ .show-more .show-more__name-less {
-          display: block;
-        }
-      }
     }
   }
 }
@@ -1649,6 +1632,102 @@
 
     &:hover {
       color: $color-red;
+    }
+  }
+}
+
+.section-about-program {
+  padding-bottom: 0;
+
+  & + .section-cards-samples{
+    padding-bottom: 140px;
+
+    @include media-tablet {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-black-light;
+  }
+
+  .title {
+    max-width: 940px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 150px;
+
+    @include media-laptop {
+      flex-direction: column-reverse;
+      padding-bottom: 85px;
+    }
+
+    @include media-mobile {
+      padding-bottom: 108px;
+    }
+  }
+
+  &__left {
+    max-width: 535px;
+    width: 100%;
+
+    @include media-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+    max-width: 638px;
+    width: 100%;
+
+    @include media-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    @include media-mobile {
+      max-height: 288px;
+      overflow: hidden;
+    }
+  }
+
+  &__message {
+    @extend %message;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    position: relative;
+
+    .image-section {
+      @include media-mobile {
+        min-height: 450px;
+      }
+    }
+  }
+
+  &__decor-image {
+    max-width: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    left: 26%;
+
+    @include media-tablet {
+      max-width: 100px;
+    }
+
+    @include media-mobile {
+      left: 15%;
     }
   }
 }

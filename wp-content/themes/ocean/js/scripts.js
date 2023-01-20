@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let body = document.querySelector('body')
     let sliderAchievements = document.querySelector('.swiper-achievements')
     let verticalSliders = document.querySelector('.section-vertical-sliders__sliders')
-    let showMore = document.querySelector('.section-mission .show-more')
+    let showMore = document.querySelector('.show-more')
     let teamSlider = document.querySelector('.team-slider')
     let sectionHeroAnimate = document.querySelector('.section-hero-animate')
 
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(showMore) {
-        let text = document.querySelector('.section-mission__text-inner')
-        let showMoreName = document.querySelector('.section-mission .show-more__name')
+        let text = showMore.parentNode.querySelector('.content-for-show-more')
+        let showMoreName = showMore.querySelector('.show-more__name')
 
         showMore.addEventListener('click', () => {
             showMoreName.classList.toggle('open')

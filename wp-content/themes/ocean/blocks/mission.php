@@ -23,7 +23,7 @@ $endorsed = $fields['endorsed'];
                         </div>
                     </div>
                     <div class="section-mission__text text">
-                        <div class="section-mission__text-inner">
+                        <div class="section-mission__text-inner content-for-show-more">
 
                             <?php echo $text ?>
 

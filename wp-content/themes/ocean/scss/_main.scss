@@ -622,3 +622,54 @@ mark {
     display: none;
   }
 }
+
+//author
+.author {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+
+  &__photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+
+  &__info {
+    padding: 6px 0;
+  }
+
+  &__description {
+    color: $color-black-light;
+    opacity: 0.5;
+  }
+}
+
+.content-for-show-more {
+  transition: all 0.5s ease-in;
+
+  &.open {
+    transition: all 0.5s ease-out;
+    max-height: 2000px;
+
+    & ~ .show-more .show-more__icon {
+      transform: rotate(180deg);
+    }
+
+    & ~ .show-more .show-more__name-more {
+      display: none;
+    }
+
+    & ~ .show-more .show-more__name-less {
+      display: block;
+    }
+  }
+}

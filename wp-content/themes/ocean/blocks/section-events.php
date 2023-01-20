@@ -3,29 +3,33 @@ $fields = $args['fields'];
 $subtitle = $fields['subtitle'];
 $title = $fields['title'];
 $text = $fields['text'];
-$image = $fields['image'];
-$image_decor = $fields['decor_image'];
-$author = $fields['message']['author'];
-$message = $fields['message']['text'];
+$data = $fields['workshop'][0]['events'][0]['data'];
 
 ?>
 
-<section class="section section-about-program">
+<section class="section section-full-events">
     <div class="size-main">
-        <div class="section-about-program__wrapper">
+        <div class="section-full-events__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>
+            <div class="section-full-events__content">
+                <?php if(!empty($title)) { ?>
 
-            <?php if(!empty($title)) { ?>
+                    <div class="section-full-events__title">
+                        <h2 class="title"><?php echo $title ?></h2>
+                    </div>
 
-                <div class="section-about-program__title">
-                    <h2 class="title"><?php echo $title ?></h2>
-                </div>
+                <?php } ?>
+                <?php if(!empty($text)) { ?>
 
-            <?php } ?>
+                    <div class="section-full-events__text text"><?php echo $text ?></div>
 
-            <div class="section-about-program__content">
-                <div class="section-about-program__left">
-                    <div class="section-about-program__message"><?php echo $message ?></div>
+                <?php } ?>
+
+            </div>
+
+            <div class="section-full-events__content">
+                <div class="section-full-events__left">
+                    <div class="section-full-events__message"><?php echo $message ?></div>
                     <div class="author">
                         <div class="author__photo">
                             <?php echo $author['user_avatar'] ?>
@@ -36,8 +40,8 @@ $message = $fields['message']['text'];
                         </div>
                     </div>
                 </div>
-                <div class="section-about-program__right">
-                    <div class="section-about-program__text content-for-show-more"><?php echo $text ?></div>
+                <div class="section-full-events__right">
+                    <div class="section-full-events__text content-for-show-more"><?php echo $text ?></div>
                     <div class="show-more">
                             <span class="show-more__name">
                                 <span class="show-more__name-more">Show more</span>
@@ -51,9 +55,9 @@ $message = $fields['message']['text'];
                     </div>
                 </div>
             </div>
-            <div class="section-about-program__image">
+            <div class="section-full-events__image">
                 <img class="image-section" src="<?php echo $image['url'] ?>" alt="<?php echo $image['url'] ?>">
-                <div class="section-about-program__decor-image">
+                <div class="section-full-events__decor-image">
                     <img src="<?php echo $image_decor['url'] ?>" alt="<?php echo $image_decor['url'] ?>">
                 </div>
             </div>

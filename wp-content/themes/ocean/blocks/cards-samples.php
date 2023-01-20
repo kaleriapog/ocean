@@ -28,7 +28,7 @@ $endorsed = $fields['endorsed'];
 
         </ul>
 
-        <?php if(!empty($endorsed)) { ?>
+        <?php if(!empty($endorsed['image'])) { ?>
 
         <div class="section-mission__endorsed">
             <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
