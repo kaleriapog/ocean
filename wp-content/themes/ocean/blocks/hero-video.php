@@ -18,7 +18,7 @@ $video = $fields['video'];
 
                 <div class="section-hero-video__video">
                     <div class="section-hero-video__video-inner">
-                        <video autoplay muted loop>
+                        <video autoplay muted playsinline loop>
                             <source src="<?php echo $video['url'] ?>" type="video/mp4">
                         </video>
                         <ul class="donuts">

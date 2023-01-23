@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let controller = new ScrollMagic.Controller()
+
     let openMenu = document.querySelector('.header .icon-menu')
     let header = document.querySelector('.header')
     let closeMenu = document.querySelector('.header .icon-menu-close')
@@ -10,9 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let showMore = document.querySelector('.show-more')
     let teamSlider = document.querySelector('.team-slider')
     let sectionHeroAnimate = document.querySelector('.section-hero-animate')
+    let loadMoreEvents = document.querySelector('.section-full-events .load-more')
+    let heroAnimateImage = document.querySelector('.section-hero-animate-image__image')
+    let buttonsVideo = document.querySelectorAll('.button-video')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
+    let mediaLaptop = (window.innerWidth < 1025)
+    let mediaTablet = (window.innerWidth < 993)
+    let mediaHeight600 = (window.innerHeight < 600)
     // let mediaMobileLandscape = (window.innerHeight < 500)
 
     if(openMenu) {
@@ -119,6 +127,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
         header.classList.add('header-transparent')
         sectionHeroAnimate.style.paddingTop = `${getprop + headerHeight}px`
+    }
+
+    if(loadMoreEvents) {
+        loadMoreEvents.addEventListener('click', (elem) => {
+            elem.target.closest('.section-full-events__workshops').classList.add('open')
+        })
+    }
+
+    if(heroAnimateImage && !mediaHeight600) {
+        let timelineSectionInteractive = new TimelineMax();
+
+        timelineSectionInteractive
+            .fromTo(['.section-hero-animate-image__image-inner'], {clipPath: mediaMobile ? 'circle(49% at 50% 50%)' : mediaLaptop ? 'circle(34% at 50% 50%)' : 'circle(25.1% at 50% 50%)'}, {clipPath: mediaMobile ? 'circle(74% at 50% 50%)' : 'circle(61% at 50% 50%)', ease: Circ.easeNone})
+
+        let ScrollMagicInteractive = new ScrollMagic.Scene({triggerElement: mediaMobile ? '.section-hero-animate-image__image' : mediaLaptop ? '.section-hero-animate-image' : '.section-hero-animate-image__image', duration: '100%', triggerHook: 'onLeave' })
+            .setPin( mediaMobile ? '.section-hero-animate-image__image' : mediaLaptop ? '.section-hero-animate-image' : '.section-hero-animate-image__image')
+            .setTween(timelineSectionInteractive)
+            // .addIndicators({name: "section-interactive"})
+            .addTo(controller)
+            .reverse(true);
+    }
+
+    if(buttonsVideo) {
+        let video = document.querySelector('.section-video__video .video')
+
+        buttonsVideo.forEach((buttonVideo) => {
+            buttonVideo.addEventListener('click', (elem) => {
+                let button = elem.target.closest('.button-video')
+                let video = button.previousElementSibling
+
+                const playPromise = video.play()
+
+                if (playPromise !== null){
+                    playPromise.catch(() => { video.play()})
+                }
+
+                button.classList.add('play')
+
+            })
+        })
+
+        video.addEventListener('ended', (elem) => {
+            elem.target.nextElementSibling.classList.remove('play')
+        })
     }
 
 })
