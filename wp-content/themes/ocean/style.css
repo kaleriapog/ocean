@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footer__form .wpcf7-response-output, .button, .header__menu-list {
 	font-family: 'Avenir Next', sans-serif;
 	font-size: 16px;
@@ -134,6 +135,37 @@
 @media (max-width: 767px) {
 	.section-about-program__message {
 		font-size: 22px;
+	}
+}
+
+.section-video .button-video, .section-slider-horizontal .button-slider {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 150%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.35);
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-20.75deg);
+	cursor: pointer;
+	transition: all .3s linear;
+}
+
+@media (max-width: 767px) {
+	.section-video .button-video, .section-slider-horizontal .button-slider {
+		width: 100px;
+		height: 100px;
+		font-size: 16px;
 	}
 }
 
@@ -4240,7 +4272,7 @@ mark {
 	border-bottom: 1px solid #fff;
 }
 
-.section-video + .section-video {
+.section-video + .section-video, .section-video + .section-fundraise {
 	padding-top: 0;
 }
 
@@ -4305,37 +4337,6 @@ mark {
 	margin-left: auto;
 }
 
-.section-video .button-video {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	font-size: 20px;
-	font-weight: 600;
-	line-height: 150%;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(255, 255, 255, 0.35);
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
-	color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(-20.75deg);
-	cursor: pointer;
-	transition: all .3s linear;
-}
-
-@media (max-width: 767px) {
-	.section-video .button-video {
-		width: 100px;
-		height: 100px;
-		font-size: 16px;
-	}
-}
-
 .section-video .button-video:hover {
 	-webkit-backdrop-filter: blur(6px);
 	backdrop-filter: blur(6px);
@@ -4357,6 +4358,157 @@ mark {
 	display: none;
 }
 
+.section-video__wrapper.text-order {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-video__wrapper.text-order .section-video__title {
+	margin-bottom: 40px;
+}
+
+.section-video__wrapper.text-order .section-video__text {
+	margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+	.section-video__wrapper.text-order .section-video__text {
+		margin-bottom: 40px;
+	}
+}
+
+.section-video__wrapper.text-order .section-video__video {
+	order: 1;
+	margin-bottom: 0;
+}
+
+.section-fundraise {
+	background-color: transparent;
+	color: #0F1010;
+}
+
+.section-fundraise .section-events__title {
+	max-width: 1030px;
+	color: #0F1010;
+	margin: 0 auto 60px;
+	font-size: 85px;
+	line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.section-fundraise .section-events__title {
+		max-width: 730px;
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-fundraise .section-events__title {
+		font-size: 44px;
+		max-width: 360px;
+	}
+}
+
+@media (max-width: 350px) {
+	.section-fundraise .section-events__title {
+		font-size: 34px;
+	}
+}
+
+.section-fundraise .section-events__item-text {
+	color: #0F1010;
+}
+
+.section-fundraise .section-events__item-title {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.section-fundraise .item-сontribution {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 120%;
+	text-align: right;
+	display: inline-block;
+}
+
+.section-fundraise .section-events__item-content {
+	gap: 40px;
+	justify-content: start;
+}
+
+@media (max-width: 767px) {
+	.section-fundraise .section-events__items {
+		gap: 40px;
+	}
+}
+
+.section-fundraise .section-events__item-content, .section-fundraise .section-events__item:first-child .section-events__item-content {
+	border-top: 1px solid #1D252D;
+	padding-top: 40px;
+}
+
+.section-slider-horizontal {
+	background-color: #0F1010;
+	color: #fff;
+}
+
+.section-slider-horizontal .subtitle {
+	color: #fff;
+}
+
+.section-slider-horizontal__title {
+	color: #fff;
+}
+
+@media (max-width: 767px) {
+	.section-slider-horizontal__title {
+		font-size: 36px;
+	}
+}
+
+.section-slider-horizontal__text {
+	color: #fff;
+	max-width: 640px;
+	width: 100%;
+}
+
+.section-slider-horizontal__wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin-bottom: 120px;
+}
+
+@media (max-width: 991px) {
+	.section-slider-horizontal__wrapper {
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+}
+
+.section-slider-horizontal__item {
+	max-width: 700px;
+	width: 100%;
+}
+
+@media (max-width: 767px) {
+	.section-slider-horizontal__item {
+		max-width: 360px;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-slider-horizontal__item img {
+		min-height: 450px;
+	}
+}
+
+.section-slider-horizontal .button-slider {
+	z-index: 1;
+}
+
 @keyframes hero-animate-title {
 	0% {
 		transform: translateY(150%) skewY(6deg);
@@ -4364,6 +4516,93 @@ mark {
 	100% {
 		transform: translateY(0) skewY(0);
 	}
+}
+
+.post__info {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 120%;
+	color: #0F1010;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.post__author {
+	margin-right: 10px;
+}
+
+.post__image {
+	margin-bottom: 60px;
+}
+
+.post__image img {
+	max-height: 550px;
+}
+
+.post__content {
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+}
+
+.post__content-inner {
+	max-width: 645px;
+	width: 100%;
+}
+
+.post__content-inner blockquote {
+	padding: 40px;
+	background-color: #5092A4;
+	color: #fff;
+}
+
+.post__share .share-title {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 150%;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.post__share ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.post__share ul li {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 1px solid #0F1010;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.post__share ul li:hover {
+	background-color: #0F1010;
+}
+
+.post__share ul li:hover svg path {
+	stroke: #fff;
+}
+
+.post__share ul li:not(:first-child):hover svg path {
+	fill: #fff;
+}
+
+.post__share ul li svg path {
+	transition: all .3s;
+}
+
+.category {
+	padding: 6px 10px;
+	font-size: 16px;
+	display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

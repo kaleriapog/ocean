@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let loadMoreEvents = document.querySelector('.section-full-events .load-more')
     let heroAnimateImage = document.querySelector('.section-hero-animate-image__image')
     let buttonsVideo = document.querySelectorAll('.button-video')
+    let sliderHorizontalItems = document.querySelector('.section-slider-horizontal__items')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -189,7 +190,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 buttonPlay.style.opacity = '1'
             })
         })
-
     }
 
+    if(sliderHorizontalItems) {
+        let sectionSliderHorizontal = new Swiper('.section-slider-horizontal__items', {
+            direction: 'horizontal',
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            loop: true,
+            slidesOffsetBefore: -120,
+            breakpoints: {
+                320: {
+                    spaceBetween: 20,
+                    slidesOffsetBefore: -80,
+                },
+                768: {
+                    spaceBetween: 40,
+                    slidesOffsetBefore: -120,
+                },
+            }
+        });
+
+        sectionSliderHorizontal.on('slideChange', function () {
+            let button = document.querySelector('.section-slider-horizontal__items .button-slider')
+
+            button.style.display = 'none'
+        });
+    }
 })
