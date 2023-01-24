@@ -150,27 +150,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(buttonsVideo) {
-        let video = document.querySelector('.section-video__video .video')
 
         buttonsVideo.forEach((buttonVideo) => {
+            let video = buttonVideo.closest('.button-video').previousElementSibling
+
             buttonVideo.addEventListener('click', (elem) => {
                 let button = elem.target.closest('.button-video')
                 let video = button.previousElementSibling
 
-                const playPromise = video.play()
+                video.addEventListener('play', function() {
+                    video.play();
+                }, false);
 
-                if (playPromise !== null){
-                    playPromise.catch(() => { video.play()})
+                if (video.paused) {
+                    const playPromise = video.play()
+
+                    if (playPromise !== null){
+                        playPromise.catch(() => { video.play()})
+                    }
+
+                    button.classList.add('play')
+
+                    setTimeout(() => {
+                        button.style.opacity = '0'
+                    }, 2000)
+
+                } else {
+                    video.pause();
+                    button.classList.remove('play')
+                    button.style.opacity = '1'
                 }
+                return false;
+            })
 
-                button.classList.add('play')
-
+            video.addEventListener('ended', (elem) => {
+                let buttonPlay = elem.target.nextElementSibling
+                buttonPlay.classList.remove('play')
+                buttonPlay.style.opacity = '1'
             })
         })
 
-        video.addEventListener('ended', (elem) => {
-            elem.target.nextElementSibling.classList.remove('play')
-        })
     }
 
 })

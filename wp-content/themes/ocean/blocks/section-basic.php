@@ -4,6 +4,7 @@ $title = $fields['title'];
 $link = $fields['link'];
 $text = $fields['text'];
 $image = $fields['image'];
+$decor_title = $fields['decor_title'];
 $color_bg = $fields['background_color'];
 
 ?>
@@ -12,7 +13,16 @@ $color_bg = $fields['background_color'];
     <div class="size-main">
         <div class="section-basic__wrapper">
             <div class="section-basic__content">
-                <h2 class="title"><?php echo $title ?></h2>
+                <div class="section-basic__headline">
+                    <h2 class="title"><?php echo $title ?></h2>
+
+                    <?php if(!empty($decor_title)) { ?>
+                        <div class="section-basic__decor-title">
+                            <img src="<?php echo $decor_title['url'] ?>" alt="<?php echo $decor_title['title'] ?>">
+                        </div>
+                    <?php } ?>
+
+                </div>
                 <div class="section-basic__description">
                     <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
 
