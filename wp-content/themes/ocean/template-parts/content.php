@@ -62,7 +62,7 @@ $color_bg = $fields['background_color'];
                             </a>
                         </li>
                         <li>
-                            <a class="icon-share" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php echo urlencode( the_permalink() ); ?>&p[title]=<?php echo the_title() ?>&p[summary]=<?php echo the_excerpt() ?>&p[images][0]=<?php echo get_the_post_thumbnail_url() ?>" onclick="window.open(this.href, this.title, 'toolbar=0, status=0, width=548, height=325'); return false" target="_parent">
+                            <a class="icon-share" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php echo urlencode( the_permalink() ); ?>&p[title]=<?php echo the_title() ?>&p[summary]=<?php echo the_excerpt() ?>&p[images][0]=<?php echo get_the_post_thumbnail_url() ?>" target="_blank">
                                 <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.84672 9.07367H5.66228V9.25811V16.8156H2.83837V9.25245V9.068H2.65392H0.184444V6.40569H2.64814H2.83258V6.22125V3.99673C2.83258 2.74251 3.22365 1.79508 3.87965 1.16083C4.53672 0.525545 5.48014 0.184604 6.62179 0.184606L6.62249 0.184603C7.35486 0.18181 8.08685 0.215941 8.81556 0.28685V2.63816H7.37661C6.71227 2.63816 6.26434 2.79306 5.99126 3.11125C5.72342 3.42335 5.66228 3.85031 5.66228 4.29617V6.22692V6.41136H5.84672H8.6983L8.35031 9.07367H5.84672Z" fill="#0F1010" stroke="#0F1010" stroke-width="0.368889"/>
                                 </svg>
