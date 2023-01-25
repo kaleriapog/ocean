@@ -24,7 +24,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 
 //for menu mobile
 @mixin media-mobile-menu {
-  @media (max-width: 1300px) {
+  @media (max-width: 1260px) {
     @content;
   }
 }

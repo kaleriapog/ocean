@@ -141,6 +141,7 @@
   &__navigation {
     &.open {
       clip-path: inset(0 0 0 0);
+      overflow: scroll;
     }
 
     @include media-mobile-menu {
@@ -198,6 +199,73 @@
     }
   }
 }
+
+.single-post {
+  .header {
+    background-color: #fff;
+
+    &__wrapper {
+      border-bottom: 1px solid rgba(29, 37, 45, 0.15);
+    }
+
+    .header__menu-list {
+      color: $color-black;
+
+      @include media-mobile-menu {
+        color: #fff;
+      }
+    }
+
+    .header__menu-list li.menu-item-has-children:after {
+      content: url("data:image/svg+xml;charset=UTF-8, <svg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M13 1L7 7L1 1' stroke='black' stroke-width='2' stroke-linecap='round'/></svg>");
+    }
+
+    .header__menu-list li:hover > a {
+      color: rgba(29, 37, 45, 0.7);
+
+      @include media-mobile-menu {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .sub-menu {
+      background: rgba(29, 37, 45, 0.03);
+
+      @include media-mobile-menu {
+        background: transparent;
+      }
+    }
+
+    .header__social {
+      display: none;
+    }
+
+    .header__button {
+      .button {
+        background-color: $color-black;
+        color: #fff;
+
+        &:hover {
+          background-color: rgba(29, 37, 45, 0.7);
+        }
+      }
+    }
+
+    .logo {
+      filter: invert(1);
+    }
+
+    .icon-menu {
+      border-top: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+
+      &:after {
+        border-top: 1px solid $color-black;
+      }
+    }
+  }
+}
+
 
 .icon-menu {
   width: 30px;
