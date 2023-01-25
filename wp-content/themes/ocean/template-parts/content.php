@@ -63,10 +63,10 @@ $color_bg = $fields['background_color'];
                         </li>
                         <li>
                             <?php
-                            $title = 'Привет, мир'; // заголовок
-                            $summary = 'Короткое описание данной статьи, например можно использовать функцию WordPress the_excerpt()'; // анонс поста
-                            $url = 'http://ocean/2023/01/16/what-ocean-action-has-emerged-from-the-un-ocean-conference/'; // ссылка на пост
-                            $image_url = 'http://ocean/wp-content/uploads/2023/01/image-23.jpg' // URL изображения
+                            $title = the_title();
+                            $summary = the_excerpt();
+                            $url = the_permalink();
+                            $image_url = get_the_post_thumbnail_url();
                             ?>
                             <a class="icon-share" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php echo urlencode( $url ); ?>&p[title]=<?php echo $title ?>&p[summary]=<?php echo $summary ?>&p[images][0]=<?php echo $image_url ?>" onclick="window.open(this.href, this.title, 'toolbar=0, status=0, width=548, height=325'); return false" target="_parent">
                                 <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
