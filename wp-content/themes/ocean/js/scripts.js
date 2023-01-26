@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let heroAnimateImage = document.querySelector('.section-hero-animate-image__image')
     let buttonsVideo = document.querySelectorAll('.button-video')
     let sliderHorizontalItems = document.querySelector('.section-slider-horizontal__items')
+    let sharePostCopy = document.querySelector('.share-post-copy')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -217,4 +218,21 @@ document.addEventListener('DOMContentLoaded', function() {
             button.style.display = 'none'
         });
     }
+
+    if(sharePostCopy) {
+        let urlCurrentPost = location.href
+
+        sharePostCopy.addEventListener('click', (e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(urlCurrentPost).then(function() {
+                document.querySelector('.copied').style.opacity = 1;
+
+                window.setTimeout(() => {
+                    document.querySelector('.copied').style.opacity = 0;
+                }, 2000);
+            }, function(err) {
+            });
+        })
+    }
 })
+

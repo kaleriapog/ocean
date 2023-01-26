@@ -39,12 +39,15 @@ $color_bg = $fields['background_color'];
                 <div class="post__share">
                     <span class="share-title">Share this page</span>
                     <ul>
-                        <li class="icon-share">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.0838 9.58351L14.8335 7.83376C16.122 6.54526 16.122 4.45576 14.8335 3.16651V3.16651C13.545 1.87801 11.4555 1.87801 10.1663 3.16651L8.4165 4.91626" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.66748 11.3325L11.3325 6.66748" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M4.9162 8.4165L3.16645 10.1663C1.87795 11.4548 1.87795 13.5443 3.16645 14.8335V14.8335C4.45495 16.122 6.54445 16.122 7.8337 14.8335L9.58345 13.0838" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <li>
+                            <a class="icon-share icon-share-copy share-post-copy" href="#">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.0838 9.58351L14.8335 7.83376C16.122 6.54526 16.122 4.45576 14.8335 3.16651V3.16651C13.545 1.87801 11.4555 1.87801 10.1663 3.16651L8.4165 4.91626" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.66748 11.3325L11.3325 6.66748" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.9162 8.4165L3.16645 10.1663C1.87795 11.4548 1.87795 13.5443 3.16645 14.8335V14.8335C4.45495 16.122 6.54445 16.122 7.8337 14.8335L9.58345 13.0838" stroke="#1D252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <span class="copied">Copied</span>
                         </li>
                         <li>
                             <a class="icon-share" target="_blank" href="https://www.linkedin.com/shareArticle?url=<?php the_permalink() ?>&title=<?php the_title() ?>&summary=<?php echo the_excerpt() ?>">

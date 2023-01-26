@@ -148,6 +148,10 @@
       flex-wrap: wrap;
       gap: 8px;
 
+      li {
+        position: relative;
+      }
+
       .icon-share {
         width: 48px;
         height: 48px;
@@ -167,7 +171,7 @@
           }
         }
 
-        &:not(:first-child):hover {
+        &:not(.icon-share-copy):hover {
           svg path {
             fill: #fff;
           }
@@ -177,6 +181,13 @@
           transition: all .3s;
         }
       }
+    }
+
+    .copied {
+      opacity: 0;
+      position: absolute;
+      top: calc(100% + 20px);
+      display: inline-block;
     }
   }
 

@@ -169,6 +169,13 @@
 	}
 }
 
+.posts__item-title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 30px;
+}
+
 html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
 del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
@@ -4750,6 +4757,10 @@ mark {
 	gap: 8px;
 }
 
+.post__share ul li {
+	position: relative;
+}
+
 .post__share ul .icon-share {
 	width: 48px;
 	height: 48px;
@@ -4770,12 +4781,19 @@ mark {
 	stroke: #fff;
 }
 
-.post__share ul .icon-share:not(:first-child):hover svg path {
+.post__share ul .icon-share:not(.icon-share-copy):hover svg path {
 	fill: #fff;
 }
 
 .post__share ul .icon-share svg path {
 	transition: all .3s;
+}
+
+.post__share .copied {
+	opacity: 0;
+	position: absolute;
+	top: calc(100% + 20px);
+	display: inline-block;
 }
 
 .post__author-full {
@@ -4819,6 +4837,237 @@ mark {
 	font-size: 16px;
 	display: inline-block;
 	line-height: 150%;
+}
+
+.posts__headline {
+	background-color: #0F1010;
+	color: #fff;
+	padding: 190px 0;
+	font-size: 170px;
+	font-weight: 900;
+	line-height: 1;
+	text-align: center;
+}
+
+.posts__wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	padding-top: 60px;
+}
+
+.posts__wrapper:nth-child(2) {
+	margin-bottom: 80px;
+}
+
+.posts .posts-panel {
+	max-width: 240px;
+	width: 100%;
+}
+
+.posts__items-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 45px;
+	flex-wrap: wrap;
+}
+
+.posts__items:first-child {
+	margin-bottom: 80px;
+}
+
+.posts__item {
+	max-width: 480px;
+	width: 100%;
+}
+
+.posts__item:nth-child(2n) {
+	max-width: 435px;
+	width: 100%;
+}
+
+.posts__item:nth-child(2n) .posts__item-image img {
+	height: 300px;
+}
+
+.posts__item-image {
+	margin-bottom: 40px;
+}
+
+.posts__item-image img {
+	height: 450px;
+}
+
+.posts__item-text {
+	margin-bottom: 30px;
+}
+
+.posts__item-bottom {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.posts__item-info {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.post-last {
+	position: relative;
+}
+
+.post-last__wrapper {
+	padding-bottom: 60px;
+	border-bottom: 1px solid #1D252D;
+}
+
+.post-last:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	background-color: #0F1010;
+}
+
+.post-last__image {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 60px;
+}
+
+.post-last__image img {
+	height: 550px;
+}
+
+.post-last__title {
+	max-width: 890px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.post-last__text {
+	max-width: 500px;
+}
+
+.post-last__content {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.post-last__item-left {
+	display: flex;
+	align-items: end;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.post-last__item-info {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.post-filter__item {
+	margin-bottom: 12px;
+	padding: 6px 10px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.post-filter .posts-panel-item {
+	display: flex;
+	cursor: pointer;
+}
+
+.posts-form {
+	padding: 100px;
+	width: 100%;
+	background-color: #5092A4;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 80px;
+}
+
+.posts-form__image {
+	max-width: 300px;
+	width: 100%;
+}
+
+.posts-form__title {
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.posts-form__text {
+	color: #fff;
+}
+
+.posts-form__form {
+	margin-bottom: 16px;
+}
+
+.posts-form__form .wpcf7-form-control-wrap {
+	display: inline-block;
+}
+
+.posts-form__form input[type=email] {
+	padding: 16px 20px;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 100px;
+	color: #fff;
+	margin-right: 12px;
+}
+
+.posts-form__form input[type=email]::placeholder {
+	color: #fff;
+}
+
+.posts-form__form input[type=submit] {
+	padding: 16px 36px;
+	background: #FFFFFF;
+	border-radius: 100px;
+	color: #5092A4;
+	border: 1px solid #fff;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.posts-form__form input[type=submit]:hover {
+	color: #fff;
+	background-color: #5092A4;
+}
+
+.posts-form__form .wpcf7-response-output {
+	border-color: transparent !important;
+	color: #DC6761;
+	background-color: #fff;
+	padding: 5px;
+	border-radius: 25px;
+	font-size: 14px;
+}
+
+.posts-form__form .wpcf7-not-valid-tip {
+	color: #DC6761;
+	background-color: #fff;
+	padding: 5px 20px;
+	border-radius: 25px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.posts-form__form form p {
+	display: flex;
+	align-items: start;
 }
 
 /*# sourceMappingURL=style.css.map */
