@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let buttonsVideo = document.querySelectorAll('.button-video')
     let sliderHorizontalItems = document.querySelector('.section-slider-horizontal__items')
     let sharePostCopy = document.querySelector('.share-post-copy')
-    let formPost = document.querySelector('.post-filter')
+    let formPost = document.querySelector('.posts-filter')
+    let postsPanel = document.querySelector('.posts-panel')
+    let postsSecondList = document.querySelector('.posts-second-list')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -246,6 +248,14 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
 
+    }
+
+    if(postsPanel && postsSecondList && !mediaLaptop) {
+        new ScrollMagic.Scene({triggerElement: '.posts__wrapper', triggerHook: 'onLeave' })
+            .setPin( '.posts-panel__wrapper')
+            // .addIndicators({name: "section-interactive"})
+            .addTo(controller)
+            .reverse(true);
     }
 })
 

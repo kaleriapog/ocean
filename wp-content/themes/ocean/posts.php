@@ -3,7 +3,7 @@
 
 global $wp;
 $current_url = home_url( add_query_arg( NULL, NULL ) );
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+//$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $all_cats = get_categories();
 $action = '/'.$post->post_name.'/?paged=1';
 
@@ -39,6 +39,7 @@ if(!empty($_GET['cat_ids'])) {
     $cat_ids = $_GET['cat_ids'];
     $args_post['cat'] = $cat_ids;
 }
+$cat_current_page = get_the_category_by_ID($cat_ids);
 
 $query = new WP_Query();
 $posts = $query->query($args_post);
@@ -125,13 +126,13 @@ get_header();
 
                 <?php if (!empty($all_cats)): ?>
 
-                    <div class="posts-panel posts-panel-main">
-                        <div class="post-panel__wrapper">
+                    <div class="posts-panel">
+                        <div class="posts-panel__wrapper">
 
                             <?php if (!empty($categories)): ?>
 
-                                <form class="post-filter" action="<?php echo $action ?>">
-                                    <div class="post-filter__item">
+                                <form class="posts-filter" action="<?php echo $action ?>">
+                                    <div class="posts-filter__item">
                                         <label class="posts-panel-item">
                                             <a class="<?php echo empty($cat_ids) ? 'active' : '' ?>" href="<?php echo $action ?>"><?php _e('All Articles') ?></a>
                                         </label>
@@ -139,7 +140,7 @@ get_header();
 
                                     <?php foreach ($categories as $cat): ?>
 
-                                        <div class="post-filter__item">
+                                        <div class="posts-filter__item">
                                             <label class="posts-panel-item">
                                                 <input input type="radio" name="cat_ids" value="<?php echo $cat->term_id ?>" <?php if ($cat->term_id == $cat_ids) : ?> checked <?php endif ?>>
                                                 <span><?php echo $cat->name ?></span>
@@ -173,7 +174,8 @@ get_header();
 
                         </ul>
 
-                        <?php else : ?>
+                        <?php endif; ?>
+                        <?php if(count($posts) <= 1) : ?>
 
                             <div class="news-nothing"><h1 class="news-nothing__title title-regular"><?php _e('Nothing found', 'theme') ?></h1></div>
 
@@ -192,7 +194,10 @@ get_header();
                     <img src="<?php echo $form_image['url'] ?>" alt="<?php echo $form_image['title'] ?>">
                 </div>
             </div>
-            <div class="posts__wrapper">
+
+            <?php if(count($posts) >= 7) : ?>
+
+                <div class="posts__wrapper posts-second-list">
 
                 <?php if (!empty($all_cats)): ?>
 
@@ -217,18 +222,34 @@ get_header();
 
                         </ul>
 
-                        <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="10" offset="11" pause="true"]') ?>
+                        <?php if(count($posts) >= 11) : ?>
 
-                        <?php else : ?>
 
-                            <div class="news-nothing"><h1 class="news-nothing__title title-regular"><?php _e('Nothing found', 'theme') ?></h1></div>
 
-                        <?php endif ?>
+                            <?php
+                                if(!empty($cat_ids)) {
+                                    $shortcode = '[ajax_load_more post_type="post" posts_per_page="10" offset="11" pause="true" category="'.$cat_current_page.'"]';
+
+                                } else {
+                                    $shortcode = '[ajax_load_more post_type="post" posts_per_page="10" offset="11" pause="true"]';
+                                }
+                            ?>
+
+                            <div class="news-list">
+                                <?php echo do_shortcode($shortcode); ?>
+                            </div>
+
+                        <?php endif; ?>
+
+                    <?php endif; ?>
 
                     </div>
 
                 </div>
             </div>
+
+            <?php endif ?>
+
         </div>
     </section>
     <section class="section-basic" style="background-color: <?php echo $color_bg ?>">
