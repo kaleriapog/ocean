@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let buttonsVideo = document.querySelectorAll('.button-video')
     let sliderHorizontalItems = document.querySelector('.section-slider-horizontal__items')
     let sharePostCopy = document.querySelector('.share-post-copy')
+    let formPost = document.querySelector('.post-filter')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -233,6 +234,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }, function(err) {
             });
         })
+    }
+
+    if(formPost) {
+        const inputs = formPost.querySelectorAll('input')
+
+        inputs.forEach((el) => {
+            el.addEventListener('change', () => {
+                formPost.submit();
+                return false;
+            })
+        })
+
     }
 })
 

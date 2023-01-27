@@ -4839,6 +4839,10 @@ mark {
 	line-height: 150%;
 }
 
+.posts {
+	padding-bottom: 20px;
+}
+
 .posts__headline {
 	background-color: #0F1010;
 	color: #fff;
@@ -4865,11 +4869,12 @@ mark {
 	width: 100%;
 }
 
-.posts__items-wrapper {
+.posts__items-wrapper, .posts .alm-reveal {
 	display: flex;
 	justify-content: space-between;
 	gap: 45px;
 	flex-wrap: wrap;
+	padding-bottom: 60px;
 }
 
 .posts__items:first-child {
@@ -4914,6 +4919,21 @@ mark {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
+}
+
+.posts__button {
+	background: rgba(64, 54, 237, 0.05);
+	border-radius: 40px;
+	font-size: 16px;
+	padding: 16px 32px;
+	margin: 20px auto 0;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.posts__button:hover {
+	color: #fff;
+	background-color: #0F1010;
 }
 
 .post-last {
