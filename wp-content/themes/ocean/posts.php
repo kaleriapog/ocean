@@ -48,7 +48,6 @@ $current_number_of_posts = $query->found_posts;
 $selected_post = $args['fields']['selected_post'];
 $number_of_posts = wp_count_posts()->publish;
 
-
 $cats = get_the_category($post_last->ID);
 $cat_list = '';
 if (!empty($cats)) {
@@ -63,6 +62,8 @@ $form = $form_subscribe['form'];
 $form_title = $form_subscribe['title'];
 $form_text = $form_subscribe['text'];
 $form_image = $form_subscribe['image'];
+
+$load_more = get_field('load_more', 'options');
 
 get_header();
 ?>
@@ -235,6 +236,8 @@ get_header();
                                 endif;
                             endforeach; ?>
 
+                            <?php echo $load_more ?>
+
                         </ul>
 
                         <?php else : ?>
@@ -244,6 +247,7 @@ get_header();
                         <?php endif ?>
 
                     </div>
+
                 </div>
             </div>
         </div>
