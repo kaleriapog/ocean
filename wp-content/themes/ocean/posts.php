@@ -217,7 +217,7 @@ get_header();
 
                         </ul>
 
-                        <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="10" offset="9" pause="true"]') ?>
+                        <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="10" offset="11" pause="true"]') ?>
 
                         <?php else : ?>
 
