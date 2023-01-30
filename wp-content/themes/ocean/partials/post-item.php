@@ -21,11 +21,11 @@ $cat_list = rtrim( $cat_list, ', ' );
             <?php echo get_the_post_thumbnail($p); ?>
 
         </div>
-        <div class="posts__item-title">
+        <h3 class="posts__item-title">
 
             <?php echo $p->post_title?>
 
-        </div>
+        </h3>
 
         <div class="posts__item-text">
 
@@ -37,7 +37,7 @@ $cat_list = rtrim( $cat_list, ', ' );
             <div class="posts__item-info">
                 <time>
 
-                    <?php echo get_the_date('j. m. Y', $p); ?>
+                    <?php echo get_the_date('j.  m.  Y', $p); ?>
 
                 </time>
                 <div class="posts__item-author">

@@ -226,5 +226,4 @@ $color_bg = $fields['background_color'];
             </div>
         </div>
     </div>
-
 </section>

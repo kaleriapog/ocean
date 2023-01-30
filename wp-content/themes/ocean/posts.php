@@ -81,7 +81,7 @@ get_header();
         </div>
         <div class="posts__last post-last">
             <div class="size-main">
-                <div class="post-last__wrapper">
+                <a href="<?php echo get_permalink($post_last); ?>" class="post-last__wrapper">
                     <div class="post-last__image">
 
                         <?php echo get_the_post_thumbnail($post_last); ?>
@@ -118,7 +118,7 @@ get_header();
 
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="size-main">
@@ -134,7 +134,7 @@ get_header();
                                 <form class="posts-filter" action="<?php echo $action ?>">
                                     <div class="posts-filter__item">
                                         <label class="posts-panel-item">
-                                            <a class="<?php echo empty($cat_ids) ? 'active' : '' ?>" href="<?php echo $action ?>"><?php _e('All Articles') ?></a>
+                                            <a class="<?php echo empty($cat_ids) ? 'active' : '' ?> item-filter" href="<?php echo $action ?>"><?php _e('All articles') ?></a>
                                         </label>
                                     </div>
 
@@ -142,8 +142,8 @@ get_header();
 
                                         <div class="posts-filter__item">
                                             <label class="posts-panel-item">
-                                                <input input type="radio" name="cat_ids" value="<?php echo $cat->term_id ?>" <?php if ($cat->term_id == $cat_ids) : ?> checked <?php endif ?>>
-                                                <span><?php echo $cat->name ?></span>
+                                                <input input class="item-filter-input" type="radio" name="cat_ids" value="<?php echo $cat->term_id ?>" <?php if ($cat->term_id == $cat_ids) : ?> checked <?php endif ?>>
+                                                <span class="item-filter"><?php echo $cat->name ?></span>
                                             </label>
                                         </div>
 
