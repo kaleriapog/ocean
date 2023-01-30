@@ -673,3 +673,125 @@ mark {
     }
   }
 }
+
+.form-regular {
+  max-width: 830px;
+  width: 100%;
+
+  label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    @include media-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 16px 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 2px;
+    resize: none;
+    font-size: 16px;
+    line-height: 150%;
+
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  textarea {
+    height: 170px;
+  }
+
+  fieldset p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px 24px;
+
+    @include media-mobile {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .button-submit-contact {
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+
+    @include media-mobile {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .wpcf7-spinner {
+    @include media-mobile {
+      position: absolute;
+    }
+  }
+
+  #button-submit-page {
+    text-align: left;
+    padding-right: 110px;
+    display: inline-block;
+    width: auto;
+    height: 80px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    padding-left: 0;
+    z-index: 2;
+    position: relative;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .fake-button-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 72px;
+    transition: all .3s;
+
+    @include media-mobile {
+      right: 106px;
+    }
+
+    @include media-mobile-small {
+      right: 80px;
+    }
+
+    svg {
+      @include media-mobile {
+        width: 20px;
+      }
+    }
+
+    p {
+      line-height: 0;
+    }
+  }
+}

@@ -2438,6 +2438,57 @@
   }
 }
 
+//section-contact
+.section-contact {
+  background-color: $color-black;
+  color: #fff;
+  padding-top: 155px;
+
+  @include media-mobile {
+    padding-top: 135px;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: 40px;
+
+    @include media-mobile {
+      margin-bottom: 30px;
+    }
+
+    p:last-of-type {
+      display: inline;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    margin-bottom: 60px;
+    max-width: 415px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include media-mobile {
+      font-size: 16px;
+      max-width: 248px;
+    }
+  }
+
+  &__title-image {
+    max-width: 70px;
+    max-height: 70px;
+    display: inline;
+
+    @include media-mobile {
+      max-width: 50px;
+      max-height: 50px;
+      transform: translate(7px, -3px);
+      position: absolute;
+    }
+  }
+}
+
 @keyframes hero-animate-title {
   0% {
     transform: translateY(150%) skewY(6deg);
