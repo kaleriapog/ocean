@@ -45,6 +45,7 @@
 }
 
 .button-link {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -694,7 +695,7 @@ mark {
     }
   }
 
-  input, textarea {
+  input, textarea, select {
     width: 100%;
     padding: 16px 20px;
     color: #fff;
@@ -706,6 +707,26 @@ mark {
 
     ::placeholder {
       color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  select {
+    -moz-appearance:none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
+    background-position: calc(100% - 0.75rem) center !important;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: red;
+    }
+
+    option {
+      max-height: 800px;
     }
   }
 

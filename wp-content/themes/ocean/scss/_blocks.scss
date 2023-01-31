@@ -955,7 +955,7 @@
   padding: 190px 0;
 
   @include media-mobile {
-    display: none;
+    padding: 100px 0;
   }
 
   &__title-item {
@@ -984,7 +984,25 @@
     }
 
     @include media-mobile {
-      font-size: 44px;
+      font-size: 11.4vw;
+    }
+
+    @include media-mobile-regular {
+      font-size: 12vw;
+    }
+
+    &.desktop {
+      @include media-mobile {
+        display: none;
+      }
+    }
+
+    &.mobile {
+      display: none;
+
+      @include media-mobile {
+        display: block;
+      }
     }
 
     & > p {
@@ -1012,11 +1030,20 @@
         max-width: 80px;
       }
 
+      @include media-mobile {
+        min-height: 10.3vw;
+      }
+
+      @include media-mobile-regular {
+        min-height: 10vw;
+      }
+
       &.decor-1 {
         background-color: $color-yellow-light;
 
         @include media-mobile {
           background-color: $color-purple-light;
+          max-width: 50px;
         }
       }
 
@@ -1025,23 +1052,49 @@
         max-width: 337px;
 
         @include media-mobile {
-          display: none;
+          background-color: $color-pink;
+          max-width: 130px;
+        }
+        @include media-mobile-regular {
+          max-width: 37vw;
         }
       }
 
       &.decor-3 {
         background-color: $color-mandys-pink;
         max-width: 424px;
+
+        @include media-mobile {
+          background-color: $color-yellow-second;
+          max-width: 166px;
+        }
+
+        @include media-mobile-regular {
+          max-width: 42vw;
+        }
       }
 
       &.decor-4 {
         background-color: $color-mandys-pink;
         max-width: 319px;
+
+        @include media-mobile {
+          background-color: $color-yellow-second;
+          max-width: 130px;
+        }
+
+        @include media-mobile-regular {
+          max-width: 31vw;
+        }
       }
 
       &.decor-5 {
         background-color: $color-yellow-light;
         max-width: 254px;
+
+        @include media-mobile {
+          display: none;
+        }
       }
     }
   }
@@ -2485,6 +2538,73 @@
       max-height: 50px;
       transform: translate(7px, -3px);
       position: absolute;
+    }
+  }
+}
+
+.section-contact-pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  max-height: 100vh;
+  clip-path: inset(50% 0 50% 0);
+  transition: all .3s;
+  padding-top: 100px;
+
+  @include media-mobile {
+    padding-top: 50px;
+  }
+
+  &.open {
+    display: block;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .section-contact__title {
+    line-height: 105%;
+    margin-bottom: 60px;
+
+    @include media-mobile {
+      font-size: 40px;
+    }
+
+    @include media-mobile-small {
+      font-size: 34px;
+    }
+
+    .section-contact__title-image {
+      @include media-mobile-small {
+        max-width: 40px;
+        max-height: 40px;
+      }
+    }
+  }
+
+  .section-contact__wrapper {
+    max-width: 975px;
+    margin: auto;
+  }
+
+  .pop-up-close {
+    margin: 0 55px 55px auto;
+    max-width: 80px;
+    max-height: 80px;
+    cursor: pointer;
+
+    @include media-mobile {
+      margin: 0 20px 20px auto;
+      max-width: 30px;
+    }
+  }
+
+  .form-regular {
+    .fake-button-submit {
+      @include media-mobile {
+        right: 72px;
+      }
     }
   }
 }

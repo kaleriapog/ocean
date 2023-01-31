@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let formPost = document.querySelector('.posts-filter')
     let postsPanel = document.querySelector('.posts-panel')
     let postsSecondList = document.querySelector('.posts-second-list')
-    let buttonSubmitPage = document.getElementById('button-submit-page')
+    // let buttonSubmitPage = document.getElementById('button-submit-page')
+    let sectionsWithPopUp =document.querySelectorAll('.section-with-pop-up')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -268,4 +269,23 @@ document.addEventListener('DOMContentLoaded', function() {
     //     buttonSubmitPage.parentNode.prepend(div)
     //     buttonSubmitPage.parentNode.style.position = 'relative'
     // }
+
+    if(sectionsWithPopUp) {
+        sectionsWithPopUp.forEach((sectionWithPopUp) => {
+            let buttonsPopUp = sectionWithPopUp.querySelectorAll('.button-link-pop-up')
+            let buttonsClosePopUp = document.querySelectorAll('.pop-up-close')
+
+            buttonsPopUp.forEach((buttonPopUp) => {
+                buttonPopUp.addEventListener('click', (elem) => {
+                    document.querySelector('.section-contact-pop-up').classList.add('open')
+                })
+            })
+
+            buttonsClosePopUp.forEach((buttonClosePopUp) => {
+                buttonClosePopUp.addEventListener('click', (elem) => {
+                    elem.target.closest('.section-contact-pop-up').classList.remove('open')
+                })
+            })
+        })
+    }
 })
