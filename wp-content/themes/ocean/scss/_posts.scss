@@ -128,8 +128,15 @@
   &__item-image {
     margin-bottom: 40px;
 
+    &:hover {
+      img {
+        opacity: 0.7;
+      }
+  }
+
     img {
       height: 450px;
+      transition: opacity 0.5s ease;
 
       @include media-large-laptop {
         height: 300px;
@@ -188,15 +195,15 @@
     transition: all .3s;
     color: $color-black;
 
+    &:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
     &:hover {
       color: #fff;
       background-color: $color-black;
     }
-  }
-
-  &__content {
-    max-width: 960px;
-    width: 100%;
   }
 
   .alm-btn-wrap {
@@ -318,6 +325,10 @@
 .posts-filter {
   &__item {
     margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
 
   .item-filter {
@@ -444,6 +455,10 @@
         margin-right: 0;
         width: calc(100vw - 70px);
         padding: 18px 20px;
+      }
+
+      &:focus::placeholder {
+        opacity: 0.5;
       }
 
       &::placeholder {
