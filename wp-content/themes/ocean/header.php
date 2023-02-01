@@ -15,7 +15,6 @@ $header_button = $header['button'];
 $decorative_element = $header['decorative_element'];
 $social = get_field('social', 'options');
 
-
 ?>
 
 <!doctype html>

@@ -194,6 +194,11 @@
     }
   }
 
+  &__content {
+    max-width: 960px;
+    width: 100%;
+  }
+
   .alm-btn-wrap {
     position: absolute;
     left: 0;

@@ -11,13 +11,17 @@
   }
 
   &__wrapper {
-    padding: 27px 0;
+    padding: 7px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    @include media-mobile-menu {
+      padding: 27px 0;
+    }
   }
 
   &__menu-list {
@@ -30,8 +34,8 @@
     @include media-mobile-menu {
       flex-direction: column;
       gap: 40px;
-      text-align: right;
-      align-items: end;
+      text-align: left;
+      align-items: start;
       padding-right: 50px;
       margin-bottom: 35px;
     }
@@ -41,6 +45,14 @@
       text-align: left;
       padding: 25px 0;
       gap: 35px;
+    }
+
+    &>li {
+      padding: 20px 0;
+
+      @include media-mobile-menu {
+        padding: 0;
+      }
     }
 
     li {
@@ -86,7 +98,7 @@
   .sub-menu {
     clip-path: inset(0 0 100% 0);
     position: absolute;
-    top: calc(100% + 18px);
+    top: 100%;
     left: 0;
     padding: 16px;
     background: rgba(255, 255, 255, 0.03);
@@ -171,12 +183,11 @@
 
     .social-list {
       @include media-mobile-menu {
-        justify-content: end;
+        justify-content: start;
         padding-right: 50px;
       }
 
       @include media-mobile {
-        justify-content: start;
         padding-right: 0;
       }
     }
@@ -184,7 +195,7 @@
 
   &__decor  {
     max-width: 80px;
-    margin: 0 50px 76px auto;
+    margin: 10px auto 76px 0;
 
     @include media-mobile {
       margin-left: 0;

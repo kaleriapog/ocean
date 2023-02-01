@@ -22,10 +22,10 @@ $text = $footer['text'];
 
 	<footer id="colophon" class="footer">
 		<div class="size-main">
-            <div class="footer__wrapper">
-                <div class="footer-logo footer-logo-mobile">
+            <div class="footer__wrapper" style="background-color: black;">
+                <a class="footer-logo footer-logo-mobile" href="<?php echo get_option('home') ?>">
                     <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
-                </div>
+                </a>
                 <div class="footer__top">
                     <div>
                         <?php if(!empty($form)) {
@@ -70,9 +70,9 @@ $text = $footer['text'];
                 <div class="footer__content">
                     <div class="footer__content-left">
                         <div class="footer__content-address">
-                            <div class="footer-logo footer-logo-desktop">
+                            <a class="footer-logo footer-logo-desktop" href="<?php echo get_option('home') ?>">
                                 <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
-                            </div>
+                            </a>
                             <div class="address-text">
 
                                 <?php echo $address; ?>

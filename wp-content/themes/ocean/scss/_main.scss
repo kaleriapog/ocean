@@ -309,6 +309,11 @@ mark {
 
   h4 {
     font-size: 20px;
+
+    @include media-mobile {
+      font-size: 16px;
+      max-width: 260px;
+    }
   }
 
   h5 {
@@ -510,6 +515,7 @@ mark {
 
     @include media-laptop {
       order: 1;
+      margin: 0 auto 40px;
     }
 
     @include media-mobile {
