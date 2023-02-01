@@ -167,7 +167,7 @@ get_header();
 
                             <?php
                             foreach ($posts as $key=>$p):
-                                if($key >= 1 && $key <= 6):
+                                if($key >= 0 && $key <= 5):
                                     get_template_part('partials/post-item',  NULL,  array('p' => $p));
                                 endif;
                             endforeach; ?>
@@ -175,7 +175,7 @@ get_header();
                         </ul>
 
                         <?php endif; ?>
-                        <?php if(count($posts) <= 1) : ?>
+                        <?php if(count($posts) <= 0) : ?>
 
                             <div class="news-nothing"><h1 class="news-nothing__title title-regular"><?php _e('Nothing found', 'theme') ?></h1></div>
 
@@ -195,7 +195,7 @@ get_header();
                 </div>
             </div>
 
-            <?php if(count($posts) >= 7) : ?>
+            <?php if(count($posts) >= 6) : ?>
 
                 <div class="posts__wrapper posts-second-list">
 
@@ -215,7 +215,7 @@ get_header();
 
                             <?php
                             foreach ($posts as $key=>$p):
-                                if($key >= 7 && $key <= 13):
+                                if($key >= 6 && $key <= 12):
                                     get_template_part('partials/post-item',  NULL,  array('p' => $p));
                                 endif;
                             endforeach; ?>
