@@ -661,11 +661,11 @@ mark {
 }
 
 .content-for-show-more {
-  transition: all 0.5s ease-in;
+  transition: all 0.7s ease-in;
 
   &.open {
-    transition: all 0.5s ease-out;
-    max-height: 2000px;
+    transition: all 0.7s ease-in-out;
+    max-height: 1000px;
 
     & ~ .show-more .show-more__icon {
       transform: rotate(180deg);

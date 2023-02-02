@@ -247,6 +247,10 @@ video {
 	transition-timing-function: linear;
 }
 
+#detach-button-host {
+	display: none !important;
+}
+
 @font-face {
 	font-family: 'Avenir Next';
 	src: url("./fonts/AvenirNextCyr-Bold.eot");
@@ -1478,12 +1482,12 @@ mark {
 }
 
 .content-for-show-more {
-	transition: all 0.5s ease-in;
+	transition: all 0.7s ease-in;
 }
 
 .content-for-show-more.open {
-	transition: all 0.5s ease-out;
-	max-height: 2000px;
+	transition: all 0.7s ease-in-out;
+	max-height: 1000px;
 }
 
 .content-for-show-more.open ~ .show-more .show-more__icon {
@@ -4794,6 +4798,12 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	max-width: 640px;
 	width: 100%;
 	margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+	.section-video__text {
+		max-width: 100%;
+	}
 }
 
 .section-video .button-video:hover {

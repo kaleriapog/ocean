@@ -67,3 +67,7 @@ video {
   -o-transition-timing-function : linear;
   transition-timing-function : linear;
 }
+//opera video
+#detach-button-host {
+  display: none!important;
+}
