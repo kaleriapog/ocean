@@ -2584,7 +2584,6 @@
   clip-path: inset(50% 0 50% 0);
   transition: all .3s;
   padding-top: 100px;
-  z-index: 101;
 
   @include media-mobile {
     padding-top: 50px;
@@ -2593,6 +2592,7 @@
   &.open {
     display: block;
     clip-path: inset(0 0 0 0);
+    z-index: 110;
   }
 
   .section-contact__title {
