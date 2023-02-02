@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let timelineSectionInteractive = new TimelineMax();
 
         timelineSectionInteractive
-            .fromTo(['.section-hero-animate-image__image-inner'], {clipPath: mediaMobile ? 'circle(47% at 50% 50%)' : mediaLaptop ? 'circle(34% at 50% 50%)' : 'circle(25.1% at 50% 50%)'}, {clipPath: mediaMobile ? 'circle(74% at 50% 50%)' : 'circle(61% at 50% 50%)', ease: Circ.easeNone})
+            .fromTo(['.section-hero-animate-image__image-inner'], {clipPath: mediaMobile ? 'circle(46% at 50% 50%)' : mediaLaptop ? 'circle(34% at 50% 50%)' : 'circle(25.1% at 50% 50%)'}, {clipPath: mediaMobile ? 'circle(74% at 50% 50%)' : 'circle(61% at 50% 50%)', ease: Circ.easeNone})
 
         let ScrollMagicInteractive = new ScrollMagic.Scene({triggerElement: mediaMobile ? '.section-hero-animate-image__image' : mediaLaptop ? '.section-hero-animate-image' : '.section-hero-animate-image__image', duration: '100%', triggerHook: 'onLeave' })
             .setPin( mediaMobile ? '.section-hero-animate-image__image' : mediaLaptop ? '.section-hero-animate-image' : '.section-hero-animate-image__image')
