@@ -5029,7 +5029,6 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	clip-path: inset(50% 0 50% 0);
 	transition: all .3s;
 	padding-top: 100px;
-	z-index: 101;
 }
 
 @media (max-width: 767px) {
@@ -5041,6 +5040,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 .section-contact-pop-up.open {
 	display: block;
 	clip-path: inset(0 0 0 0);
+	z-index: 110;
 }
 
 .section-contact-pop-up .section-contact__title {
