@@ -874,6 +874,19 @@ video {
 	color: #fff;
 }
 
+@media (max-width: 350px) {
+	.social-list {
+		gap: 8px 16px;
+	}
+}
+
+@media (max-width: 350px) {
+	.social-list__item.item-name {
+		display: flex;
+		width: 100%;
+	}
+}
+
 .social-list__item-link {
 	border: 1px solid #fff;
 	border-radius: 50%;
@@ -3081,10 +3094,17 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	margin-bottom: 30px;
 }
 
+@media (max-width: 1024px) {
+	.section-cards-samples__title {
+		gap: 20px;
+	}
+}
+
 @media (max-width: 767px) {
 	.section-cards-samples__title {
 		max-width: 220px;
 		margin-bottom: 20px;
+		gap: 10px;
 	}
 }
 
@@ -3641,7 +3661,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 @media (max-width: 1400px) {
 	.section-hero-video__video-inner {
 		max-width: 100%;
-		max-height: 51.1vw;
+		max-height: 40vw;
 		height: 100%;
 	}
 }
@@ -3655,7 +3675,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	.section-hero-video__video .donuts .donut-inner {
 		width: 75vw;
 		height: 75vw;
-		border-width: 15vw;
+		border-width: 20vw;
 	}
 }
 
@@ -4137,7 +4157,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	width: 100%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
 	.section-about-program__left {
 		max-width: 100%;
 	}
@@ -4148,7 +4168,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	width: 100%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
 	.section-about-program__right {
 		max-width: 100%;
 	}
@@ -4235,7 +4255,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	margin-bottom: 60px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
 	.section-full-events__wrapper {
 		flex-direction: column;
 		margin-bottom: 40px;
@@ -4249,7 +4269,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 }
 
 .section-full-events__content {
-	max-width: 960px;
+	max-width: 990px;
 	width: 100%;
 	padding-right: 20px;
 }
@@ -4563,6 +4583,11 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	.section-full-events .load-more__inner {
 		display: inline-block;
 	}
+}
+
+.section-full-events .author__description {
+	opacity: 0.5;
+	color: #fff;
 }
 
 .section-hero-animate-image {

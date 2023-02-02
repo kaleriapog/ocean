@@ -74,7 +74,7 @@ $social = get_field('social', 'options');
                                     $custom_icon = $item['custom_icon'];
                                     ?>
 
-                                    <li class="social-list__item">
+                                    <li class="social-list__item <?php if(!empty($name)) { ?>item-name<?php } ?>">
                                         <a class="social-list__item-link <?php if(!empty($name)) { ?>social-list__item-link-text<?php } elseif(!empty($custom_icon)) { ?>social-list__item-link-custom_icon<?php } ?>" href="<?php echo $url ?>">
 
                                             <?php
