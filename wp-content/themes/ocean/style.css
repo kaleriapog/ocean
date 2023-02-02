@@ -251,7 +251,7 @@ video {
 	font-family: 'Avenir Next';
 	src: url("./fonts/AvenirNextCyr-Bold.eot");
 	src: url("./fonts/AvenirNextCyr-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/AvenirNextCyr-Bold.woff2") format("woff2"), url("./fonts/AvenirNextCyr-Bold.woff") format("woff"), url("./fonts/AvenirNextCyr-Bold.ttf") format("truetype");
-	font-weight: bold;
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -278,7 +278,7 @@ video {
 	font-family: 'Avenir Next';
 	src: url("./fonts/AvenirNextCyr-BoldItalic.eot");
 	src: url("./fonts/AvenirNextCyr-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/AvenirNextCyr-BoldItalic.woff2") format("woff2"), url("./fonts/AvenirNextCyr-BoldItalic.woff") format("woff"), url("./fonts/AvenirNextCyr-BoldItalic.ttf") format("truetype");
-	font-weight: bold;
+	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
 }
@@ -296,7 +296,7 @@ video {
 	font-family: 'Avenir Next';
 	src: url("./fonts/AvenirNextCyr-Demi.eot");
 	src: url("./fonts/AvenirNextCyr-Demi.eot?#iefix") format("embedded-opentype"), url("./fonts/AvenirNextCyr-Demi.woff2") format("woff2"), url("./fonts/AvenirNextCyr-Demi.woff") format("woff"), url("./fonts/AvenirNextCyr-Demi.ttf") format("truetype");
-	font-weight: bold;
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -305,7 +305,7 @@ video {
 	font-family: 'Avenir Next';
 	src: url("./fonts/AvenirNextCyr-DemiItalic.eot");
 	src: url("./fonts/AvenirNextCyr-DemiItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/AvenirNextCyr-DemiItalic.woff2") format("woff2"), url("./fonts/AvenirNextCyr-DemiItalic.woff") format("woff"), url("./fonts/AvenirNextCyr-DemiItalic.ttf") format("truetype");
-	font-weight: bold;
+	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
 }
@@ -1316,7 +1316,7 @@ mark {
 .post-big__image {
 	max-width: 640px;
 	width: 100%;
-	max-height: 570px;
+	height: 570px;
 	margin-bottom: 40px;
 }
 
@@ -1530,6 +1530,20 @@ mark {
 	resize: none;
 	font-size: 16px;
 	line-height: 150%;
+	transition: all .3s;
+	border: 1px solid transparent;
+}
+
+.form-regular input.wpcf7-not-valid, .form-regular textarea.wpcf7-not-valid, .form-regular select.wpcf7-not-valid {
+	border-color: #DC6761;
+}
+
+.form-regular input:not(.wpcf7-submit):focus, .form-regular textarea:not(.wpcf7-submit):focus, .form-regular select:not(.wpcf7-submit):focus {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-regular input:hover, .form-regular textarea:hover, .form-regular select:hover {
+	background: rgba(255, 255, 255, 0.08);
 }
 
 .form-regular input ::placeholder, .form-regular textarea ::placeholder, .form-regular select ::placeholder {
@@ -5121,11 +5135,6 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	}
 }
 
-.wpsd-master-wrapper .wpsd-wrapper-content ul#wpsd_donate_amount li {
-	background-color: red;
-	border-radius: 50%;
-}
-
 .post__info {
 	font-size: 14px;
 	font-weight: 500;
@@ -5928,6 +5937,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	padding: 5px;
 	border-radius: 25px;
 	font-size: 14px;
+	margin-left: 0 !important;
 }
 
 .posts-form__form .wpcf7-response-output[aria-hidden="true"] {
@@ -5941,6 +5951,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	border-radius: 25px;
 	font-size: 14px;
 	margin-top: 10px;
+	display: none;
 }
 
 .posts-form__form .wpcf7-spinner {

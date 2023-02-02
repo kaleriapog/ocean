@@ -494,6 +494,7 @@
       padding: 5px;
       border-radius: 25px;
       font-size: 14px;
+      margin-left: 0!important;
 
       &[aria-hidden="true"]{
         color: $color-blue;
@@ -507,6 +508,7 @@
       border-radius: 25px;
       font-size: 14px;
       margin-top: 10px;
+      display: none;
     }
 
     .wpcf7-spinner {

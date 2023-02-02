@@ -16,7 +16,7 @@ $position_text = $fields['position_text'];
                 <h2 class="title"><?php echo $title ?></h2>
             </div>
             <div class="section-video__video">
-                <video class="video" playsinline>
+                <video class="video" playsinline loop>
                     <source src="<?php echo $video['url'] ?>" type="video/mp4">
                 </video>
                 <div class="button-video">

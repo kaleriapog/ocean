@@ -510,7 +510,7 @@ mark {
   &__image {
     max-width: 640px;
     width: 100%;
-    max-height: 570px;
+    height: 570px;
     margin-bottom: 40px;
 
     @include media-laptop {
@@ -710,6 +710,20 @@ mark {
     resize: none;
     font-size: 16px;
     line-height: 150%;
+    transition: all .3s;
+    border: 1px solid transparent;
+
+    &.wpcf7-not-valid {
+      border-color: $color-red;
+    }
+
+    &:not(.wpcf7-submit):focus {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
 
     ::placeholder {
       color: rgba(255, 255, 255, 0.3);
