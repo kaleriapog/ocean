@@ -732,7 +732,7 @@ mark {
     }
 
     option {
-      max-height: 800px;
+      max-width: 800px;
     }
   }
 
@@ -756,6 +756,15 @@ mark {
     position: relative;
     margin-top: 10px;
 
+    &:hover {
+      .fake-button-submit {
+        background-color: #fff;
+
+        svg path {
+          fill: $color-black;
+        }
+      }
+    }
     @include media-mobile {
       margin-top: 25px;
       display: flex;
@@ -764,9 +773,7 @@ mark {
   }
 
   .wpcf7-spinner {
-    @include media-mobile {
-      position: absolute;
-    }
+    position: absolute;
   }
 
   #button-submit-page {
@@ -784,10 +791,6 @@ mark {
     padding-left: 0;
     z-index: 2;
     position: relative;
-
-    &:hover {
-      opacity: .8;
-    }
   }
 
   .fake-button-submit {
@@ -800,8 +803,12 @@ mark {
     position: absolute;
     border-radius: 50%;
     top: 0;
-    right: 72px;
+    right: 0;
     transition: all .3s;
+
+    &:hover {
+      background-color: red;
+    }
 
     @include media-mobile {
       right: 106px;
@@ -821,4 +828,98 @@ mark {
       line-height: 0;
     }
   }
+}
+
+form {
+  .select2-container--default .select2-selection--single {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 2px;
+    padding: 16px 50px 16px 20px;
+    font-size: 16px;
+    line-height: 150%;
+    height: auto;
+    border: none;
+    color: #fff;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    font-family: Avenir Next, sans-serif;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    background: url("./images/arrow.svg") no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    transition: all .3s;
+
+    b {
+      display: none;
+    }
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+  }
+
+  .select2.select2-container.select2-container--open .select2-selection__arrow {
+    transform: rotateX(180deg);
+  }
+}
+
+.select2-container {
+  .select2-dropdown {
+    background-color: $color-black;
+    border-radius: 2px;
+    top: 4px;
+    border: none;
+  }
+
+  .select2-results__option {
+    padding: 6px 20px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    font-family: Avenir Next, sans-serif;
+  }
+
+  .select2-results__options{
+    background: rgba(255, 255, 255, 0.03);
+    padding: 14px 0;
+    border: 1px solid #fff;
+  }
+
+  .select2-search--dropdown {
+    display: none;
+  }
+
+  .select2-results__options .select2-results__option--highlighted {
+    transition: background-color .3s;
+  }
+
+  .select2-results__options .select2-results__option--highlighted[aria-selected] {
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: background-color .3s;
+  }
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: $color-blue!important;
 }

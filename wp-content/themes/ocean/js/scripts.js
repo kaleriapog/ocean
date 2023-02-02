@@ -278,12 +278,14 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonsPopUp.forEach((buttonPopUp) => {
                 buttonPopUp.addEventListener('click', (elem) => {
                     document.querySelector('.section-contact-pop-up').classList.add('open')
+                    body.classList.add('open-menu')
                 })
             })
 
             buttonsClosePopUp.forEach((buttonClosePopUp) => {
                 buttonClosePopUp.addEventListener('click', (elem) => {
                     elem.target.closest('.section-contact-pop-up').classList.remove('open')
+                    body.classList.remove('open-menu')
                 })
             })
         })

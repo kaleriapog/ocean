@@ -215,7 +215,7 @@ get_header();
 
                             <?php
                             foreach ($posts as $key=>$p):
-                                if($key >= 6 && $key <= 12):
+                                if($key >= 6 && $key <= 11):
                                     get_template_part('partials/post-item',  NULL,  array('p' => $p));
                                 endif;
                             endforeach; ?>
@@ -223,8 +223,6 @@ get_header();
                         </ul>
 
                         <?php if(count($posts) >= 11) : ?>
-
-
 
                             <?php
                                 if(!empty($cat_ids)) {

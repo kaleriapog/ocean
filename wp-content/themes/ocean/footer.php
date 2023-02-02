@@ -22,7 +22,7 @@ $text = $footer['text'];
 
 	<footer id="colophon" class="footer">
 		<div class="size-main">
-            <div class="footer__wrapper" style="background-color: black;">
+            <div class="footer__wrapper">
                 <a class="footer-logo footer-logo-mobile" href="<?php echo get_option('home') ?>">
                     <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
                 </a>
