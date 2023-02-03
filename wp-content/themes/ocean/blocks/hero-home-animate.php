@@ -8,8 +8,8 @@ $link = $fields['link'];
 ?>
 
 <section class="section-hero-animate">
-    <div class="section-hero-animate__bg">
-        <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+    <div class="section-hero-animate__bg" style="background-image: url('<?php echo $image['url'] ?>')">
+<!--        <img src="--><?php //echo $image['url'] ?><!--" alt="--><?php //echo $image['title'] ?><!--">-->
     </div>
     <div class="section-hero-animate__content">
         <div class="size-main">

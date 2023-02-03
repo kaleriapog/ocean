@@ -159,6 +159,11 @@
 //body
 body {
   @extend %text-regular;
+  padding-top: 93px;
+
+  &.home {
+    padding-top: 0;
+  }
 
   &.open-menu {
     max-height: 100vh;
@@ -947,4 +952,8 @@ form {
 
 .select2-container--default .select2-results__option[aria-selected=true] {
   background-color: $color-blue!important;
+}
+
+.wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
+  display: none;
 }

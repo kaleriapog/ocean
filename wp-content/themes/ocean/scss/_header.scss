@@ -1,12 +1,13 @@
 .header {
   background-color: $color-black;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  transition: all .3s;
 
   &.header-transparent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
     background-color: transparent;
   }
 
@@ -239,7 +240,7 @@
     }
 
     .header__social {
-      display: none;
+      filter: invert(1);
     }
 
     .header__button {

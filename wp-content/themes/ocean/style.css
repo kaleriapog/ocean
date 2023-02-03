@@ -919,6 +919,14 @@ video {
 	background-color: #fff;
 }
 
+body {
+	padding-top: 93px;
+}
+
+body.home {
+	padding-top: 0;
+}
+
 body.open-menu {
 	max-height: 100vh;
 	overflow: hidden;
@@ -1777,16 +1785,21 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	background-color: #5092A4 !important;
 }
 
+.wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
+	display: none;
+}
+
 .header {
 	background-color: #0F1010;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 99;
+	transition: all .3s;
 }
 
 .header.header-transparent {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
 	background-color: transparent;
 }
 
@@ -2039,7 +2052,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 }
 
 .single-post .header .header__social {
-	display: none;
+	filter: invert(1);
 }
 
 .single-post .header .header__button .button {
@@ -2540,14 +2553,9 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 @media (max-width: 767px) {
 	.section-basic__image {
 		padding-top: 0;
-		height: auto;
-	}
-}
-
-@media (max-width: 400px) {
-	.section-basic__image {
 		height: 550px;
-		max-width: calc(100% + 30px);
+		max-width: 100vw;
+		width: 100vw;
 		margin: 0 -15px;
 	}
 }
@@ -3587,6 +3595,10 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	height: 100%;
 }
 
+.section-logos__item-image img {
+	object-fit: contain;
+}
+
 .section-hero-video {
 	background-color: #0F1010;
 	color: #fff;
@@ -3716,6 +3728,15 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	right: 0;
 	bottom: 0;
 	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+}
+
+@media (max-width: 767px) {
+	.section-hero-animate__bg {
+		background-position-x: 93%;
+	}
 }
 
 .section-hero-animate__content {
