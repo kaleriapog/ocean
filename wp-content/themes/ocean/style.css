@@ -1785,7 +1785,7 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	background-color: #5092A4 !important;
 }
 
-.wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
+select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
 	display: none;
 }
 
