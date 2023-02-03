@@ -27,7 +27,7 @@
 	text-transform: uppercase;
 }
 
-.footer__form input[type="email"] {
+.footer__form input[type="email"]::placeholder {
 	font-family: Avenir;
 	font-size: 54px;
 	font-weight: 900;
@@ -37,13 +37,13 @@
 }
 
 @media (max-width: 1200px) {
-	.footer__form input[type="email"] {
+	.footer__form input[type="email"]::placeholder {
 		font-size: 42px;
 	}
 }
 
 @media (max-width: 767px) {
-	.footer__form input[type="email"] {
+	.footer__form input[type="email"]::placeholder {
 		font-size: 22px;
 		letter-spacing: -0.045em;
 	}
@@ -433,11 +433,14 @@ video {
 	background-color: transparent;
 	max-width: 675px;
 	margin-right: 40px;
+	color: #fff;
+	font-size: 40px;
 }
 
 @media (max-width: 1200px) {
 	.footer__form input[type="email"] {
 		max-width: 540px;
+		font-size: 42px;
 	}
 }
 
@@ -445,6 +448,8 @@ video {
 	.footer__form input[type="email"] {
 		max-width: 280px;
 		margin-right: 18px;
+		font-size: 22px;
+		letter-spacing: -0.045em;
 	}
 }
 
@@ -537,6 +542,28 @@ video {
 
 .footer__form .wpcf7-response-output {
 	border: none !important;
+}
+
+.footer__form.invalid .wpcf7-response-output {
+	display: none;
+}
+
+.footer__form .wpcf7-not-valid-tip {
+	position: absolute;
+	color: #DC6761;
+}
+
+.footer__form .wpcf7-response-output {
+	position: absolute;
+	color: #5092A4;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+@media (max-width: 767px) {
+	.footer__form .wpcf7-response-output {
+		position: static;
+	}
 }
 
 .footer__content {

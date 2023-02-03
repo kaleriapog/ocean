@@ -27,24 +27,32 @@
     max-width: 800px;
 
     input[type="email"] {
-      @extend %form-footer-input;
       background-color: transparent;
       max-width: 675px;
       margin-right: 40px;
+      color: #fff;
+      font-size: 40px;
 
       @include media-large-laptop {
         max-width: 540px;
+        font-size: 42px;
       }
 
       @include media-mobile {
         max-width: 280px;
         margin-right: 18px;
+        font-size: 22px;
+        letter-spacing: -0.045em;
       }
 
       @include media-mobile-large {
         max-width: 71vw;
         font-size: 6vw;
         letter-spacing: -0.47vw;
+      }
+
+      &::placeholder {
+        @extend %form-footer-input;
       }
     }
 
@@ -124,6 +132,26 @@
     .wpcf7-response-output {
       @extend %font-nav;
       border: none!important;
+    }
+
+    &.invalid .wpcf7-response-output {
+      display: none;
+    }
+
+    .wpcf7-not-valid-tip {
+      position: absolute;
+      color: $color-red;
+    }
+
+    .wpcf7-response-output {
+      position: absolute;
+      color: $color-blue;
+      margin: 0!important;
+      padding: 0!important;
+
+      @include media-mobile {
+        position: static;
+      }
     }
   }
 

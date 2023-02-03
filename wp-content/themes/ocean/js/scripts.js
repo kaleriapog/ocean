@@ -20,12 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let formPost = document.querySelector('.posts-filter')
     let postsPanel = document.querySelector('.posts-panel')
     let postsSecondList = document.querySelector('.posts-second-list')
-    let sectionsWithPopUp =document.querySelectorAll('.section-with-pop-up')
+    let sectionsWithPopUp = document.querySelectorAll('.section-with-pop-up')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
     let mediaLaptop = (window.innerWidth < 1025)
-    let mediaTablet = (window.innerWidth < 993)
     let mediaHeight600 = (window.innerHeight < 600)
 
     if(openMenu) {
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(verticalSliders) {
-        new Swiper('.vertical-slider-left', {
+        let verticalSliderLeft = new Swiper('.vertical-slider-left', {
             direction: 'vertical',
             slidesPerView: 'auto',
             spaceBetween: 40,
@@ -72,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         });
 
-        new Swiper('.vertical-slider-right', {
+        let verticalSliderRight = new Swiper('.vertical-slider-right', {
             direction: 'vertical',
             slidesPerView: 'auto',
             spaceBetween: 40,
@@ -139,8 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if(headerTransparent) {
             window.addEventListener('scroll', () => {
                 let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-
-                console.log(scrollTop)
 
                 if (scrollTop >= 50) {
                     if (header.classList.contains('header-transparent')) {
@@ -297,4 +294,5 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
+
 })
