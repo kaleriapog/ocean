@@ -957,3 +957,28 @@ form {
 select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
   display: none;
 }
+
+.error-404 {
+  padding: 200px 0;
+  font-family: 'Avenir Next', sans-serif;
+  background-color: $color-black;
+
+  &__wrapper {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  &__name {
+    font-size: 80px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 70px;
+    line-height: 120%;
+    color: #fff;
+  }
+
+  &__link-home {
+    font-size: 30px;
+    display: block;
+  }
+}

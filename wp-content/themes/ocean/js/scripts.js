@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let postsPanel = document.querySelector('.posts-panel')
     let postsSecondList = document.querySelector('.posts-second-list')
     let sectionsWithPopUp = document.querySelectorAll('.section-with-pop-up')
+    let selects = document.querySelectorAll('select')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -295,4 +296,10 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    if(selects) {
+        jQuery(document).ready(function() {
+            jQuery('select').select2();
+        });
+    }
 })
+
