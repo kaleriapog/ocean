@@ -477,7 +477,7 @@ mark {
     transform: translate(-50%, -50%);
 
     @include media-main-size {
-      border: solid 155px $color-black;
+      border: solid 160px $color-black;
     }
 
     @include media-desktop-small {

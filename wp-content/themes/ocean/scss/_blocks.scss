@@ -2727,19 +2727,34 @@
 
 .wpforms-form {
   display: flex;
-  gap: 90px;
+  flex-wrap: wrap;
+  gap: 25px 90px;
   font-family: 'Avenir Next', sans-serif;
   padding-top: 260px;
   position: relative;
 
+  @include media-laptop {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 0;
+  }
+
   .wpforms-field-container {
     width: 100%;
     max-width: 815px;
+
+    @include media-laptop {
+      max-width: 100%;
+    }
   }
 
   .wpforms-page-indicator {
     max-width: 300px;
     width: 100%;
+
+    @include media-laptop {
+      max-width: 100%;
+    }
   }
 
   .wpforms-page-indicator-page-number {
@@ -2762,8 +2777,17 @@
     font-weight: 600;
     line-height: 120%;
 
+    @include media-laptop {
+      justify-content: center;
+      display: none;
+    }
+
     &.active {
       color: $color-blue;
+
+      @include media-laptop {
+        display: flex;
+      }
 
       .wpforms-page-indicator-page-number {
         border-color: $color-blue;
@@ -2773,6 +2797,10 @@
 
     &:last-child {
       margin-bottom: 0;
+
+      @include media-laptop {
+        margin-bottom: 36px;
+      }
     }
   }
 
@@ -2784,6 +2812,12 @@
     position: absolute;
     left: 0;
     top: 140px;
+
+    @include media-laptop {
+      position: static;
+      text-align: center;
+      margin: auto;
+    }
   }
 
   .wpforms-page-button, .wpforms-submit-container .wpforms-submit {
@@ -2813,14 +2847,20 @@
     justify-content: space-between;
 
     &.last {
-
       .wpforms-field {
         margin-bottom: 42px;
         max-width: 590px;
 
+        @include media-laptop {
+          max-width: 100%;
+        }
+
         &:first-child, &:last-child {
-          margin-bottom: 0;
           max-width: 815px;
+
+          @include media-laptop {
+            max-width: 100%;
+          }
         }
       }
 
@@ -2832,6 +2872,10 @@
       .wpforms-field-checkbox {
         gap: 24px;
       }
+    }
+
+    & > .wpforms-field-layout, .wpforms-field-pagebreak {
+      margin-bottom: 0!important;
     }
   }
 
@@ -2978,9 +3022,10 @@
   }
 
   .wpforms-submit-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    max-width: 1200px;
   }
 
   .wpforms-error {
