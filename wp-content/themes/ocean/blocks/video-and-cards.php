@@ -18,7 +18,7 @@ $cards = $fields['cards'];
 
             <div class="section-video-and-cards__video">
                 <div class="section-video-and-cards__video-inner">
-                    <video autoplay muted loop>
+                    <video autoplay muted loop playsinline>
                         <source src="<?php echo $video['url'] ?>" type="video/mp4">
                     </video>
                     <ul class="donuts">

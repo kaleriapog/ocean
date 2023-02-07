@@ -101,8 +101,11 @@ $mediaWidthDesktopExtraSmall: 1200px;
   line-height: 1;
   color: #fff;
 
+  @include media-mobile-menu {
+    font-size: 24px;
+  }
+
   @include media-mobile {
-    font-family: 'Avenir Next', sans-serif;
     font-size: 20px;
     font-weight: 900;
     line-height: 110%;
@@ -125,7 +128,6 @@ $mediaWidthDesktopExtraSmall: 1200px;
   font-size: 54px;
   font-weight: 700;
   line-height: 1.37;
-  //letter-spacing: -0.025em;
   color: rgba(255, 255, 255, .3);
 
   @include media-large-laptop {

@@ -50,6 +50,7 @@
   align-items: center;
   gap: 30px;
   @extend %text-regular;
+  font-weight: 600;
 
   @include media-mobile {
     flex-wrap: wrap;

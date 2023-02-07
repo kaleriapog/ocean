@@ -2683,6 +2683,8 @@
 .section-hero-donate {
   background-color: $color-black;
   color: #fff;
+  max-width: 100vw;
+  overflow: hidden;
 
   &__title {
     font-size: 170px;
@@ -2733,18 +2735,27 @@
   padding-top: 260px;
   position: relative;
 
+  @include media-large-laptop {
+    gap: 25px 30px;
+  }
+
   @include media-laptop {
     flex-direction: column;
     padding-top: 100px;
     gap: 0;
   }
 
+  @include media-mobile {
+    padding-top: 0;
+  }
+
   .wpforms-field-container {
     width: 100%;
-    max-width: 815px;
+    max-width: 64.2%;
 
     @include media-laptop {
       max-width: 100%;
+      margin-bottom: 25px;
     }
   }
 
@@ -2780,6 +2791,13 @@
     @include media-laptop {
       justify-content: center;
       display: none;
+    }
+
+    @include media-mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
 
     &.active {
@@ -2818,6 +2836,10 @@
       text-align: center;
       margin: auto;
     }
+
+    @include media-mobile {
+      font-size: 36px!important;
+    }
   }
 
   .wpforms-page-button, .wpforms-submit-container .wpforms-submit {
@@ -2855,6 +2877,10 @@
           max-width: 100%;
         }
 
+        @include media-mobile {
+          margin-bottom: 5px;
+        }
+
         &:first-child, &:last-child {
           max-width: 815px;
 
@@ -2867,15 +2893,41 @@
       .wpforms-field label {
         line-height: 150%;
         margin-bottom: 0;
+
+        @include media-mobile {
+          font-size: 16px;
+        }
       }
 
       .wpforms-field-checkbox {
         gap: 24px;
       }
+
+      .wpforms-field-layout:first-child {
+        .wpforms-field-layout-columns {
+          @include media-mobile {
+            display: none;
+          }
+        }
+      }
+
+      .wpforms-pagebreak-left {
+        @include media-mobile {
+          padding-top: 44px;
+        }
+      }
     }
 
     & > .wpforms-field-layout, .wpforms-field-pagebreak {
       margin-bottom: 0!important;
+    }
+
+    .wpforms-layout-column:first-child {
+      @include media-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
     }
   }
 
@@ -2886,6 +2938,10 @@
 
     &:not(:last-child) {
       margin-bottom: 28px;
+
+      @include media-mobile {
+        margin-bottom: 20px;
+      }
     }
 
     input, select, .select2-selection {
@@ -2945,12 +3001,20 @@
         flex-wrap: wrap;
         gap: 12px;
 
+        @include media-mobile {
+          gap: 8px;
+        }
+
         li {
           width: calc((100% - 24px) / 3);
           background: #fff;
           border-radius: 8px;
           position: relative;
           height: 150px;
+
+          @include media-mobile {
+            width: calc((100% - 8px) / 2);
+          }
 
           input[type=radio] {
             width: 100%;
@@ -3007,6 +3071,10 @@
 
     .wpforms-field-row {
       width: calc(50% - 8px);
+
+      @include media-mobile {
+        width: 100%;
+      }
     }
 
     .wpforms-field-row-block {
@@ -3019,6 +3087,10 @@
     justify-content: end;
     align-items: center;
     gap: 16px;
+
+    @include media-mobile {
+      justify-content: center;
+    }
   }
 
   .wpforms-submit-container {
@@ -3026,6 +3098,10 @@
     display: flex;
     justify-content: end;
     max-width: 1200px;
+
+    @include media-mobile {
+      justify-content: center;
+    }
   }
 
   .wpforms-error {
@@ -3034,6 +3110,13 @@
 
   .wpforms-field-layout-columns {
     margin-bottom: 10px;
+  }
+
+  .wpforms-field-checkbox {
+    @include media-mobile {
+      font-size: 12px;
+      padding-top: 22px;
+    }
   }
 }
 
