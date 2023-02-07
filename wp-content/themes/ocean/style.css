@@ -909,6 +909,7 @@ video {
 @media (max-width: 350px) {
 	.social-list {
 		gap: 8px 16px;
+		justify-content: start !important;
 	}
 }
 
@@ -1387,6 +1388,7 @@ mark {
 @media (max-width: 767px) {
 	.post-big__image {
 		margin-bottom: 0;
+		height: 320px;
 	}
 }
 
@@ -1865,7 +1867,6 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
 	gap: 20px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -1949,7 +1950,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	top: calc(100% - 10px);
 	left: 0;
 	padding: 16px;
-	background: rgba(255, 255, 255, 0.03);
+	background: #393B3B;
 	-webkit-backdrop-filter: blur(15px);
 	backdrop-filter: blur(15px);
 	border-radius: 8px;
@@ -2113,7 +2114,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 }
 
 .single-post .header .sub-menu {
-	background: rgba(29, 37, 45, 0.03);
+	background-color: #C7C9C9;
 }
 
 @media (max-width: 1260px) {

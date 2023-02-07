@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
@@ -97,7 +96,7 @@
     top: calc(100% - 10px);
     left: 0;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: $color-grey;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border-radius: 8px;
@@ -242,7 +241,7 @@
     }
 
     .sub-menu {
-      background: rgba(29, 37, 45, 0.03);
+      background-color: $color-grey-second;
 
       @include media-mobile-menu {
         background: transparent;

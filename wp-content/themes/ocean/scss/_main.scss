@@ -116,6 +116,7 @@
 
   @include media-mobile-small {
     gap: 8px 16px;
+    justify-content: start!important;
   }
 
   &__item.item-name {
@@ -537,6 +538,7 @@ mark {
 
     @include media-mobile {
       margin-bottom: 0;
+      height: 320px;
     }
   }
 
