@@ -24,7 +24,10 @@ $color_bg = $fields['background_color'];
 
                 </div>
                 <div class="section-basic__description">
-                    <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
+
+                    <?php if(!empty($link))  { ?>
+
+                        <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
 
                         <?php echo $link['title'] ?>
 
@@ -34,6 +37,9 @@ $color_bg = $fields['background_color'];
                             </svg>
                         </div>
                     </a>
+
+                    <?php } ?>
+
                     <div class="section-basic__text text"><?php echo $text ?></div>
                 </div>
             </div>

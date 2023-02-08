@@ -115,7 +115,7 @@
       }
 
       @include media-laptop {
-        max-height: 636px;
+        max-height: 54vw;
       }
 
       @include media-mobile {
@@ -378,6 +378,14 @@
     @include media-laptop {
       flex-direction: column-reverse;
       align-items: start;
+    }
+
+    @include media-tablet {
+      flex-direction: row-reverse;
+    }
+
+    @include media-mobile {
+      flex-direction: column-reverse;
     }
   }
 

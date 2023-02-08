@@ -1337,13 +1337,7 @@ mark {
 @media (max-width: 1024px) {
 	.donuts .donut-inner {
 		width: 168%;
-		border: solid 145px #0F1010;
-	}
-}
-
-@media (max-width: 991px) {
-	.donuts .donut-inner {
-		border: solid 110px #0F1010;
+		border: solid 14vw #0F1010;
 	}
 }
 
@@ -2341,7 +2335,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 @media (max-width: 1024px) {
 	.section-video-and-cards__video video {
-		max-height: 636px;
+		max-height: 54vw;
 	}
 }
 
@@ -2650,6 +2644,18 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	.section-basic__description {
 		flex-direction: column-reverse;
 		align-items: start;
+	}
+}
+
+@media (max-width: 991px) {
+	.section-basic__description {
+		flex-direction: row-reverse;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-basic__description {
+		flex-direction: column-reverse;
 	}
 }
 

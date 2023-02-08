@@ -493,11 +493,12 @@ mark {
 
     @include media-laptop {
       width: 168%;
-      border: solid 145px $color-black;
+      //border: solid 145px $color-black;
+      border: solid 14vw $color-black;
     }
 
     @include media-tablet {
-      border: solid 110px $color-black;
+      //border: solid 110px $color-black;
     }
 
     @include media-mobile {
