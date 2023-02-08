@@ -798,6 +798,11 @@
   }
 
   &__text-inner {
+
+    strong {
+      font-weight: 900;
+    }
+
     @include media-mobile {
       max-height: 360px;
       overflow: hidden;
@@ -918,6 +923,7 @@
     color: #fff;
     max-width: 640px;
     width: 100%;
+    opacity: 0.8;
   }
 
   &__wrapper {
@@ -3149,5 +3155,3 @@
     transform: translateY(0) skewY(0);
   }
 }
-
-//test1

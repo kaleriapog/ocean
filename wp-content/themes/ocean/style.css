@@ -3123,6 +3123,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	width: 640px;
 }
 
+.section-mission__text-inner strong {
+	font-weight: 900;
+}
+
 @media (max-width: 767px) {
 	.section-mission__text-inner {
 		max-height: 360px;
@@ -3260,6 +3264,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	color: #fff;
 	max-width: 640px;
 	width: 100%;
+	opacity: 0.8;
 }
 
 .section-with-cards__wrapper {
