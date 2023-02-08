@@ -1248,10 +1248,6 @@
 
 //section-logos
 .section-logos {
-  @include media-tablet {
-    display: none;
-  }
-
   .title {
     text-align: center;
     margin-bottom: 60px;
@@ -1274,6 +1270,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include media-tablet {
+      width: calc((100% - 48px) / 2);
+    }
+
+    @include media-mobile {
+      width: 100%;
+    }
   }
 
   &__item-image {
@@ -1542,6 +1546,10 @@
   &__right {
     max-width: 640px;
     width: 100%;
+
+    @include media-tablet {
+      max-width: 100%;
+    }
   }
 
   &__image {
@@ -1550,7 +1558,7 @@
     margin-bottom: 100px;
 
     @include media-tablet {
-      margin-bottom: 40px;
+      margin: 0 auto 40px;
     }
 
     @include media-mobile {
@@ -1565,6 +1573,10 @@
 
       @include media-tablet {
         display: block;
+        margin-top: 60px;
+      }
+
+      @include media-mobile {
         margin-top: 20px;
       }
     }
@@ -1619,6 +1631,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include media-tablet {
+      max-width: calc((100% - 40px) / 2);
+    }
 
     @include media-mobile {
       max-width: 100%;

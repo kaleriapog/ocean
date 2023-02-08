@@ -751,22 +751,29 @@ mark {
   }
 
   select {
-    -moz-appearance:none;
-    -webkit-appearance: none;
-    appearance: none;
-    background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
-    background-position: calc(100% - 0.75rem) center !important;
-    cursor: pointer;
+    //-moz-appearance:none;
+    //-webkit-appearance: none;
+    //appearance: none;
+    //background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
+    //background-position: calc(100% - 0.75rem) center !important;
+    //cursor: pointer;
+    //
+    //&:after {
+    //  content: '';
+    //  width: 20px;
+    //  height: 20px;
+    //  background-color: red;
+    //}
+    //
+    //option {
+    //  max-width: 800px;
+    //}
 
-    &:after {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background-color: red;
-    }
+    width: 100%;
+    max-width: 100%;
 
-    option {
-      max-width: 800px;
+    @include media-tablet {
+      width: calc(100vw - 30px);
     }
   }
 
@@ -790,6 +797,12 @@ mark {
     position: relative;
     margin-top: 10px;
 
+    @include media-mobile {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+    }
+
     &:hover {
       .fake-button-submit {
         background-color: #fff;
@@ -798,11 +811,6 @@ mark {
           fill: $color-black;
         }
       }
-    }
-    @include media-mobile {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
     }
   }
 
@@ -840,16 +848,12 @@ mark {
     right: 0;
     transition: all .3s;
 
+    @include media-mobile {
+      right: 0!important;
+    }
+
     &:hover {
       background-color: red;
-    }
-
-    @include media-mobile {
-      right: 106px;
-    }
-
-    @include media-mobile-small {
-      right: 80px;
     }
 
     svg {
@@ -860,6 +864,13 @@ mark {
 
     p {
       line-height: 0;
+    }
+  }
+
+  .button-submit-form {
+    @include media-mobile {
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -958,9 +969,9 @@ form {
   background-color: $color-blue!important;
 }
 
-select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
-  display: none;
-}
+//select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .select2-hidden-accessible {
+//  display: none;
+//}
 
 .error-404 {
   padding: 200px 0;
