@@ -1353,6 +1353,11 @@
     @include media-desktop-small {
       max-width: 100%;
       height: 100%;
+      max-height: 37vw;
+    }
+
+    @include media-mobile {
+      max-height: none;
     }
 
     video {
@@ -1377,6 +1382,10 @@
         }
 
         @include media-mobile {
+          border-width: 17vw;
+        }
+
+        @include media-mobile-regular {
           border-width: 16vw;
         }
       }
