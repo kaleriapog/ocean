@@ -2237,8 +2237,14 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	}
 }
 
+.section-about__title {
+	max-width: 540px;
+	width: 100%;
+}
+
 .section-about__text {
 	max-width: 640px;
+	width: 100%;
 }
 
 @media (max-width: 1200px) {

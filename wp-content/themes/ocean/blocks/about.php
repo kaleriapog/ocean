@@ -13,7 +13,7 @@ $endorsed = $fields['endorsed'];
             <span class="subtitle"><?php echo $subtitle?></span>
             <div class="section-about__content">
                 <div class="section-about__headline">
-                    <h2 class="title"><?php echo $title?></h2>
+                    <h2 class="section-about__title title"><?php echo $title?></h2>
                 </div>
                 <div class="section-about__text">
                     <div class="text"><?php echo $text?></div>
