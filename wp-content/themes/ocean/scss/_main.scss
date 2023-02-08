@@ -757,6 +757,7 @@ mark {
     background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
     background-position: calc(100% - 0.75rem) center !important;
     cursor: pointer;
+    display: none;
 
     //&:after {
     //  content: '';
