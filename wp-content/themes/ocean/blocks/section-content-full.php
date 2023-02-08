@@ -47,7 +47,8 @@ $use_pop_up = $fields['use_pop_up'];
 
                 <?php } ?>
 
-                <?php if($use_pop_up === true) { ?>
+                <?php if($use_pop_up === true && !empty($link)) { ?>
+
                     <div class="section-content-full__link desktop">
                         <div class="button-link button-link-pop-up">
 
@@ -60,6 +61,7 @@ $use_pop_up = $fields['use_pop_up'];
                             </div>
                         </div>
                     </div>
+
                 <?php } ?>
 
                 </div>
