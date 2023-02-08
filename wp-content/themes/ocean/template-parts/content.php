@@ -95,7 +95,7 @@ $color_bg = $fields['background_color'];
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<section class="section section-recent-posts">
+<section class="section section-recent-posts" style="background: #FAFAFA;">
     <div class="size-main">
         <div class="section-recent-posts__wrapper">
             <div class="section-recent-posts__headline">

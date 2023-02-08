@@ -6724,7 +6724,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 .posts__wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 	gap: 80px;
 	padding-top: 60px;
 }
@@ -7002,10 +7002,17 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	margin-bottom: 40px;
 }
 
+@media (max-width: 1200px) {
+	.post-last__title {
+		max-width: 78vw;
+	}
+}
+
 @media (max-width: 767px) {
 	.post-last__title {
 		font-size: 36px;
 		margin-bottom: 30px;
+		max-width: none;
 	}
 }
 

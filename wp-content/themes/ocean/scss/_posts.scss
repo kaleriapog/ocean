@@ -27,7 +27,7 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     gap: 80px;
     padding-top: 60px;
 
@@ -271,9 +271,14 @@
     width: 100%;
     margin-bottom: 40px;
 
+    @include media-large-laptop {
+      max-width: 78vw;
+    }
+
     @include media-mobile {
       font-size: 36px;
       margin-bottom: 30px;
+      max-width: none;
     }
   }
 

@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(postsPanel && postsSecondList && !mediaLaptop) {
-        new ScrollMagic.Scene({triggerElement: '.posts__wrapper', triggerHook: 'onLeave' })
+        new ScrollMagic.Scene({triggerElement: '.posts__wrapper', triggerHook: '0.1' })
             .setPin( '.posts-panel__wrapper')
             // .addIndicators({name: "section-interactive"})
             .addTo(controller)
