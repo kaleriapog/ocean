@@ -18,7 +18,10 @@ $endorsed = $fields['endorsed'];
                 <div class="section-about__text">
                     <div class="text"><?php echo $text?></div>
                     <div class="section-about__bottom">
-                        <a class="button-link" href="<?php echo $link['url'] ?>">
+
+                        <?php if(!empty($link)) { ?>
+
+                            <a class="button-link" href="<?php echo $link['url'] ?>">
 
                             <?php echo $link['title'] ?>
 
@@ -28,6 +31,9 @@ $endorsed = $fields['endorsed'];
                                 </svg>
                             </div>
                         </a>
+
+                        <?php } ?>
+
                         <div class="section-about__endorsed">
                             <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
                             <div class="endorsed-image">
