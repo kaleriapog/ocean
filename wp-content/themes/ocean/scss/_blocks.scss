@@ -1327,8 +1327,11 @@
     padding-top: 15px;
 
     @include media-mobile {
-      padding-top: 10px;
-      padding-left: 20px;
+      padding: 10px 25px 0 20px;
+    }
+
+    @include media-mobile-small {
+      padding: 10px 0 0;
     }
   }
 

@@ -3738,8 +3738,13 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 @media (max-width: 767px) {
 	.section-hero-video__headline {
-		padding-top: 10px;
-		padding-left: 20px;
+		padding: 10px 25px 0 20px;
+	}
+}
+
+@media (max-width: 350px) {
+	.section-hero-video__headline {
+		padding: 10px 0 0;
 	}
 }
 
