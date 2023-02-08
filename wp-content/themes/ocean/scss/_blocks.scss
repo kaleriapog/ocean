@@ -2617,6 +2617,11 @@
 
     @include media-mobile {
       margin-bottom: 30px;
+      font-size: 54px;
+    }
+
+    @include media-mobile-large {
+      font-size: 44px;
     }
 
     p:last-of-type {

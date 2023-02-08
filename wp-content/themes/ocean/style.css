@@ -5191,6 +5191,13 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 @media (max-width: 767px) {
 	.section-contact__title {
 		margin-bottom: 30px;
+		font-size: 54px;
+	}
+}
+
+@media (max-width: 400px) {
+	.section-contact__title {
+		font-size: 44px;
 	}
 }
 
