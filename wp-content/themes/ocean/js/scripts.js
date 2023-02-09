@@ -308,18 +308,19 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 let select2 = sectionContactPopUp.querySelector('.select2')
 
-                select2.addEventListener('click', () => {
-                    sectionContactPopUp.classList.toggle('hide')
-                })
-            }, 0)
+                if(select2) {
+                    select2.addEventListener('click', () => {
+                        sectionContactPopUp.classList.toggle('hide')
+                    })
+                }
+            }, 1)
 
             body.addEventListener('DOMNodeInserted', () => {
-
                 let options = document.querySelectorAll('.select2-results__option')
 
                 options.forEach((option) => {
-                    option.addEventListener('click', () => {
-                        sectionContactPopUp.classList.toggle('hide')
+                    option.addEventListener('click', (e) => {
+                        sectionContactPopUp.classList.remove('hide')
                     })
                 })
             })
