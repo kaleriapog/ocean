@@ -1617,6 +1617,14 @@ mark {
 	border: none;
 }
 
+.form-regular select:hover {
+	background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
+}
+
+.form-regular select:hover {
+	background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 1024px) {
 	.form-regular select {
 		display: block;

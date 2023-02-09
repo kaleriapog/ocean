@@ -763,6 +763,14 @@ mark {
     max-width: 100%;
     border: none;
 
+    &:hover {
+      background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.03);
+    }
+
+    &:hover {
+      background: url("./images/arrow.svg") no-repeat rgba(255, 255, 255, 0.08);
+    }
+
     @include media-laptop {
       display: block;
     }
