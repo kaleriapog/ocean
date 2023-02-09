@@ -28,9 +28,7 @@ $text = $footer['text'];
                 </a>
                 <div class="footer__top">
                     <div>
-                        <?php if(!empty($form)) {
-                            echo $form;
-                        } ?>
+                        <?php echo do_shortcode( '[contact-form-7 id="71" html_class="footer__form" title="Subscribe form"]' ); ?>
                     </div>
                     <div class="footer__social social-desktop">
                         <ul class="social-list">

@@ -34,7 +34,7 @@
 
 .footer__form input[type="email"]::placeholder {
 	font-family: 'Avenir Next', sans-serif;
-	font-size: 54px;
+	font-size: 52px;
 	font-weight: 700;
 	line-height: 1.37;
 	color: rgba(255, 255, 255, 0.3);
@@ -435,15 +435,17 @@ video {
 
 .footer__form input[type="email"] {
 	background-color: transparent;
-	max-width: 675px;
+	max-width: 690px;
 	margin-right: 40px;
 	color: #fff;
 	font-size: 40px;
+	letter-spacing: 0.02em;
+	width: 100%;
 }
 
 @media (max-width: 1200px) {
 	.footer__form input[type="email"] {
-		max-width: 540px;
+		max-width: 570px;
 		font-size: 42px;
 	}
 }
@@ -568,6 +570,10 @@ video {
 	.footer__form .wpcf7-response-output {
 		position: static;
 	}
+}
+
+.footer__form .wpcf7-form-control-wrap {
+	display: block;
 }
 
 .footer__content {
@@ -2854,6 +2860,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	.section-vertical-sliders__sliders {
 		display: none;
 	}
+}
+
+.section-vertical-sliders__link {
+	display: flex;
 }
 
 .section-vertical-sliders .vertical-slider__item {
@@ -5892,6 +5902,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 .post__title {
 	margin-bottom: 60px;
+	max-width: 890px;
 }
 
 @media (max-width: 767px) {
@@ -6013,7 +6024,13 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 }
 
 .post__content-inner figure img {
-	height: 280px;
+	height: 400px;
+}
+
+@media (max-width: 767px) {
+	.post__content-inner figure img {
+		height: 280px;
+	}
 }
 
 @media (max-width: 991px) {

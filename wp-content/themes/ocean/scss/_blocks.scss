@@ -550,6 +550,10 @@
     }
   }
 
+  &__link {
+    display: flex;
+  }
+
   .vertical-slider {
     &__item {
       max-width: 340px;

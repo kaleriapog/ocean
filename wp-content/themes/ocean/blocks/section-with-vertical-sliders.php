@@ -15,7 +15,10 @@ $slider_right = $sliders['slider_right'];
             <div class="section-vertical-sliders__headline">
                 <h2 class="title"><?php echo $title?></h2>
                 <div class="section-vertical-sliders__text text"><?php echo $text?></div>
-                <a class="button-link" href="<?php echo $link['url'] ?>">
+
+                <?php if(!empty($link)) { ?>
+                    <div class="section-vertical-sliders__link">
+                        <a class="button-link" href="<?php echo $link['url'] ?>">
 
                     <?php echo $link['title'] ?>
 
@@ -25,6 +28,10 @@ $slider_right = $sliders['slider_right'];
                         </svg>
                     </div>
                 </a>
+                    </div>
+
+                <?php } ?>
+
             </div>
             <div class="section-vertical-sliders__sliders">
 

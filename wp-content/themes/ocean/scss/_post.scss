@@ -17,6 +17,7 @@
 
   &__title {
     margin-bottom: 60px;
+    max-width: 890px;
 
     @include media-mobile {
       font-size: 36px;
@@ -124,7 +125,11 @@
       margin: 40px 0;
 
       img {
-        height: 280px;
+        height: 400px;
+
+        @include media-mobile {
+          height: 280px;
+        }
       }
     }
   }
