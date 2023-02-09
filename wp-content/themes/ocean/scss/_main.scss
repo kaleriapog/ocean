@@ -158,6 +158,12 @@
   }
 }
 
+.open-menu {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 //body
 body {
   @extend %text-regular;
@@ -165,12 +171,6 @@ body {
 
   &.home {
     padding-top: 0;
-  }
-
-  &.open-menu {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
   }
 }
 
