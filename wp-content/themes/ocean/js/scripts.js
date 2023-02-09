@@ -311,6 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(select2) {
                     select2.addEventListener('click', () => {
                         sectionContactPopUp.classList.toggle('hide')
+                        // body.classList.toggle('open-menu')
                     })
                 }
             }, 1)
@@ -321,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 options.forEach((option) => {
                     option.addEventListener('click', (e) => {
                         sectionContactPopUp.classList.remove('hide')
+                        // body.classList.remove('open-menu')
                     })
                 })
             })

@@ -961,8 +961,9 @@ body.home {
 }
 
 body.open-menu {
-	max-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
+	position: relative;
 }
 
 .endorsed-title {
