@@ -43,9 +43,15 @@ $color_bg = $fields['background_color'];
                     <div class="section-basic__text text"><?php echo $text ?></div>
                 </div>
             </div>
-            <div class="section-basic__image">
-                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-            </div>
+
+            <?php if(!empty($image)) { ?>
+
+                <div class="section-basic__image">
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                </div>
+                
+            <?php } ?>
+
         </div>
     </div>
 

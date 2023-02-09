@@ -5023,6 +5023,14 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	}
 }
 
+.section-video__info {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 40px;
+}
+
 .section-video .button-video:hover {
 	-webkit-backdrop-filter: blur(6px);
 	backdrop-filter: blur(6px);

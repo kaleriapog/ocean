@@ -61,28 +61,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(verticalSliders) {
-        let verticalSliderLeft = new Swiper('.vertical-slider-left', {
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            loop: true,
-            speed: 7000,
-            autoplay: {
-                delay: 1,
-            },
-        });
+        setTimeout(() => {
+            let verticalSliderLeft = new Swiper('.vertical-slider-left', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                loop: true,
+                speed: 7000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
 
-        let verticalSliderRight = new Swiper('.vertical-slider-right', {
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            loop: true,
-            speed: 7000,
-            autoplay: {
-                delay: 1,
-                reverseDirection: true,
-            },
-        });
+            let verticalSliderRight = new Swiper('.vertical-slider-right', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                loop: true,
+                speed: 7000,
+                autoplay: {
+                    delay: 1,
+                    reverseDirection: true,
+                },
+            });
+        }, 500)
     }
 
     if(showMore) {
@@ -96,34 +98,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(teamSlider) {
-        let teamSliderLeft = new Swiper('.team-slider-left', {
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            loop: !mediaMobile,
-            speed: 7000,
-            autoplay: {
-                delay: 1,
-            },
-        });
+        setTimeout(() => {
+            let teamSliderLeft = new Swiper('.team-slider-left', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                loop: !mediaMobile,
+                speed: 7000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
 
-        let teamSliderRight = new Swiper('.team-slider-right', {
-            direction: 'vertical',
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            speed: 7000,
-            loop: !mediaMobile,
-            autoplay: {
-                delay: 1,
-                reverseDirection: true,
-            },
+            let teamSliderRight = new Swiper('.team-slider-right', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                speed: 7000,
+                loop: !mediaMobile,
+                autoplay: {
+                    delay: 1,
+                    reverseDirection: true,
+                },
 
-        });
+            });
 
-        if(mediaMobile) {
-            teamSliderLeft.disable()
-            teamSliderRight.disable()
-        }
+            if(mediaMobile) {
+                teamSliderLeft.disable()
+                teamSliderRight.disable()
+            }
+        }, 500)
     }
 
     if(sectionHeroAnimate) {
@@ -134,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionHeroAnimate.style.paddingTop = `${getprop + headerHeight}px`
 
         let headerTransparent = document.querySelector('.header-transparent')
+
+        body.style.paddingTop = '0'
 
         //for fixed header
         if(headerTransparent) {
@@ -303,33 +309,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        //fix bugs scroll in iphone
-        if(mediaLaptop) {
-            let sectionContactPopUp = document.querySelector('.section-contact-pop-up')
-            let  html = document.querySelector('html')
-
-            setTimeout(() => {
-                let select2 = sectionContactPopUp.querySelector('.select2')
-
-                if(select2) {
-                    select2.addEventListener('click', () => {
-                        sectionContactPopUp.classList.toggle('hide')
-                        html.classList.toggle('open-menu')
-                    })
-                }
-            }, 1)
-
-            body.addEventListener('DOMNodeInserted', () => {
-                let options = document.querySelectorAll('.select2-results__option')
-
-                options.forEach((option) => {
-                    option.addEventListener('click', (e) => {
-                        sectionContactPopUp.classList.remove('hide')
-                        html.classList.remove('open-menu')
-                    })
-                })
-            })
-        }
+        // //fix bugs scroll in iphone
+        // if(mediaLaptop) {
+        //     let sectionContactPopUp = document.querySelector('.section-contact-pop-up')
+        //     let  html = document.querySelector('html')
+        //
+        //     setTimeout(() => {
+        //         let select2 = sectionContactPopUp.querySelector('.select2')
+        //
+        //         if(select2) {
+        //             select2.addEventListener('click', () => {
+        //                 sectionContactPopUp.classList.toggle('hide')
+        //                 html.classList.toggle('open-menu')
+        //             })
+        //         }
+        //     }, 1)
+        //
+        //     body.addEventListener('DOMNodeInserted', () => {
+        //         let options = document.querySelectorAll('.select2-results__option')
+        //
+        //         options.forEach((option) => {
+        //             option.addEventListener('click', (e) => {
+        //                 sectionContactPopUp.classList.remove('hide')
+        //                 html.classList.remove('open-menu')
+        //             })
+        //         })
+        //     })
+        // }
     }
 })
 
