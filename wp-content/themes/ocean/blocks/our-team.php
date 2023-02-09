@@ -86,5 +86,4 @@ $slider_right = $sliders['slider_right'];
             </div>
         </div>
     </div>
-
 </section>

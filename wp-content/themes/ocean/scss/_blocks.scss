@@ -1431,10 +1431,6 @@
     color: #fff;
   }
 
-  &__link {
-    display: flex;
-  }
-
   &__bg {
     position: absolute;
     top: 0;
@@ -1512,6 +1508,7 @@
   &__text {
     max-width: 390px;
     margin-bottom: 40px;
+    overflow: hidden;
 
     @include media-mobile {
       font-size: 16px;
@@ -1520,11 +1517,28 @@
     }
   }
 
+  &__text-wrapper {
+    transform: translateY(100%);
+    animation: hero-animate-title 1s forwards cubic-bezier(.165,.84,.44,1);
+    animation-delay: 1s;
+  }
+
   &__description {
     padding-left: 60px;
 
     @include media-mobile {
       padding-left: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    overflow: hidden;
+
+    .button-link {
+      transform: translateY(100%);
+      animation: hero-animate-title 1s forwards cubic-bezier(.165,.84,.44,1);
+      animation-delay: 1.2s;
     }
   }
 }
