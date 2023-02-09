@@ -22,11 +22,45 @@ $slider_right = $sliders['slider_right'];
                     <div class="slider-left team-slider team-slider-left swiper">
                         <div class="swiper-wrapper">
 
-                            <?php foreach ($slider_left as $key=>$item) {
+                            <?php for ($i = 1; $i <= 2; $i++) { ?>
+
+                                <?php foreach ($slider_left as $key=>$item) {
+                                    $image = $item['photo'];
+                                    $name = $item['name'];
+                                    $position = $item['position'];
+
+                                    ?>
+
+                                    <div class="swiper-slide team-slider__item">
+                                        <div class="team-slider__slide-inner">
+                                            <div class="team-slider__slide-image">
+                                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                            </div>
+                                            <div class="team-slider__slide-text">
+                                                <span class="team-slider__slide-name"><?php echo $name ?></span>
+                                                <span class="team-slider__slide-position text"><?php echo $position ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php } ?>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+
+                <?php } ?>
+                <?php if(!empty($slider_right)) { ?>
+
+                    <div class="slider-right team-slider team-slider-right swiper">
+                        <div class="swiper-wrapper">
+
+                            <?php for ($i = 1; $i <= 2; $i++) { ?>
+
+                                <?php foreach ($slider_right as $item) {
                                 $image = $item['photo'];
                                 $name = $item['name'];
                                 $position = $item['position'];
-
                                 ?>
 
                                 <div class="swiper-slide team-slider__item">
@@ -42,34 +76,6 @@ $slider_right = $sliders['slider_right'];
                                 </div>
 
                             <?php } ?>
-
-                        </div>
-                    </div>
-
-                <?php } ?>
-                <?php if(!empty($slider_right)) { ?>
-
-                    <div class="slider-right team-slider team-slider-right swiper">
-                        <div class="swiper-wrapper">
-
-                            <?php foreach ($slider_right as $item) {
-                                $image = $item['photo'];
-                                $name = $item['name'];
-                                $position = $item['position'];
-                                ?>
-
-                                <div class="swiper-slide team-slider__item">
-                                    <div class="team-slider__slide-inner">
-                                        <div class="team-slider__slide-image">
-                                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                                        </div>
-                                        <div class="team-slider__slide-text">
-                                            <span class="team-slider__slide-name"><?php echo $name ?></span>
-                                            <span class="team-slider__slide-position text"><?php echo $position ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-
                             <?php } ?>
 
                         </div>
