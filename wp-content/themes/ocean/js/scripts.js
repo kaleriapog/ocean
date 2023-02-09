@@ -300,6 +300,30 @@ document.addEventListener('DOMContentLoaded', function() {
         jQuery(document).ready(function() {
             jQuery('select').select2();
         });
+
+        //fix bugs scroll in iphone
+        if(mediaLaptop) {
+            let sectionContactPopUp = document.querySelector('.section-contact-pop-up')
+
+            setTimeout(() => {
+                let select2 = sectionContactPopUp.querySelector('.select2')
+
+                select2.addEventListener('click', () => {
+                    sectionContactPopUp.classList.toggle('hide')
+                })
+            }, 0)
+
+            body.addEventListener('DOMNodeInserted', () => {
+
+                let options = document.querySelectorAll('.select2-results__option')
+
+                options.forEach((option) => {
+                    option.addEventListener('click', () => {
+                        sectionContactPopUp.classList.toggle('hide')
+                    })
+                })
+            })
+        }
     }
 })
 

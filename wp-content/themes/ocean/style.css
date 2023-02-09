@@ -5261,6 +5261,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	z-index: 110;
 }
 
+.section-contact-pop-up.open.hide {
+	overflow: hidden;
+}
+
 .section-contact-pop-up .section-contact__title {
 	line-height: 105%;
 	margin-bottom: 60px;

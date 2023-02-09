@@ -2677,6 +2677,10 @@
     display: block;
     clip-path: inset(0 0 0 0);
     z-index: 110;
+
+    &.hide {
+      overflow: hidden;
+    }
   }
 
   .section-contact__title {
