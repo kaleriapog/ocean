@@ -6780,6 +6780,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	margin-bottom: 80px;
 }
 
+.posts__content {
+	width: 100%;
+}
+
 .posts .posts-panel {
 	max-width: 240px;
 	width: 100%;
