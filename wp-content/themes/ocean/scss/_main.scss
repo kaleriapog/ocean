@@ -759,20 +759,13 @@ mark {
     background-position: calc(100% - 0.75rem) center !important;
     cursor: pointer;
     display: none;
-
-    //&:after {
-    //  content: '';
-    //  width: 20px;
-    //  height: 20px;
-    //  background-color: red;
-    //}
-    //
-    //option {
-    //  max-width: 800px;
-    //}
-
     width: 100%;
     max-width: 100%;
+    border: none;
+
+    @include media-laptop {
+      display: block;
+    }
 
     @include media-tablet {
       width: calc(100vw - 30px);

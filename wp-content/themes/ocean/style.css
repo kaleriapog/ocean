@@ -952,18 +952,18 @@ video {
 	background-color: #fff;
 }
 
+.open-menu {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
 body {
 	padding-top: 93px;
 }
 
 body.home {
 	padding-top: 0;
-}
-
-body.open-menu {
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
 }
 
 .endorsed-title {
@@ -1614,6 +1614,13 @@ mark {
 	display: none;
 	width: 100%;
 	max-width: 100%;
+	border: none;
+}
+
+@media (max-width: 1024px) {
+	.form-regular select {
+		display: block;
+	}
 }
 
 @media (max-width: 991px) {

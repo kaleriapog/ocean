@@ -297,9 +297,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(selects) {
-        jQuery(document).ready(function() {
-            jQuery('select').select2();
-        });
+        if(!mediaLaptop) {
+            jQuery(document).ready(function() {
+                jQuery('select').select2();
+            });
+        }
 
         //fix bugs scroll in iphone
         if(mediaLaptop) {
