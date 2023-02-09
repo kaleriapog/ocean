@@ -304,6 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //fix bugs scroll in iphone
         if(mediaLaptop) {
             let sectionContactPopUp = document.querySelector('.section-contact-pop-up')
+            let  html = document.querySelector('html')
 
             setTimeout(() => {
                 let select2 = sectionContactPopUp.querySelector('.select2')
@@ -311,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(select2) {
                     select2.addEventListener('click', () => {
                         sectionContactPopUp.classList.toggle('hide')
-                        // body.classList.toggle('open-menu')
+                        html.classList.toggle('open-menu')
                     })
                 }
             }, 1)
@@ -322,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 options.forEach((option) => {
                     option.addEventListener('click', (e) => {
                         sectionContactPopUp.classList.remove('hide')
-                        // body.classList.remove('open-menu')
+                        html.classList.remove('open-menu')
                     })
                 })
             })
