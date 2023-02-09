@@ -82,6 +82,10 @@
     color: #fff;
     max-width: 925px;
     width: 100%;
+
+    @include media-mobile {
+      font-size: 28px;
+    }
   }
 
   &__headline {
@@ -101,7 +105,7 @@
     padding: 100px 0 90px;
 
     @include media-mobile {
-      max-width: 356px;
+      max-width: 91vw;
       margin: auto;
       padding: 35px 0;
     }
@@ -119,12 +123,21 @@
       }
 
       @include media-mobile {
-        max-width: 356px;
+        max-width: 100%;
         margin: auto;
         height: 185vw;
-        max-height: 716px;
+        max-height: none;
       }
     }
+  }
+
+  .donuts .donut-inner {
+    @include media-mobile {
+      border-width: 12vw;
+      width: 66vw;
+      height: 66vw;
+    }
+
   }
 
   &__video-inner {

@@ -2310,6 +2310,12 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	width: 100%;
 }
 
+@media (max-width: 767px) {
+	.section-video-and-cards .title {
+		font-size: 28px;
+	}
+}
+
 .section-video-and-cards__headline {
 	display: flex;
 	gap: 30px;
@@ -2331,7 +2337,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 @media (max-width: 767px) {
 	.section-video-and-cards__video {
-		max-width: 356px;
+		max-width: 91vw;
 		margin: auto;
 		padding: 35px 0;
 	}
@@ -2356,10 +2362,18 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 @media (max-width: 767px) {
 	.section-video-and-cards__video video {
-		max-width: 356px;
+		max-width: 100%;
 		margin: auto;
 		height: 185vw;
-		max-height: 716px;
+		max-height: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-video-and-cards .donuts .donut-inner {
+		border-width: 12vw;
+		width: 66vw;
+		height: 66vw;
 	}
 }
 
