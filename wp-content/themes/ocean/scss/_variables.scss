@@ -131,14 +131,18 @@ $mediaWidthDesktopExtraSmall: 1200px;
   font-weight: 700;
   line-height: 1.37;
   color: rgba(255, 255, 255, .3);
+  letter-spacing: 0.02em;
 
   @include media-large-laptop {
     font-size: 42px;
   }
 
   @include media-mobile {
-    font-size: 22px;
-    letter-spacing: -0.045em;
+    font-size: 20px;
+  }
+
+  @include media-mobile-small {
+    font-size: 16px;
   }
 }
 

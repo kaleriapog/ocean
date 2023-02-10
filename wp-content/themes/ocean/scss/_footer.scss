@@ -45,13 +45,11 @@
         max-width: 280px;
         margin-right: 18px;
         font-size: 22px;
-        letter-spacing: -0.045em;
       }
 
       @include media-mobile-large {
         max-width: 71vw;
         font-size: 6vw;
-        letter-spacing: -0.47vw;
       }
 
       &::placeholder {

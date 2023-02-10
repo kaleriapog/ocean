@@ -38,6 +38,7 @@
 	font-weight: 700;
 	line-height: 1.37;
 	color: rgba(255, 255, 255, 0.3);
+	letter-spacing: 0.02em;
 }
 
 @media (max-width: 1200px) {
@@ -48,8 +49,13 @@
 
 @media (max-width: 767px) {
 	.footer__form input[type="email"]::placeholder {
-		font-size: 22px;
-		letter-spacing: -0.045em;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 350px) {
+	.footer__form input[type="email"]::placeholder {
+		font-size: 16px;
 	}
 }
 
@@ -455,7 +461,6 @@ video {
 		max-width: 280px;
 		margin-right: 18px;
 		font-size: 22px;
-		letter-spacing: -0.045em;
 	}
 }
 
@@ -463,7 +468,6 @@ video {
 	.footer__form input[type="email"] {
 		max-width: 71vw;
 		font-size: 6vw;
-		letter-spacing: -0.47vw;
 	}
 }
 
