@@ -2698,6 +2698,14 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	}
 }
 
+.section-about .text h3 {
+	font-size: 16px;
+}
+
+.section-about .text h4 {
+	font-size: 14px;
+}
+
 .section-about__title {
 	max-width: 540px;
 	width: 100%;
