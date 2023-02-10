@@ -25,6 +25,14 @@
     @include media-mobile {
       margin-bottom: 42px;
     }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 14px;
+    }
   }
 
   &__title {
