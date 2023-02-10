@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let postsSecondList = document.querySelector('.posts-second-list')
     let sectionsWithPopUp = document.querySelectorAll('.section-with-pop-up')
     let selects = document.querySelectorAll('select')
+    let triggerOpenFormSimple = document.querySelector('.trigger-open-form-simple')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -308,34 +309,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 jQuery('select').select2();
             });
         }
+    }
 
-        // //fix bugs scroll in iphone
-        // if(mediaLaptop) {
-        //     let sectionContactPopUp = document.querySelector('.section-contact-pop-up')
-        //     let  html = document.querySelector('html')
-        //
-        //     setTimeout(() => {
-        //         let select2 = sectionContactPopUp.querySelector('.select2')
-        //
-        //         if(select2) {
-        //             select2.addEventListener('click', () => {
-        //                 sectionContactPopUp.classList.toggle('hide')
-        //                 html.classList.toggle('open-menu')
-        //             })
-        //         }
-        //     }, 1)
-        //
-        //     body.addEventListener('DOMNodeInserted', () => {
-        //         let options = document.querySelectorAll('.select2-results__option')
-        //
-        //         options.forEach((option) => {
-        //             option.addEventListener('click', (e) => {
-        //                 sectionContactPopUp.classList.remove('hide')
-        //                 html.classList.remove('open-menu')
-        //             })
-        //         })
-        //     })
-        // }
+    if(triggerOpenFormSimple) {
+        triggerOpenFormSimple.addEventListener('click', () => {
+            let content = document.querySelector('.section-form-simple__content')
+            let button = document.querySelector('.section-form-simple__button')
+
+            content.classList.add('open')
+
+            setTimeout(() => {
+                button.style.display = 'none'
+            }, 800)
+        })
     }
 })
 
