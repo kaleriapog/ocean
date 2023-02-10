@@ -4407,7 +4407,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 }
 
 .section-hero-animate__title-item:nth-child(3n) {
-	margin-left: 95px;
+	margin-left: 60px;
 }
 
 @media (max-width: 991px) {
