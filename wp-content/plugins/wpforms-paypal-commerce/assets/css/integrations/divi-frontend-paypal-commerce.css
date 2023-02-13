@@ -1,0 +1,38 @@
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container button[type=submit].wpforms-submit.wpforms-hidden {
+  display: none;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button {
+  position: relative;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button.size-small,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button.size-small {
+  width: 25%;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button.size-medium,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button.size-medium {
+  width: 60%;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button.size-large,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button.size-large {
+  width: 100%;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button .invisible,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button .invisible {
+  display: none;
+}
+
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button .paypal-buttons,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-single-submit-button .visible,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button .paypal-buttons,
+.et-db #et-boc .et-l .et_pb_module .wpforms-form .wpforms-submit-container .wpforms-paypal-commerce-subscriptions-submit-button .visible {
+  width: 100%;
+  height: inherit;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW50ZWdyYXRpb25zL2RpdmktZnJvbnRlbmQtcGF5cGFsLWNvbW1lcmNlLmNzcyIsInNvdXJjZXMiOlsiaW50ZWdyYXRpb25zL2RpdmktZnJvbnRlbmQtcGF5cGFsLWNvbW1lcmNlLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLy9cbi8vIERpdmkgZnJvbnRlbmQgc3R5bGVzLlxuLy9cbi5ldC1kYiAjZXQtYm9jIC5ldC1sIC5ldF9wYl9tb2R1bGUge1xuXG5cdC53cGZvcm1zLWZvcm0gLndwZm9ybXMtc3VibWl0LWNvbnRhaW5lciBidXR0b25bdHlwZT1zdWJtaXRdLndwZm9ybXMtc3VibWl0LndwZm9ybXMtaGlkZGVuIHtcblx0XHRkaXNwbGF5OiBub25lO1xuXHR9XG5cblx0LndwZm9ybXMtZm9ybSAud3Bmb3Jtcy1zdWJtaXQtY29udGFpbmVyIC53cGZvcm1zLXBheXBhbC1jb21tZXJjZS1zaW5nbGUtc3VibWl0LWJ1dHRvbixcblx0LndwZm9ybXMtZm9ybSAud3Bmb3Jtcy1zdWJtaXQtY29udGFpbmVyIC53cGZvcm1zLXBheXBhbC1jb21tZXJjZS1zdWJzY3JpcHRpb25zLXN1Ym1pdC1idXR0b24ge1xuXG5cdFx0cG9zaXRpb246IHJlbGF0aXZlO1xuXG5cdFx0Ji5zaXplLXNtYWxsIHtcblx0XHRcdHdpZHRoOiAyNSU7XG5cdFx0fVxuXG5cdFx0Ji5zaXplLW1lZGl1bSB7XG5cdFx0XHR3aWR0aDogNjAlO1xuXHRcdH1cblxuXHRcdCYuc2l6ZS1sYXJnZSB7XG5cdFx0XHR3aWR0aDogMTAwJTtcblx0XHR9XG5cblx0XHQuaW52aXNpYmxlIHtcblx0XHRcdGRpc3BsYXk6IG5vbmU7XG5cdFx0fVxuXG5cdFx0LnBheXBhbC1idXR0b25zLFxuXHRcdC52aXNpYmxlIHtcblx0XHRcdHdpZHRoOiAxMDAlO1xuXHRcdFx0aGVpZ2h0OiBpbmhlcml0O1xuXHRcdH1cblx0fVxufVxuXG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0EsQUFFQyxNQUZLLENB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 */

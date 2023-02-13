@@ -1,0 +1,626 @@
+# Copyright (C) 2022 WPForms PayPal Commerce
+# This file is distributed under the same license as the WPForms PayPal Commerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPForms PayPal Commerce\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: WPForms <support@wpforms.com>\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: WPForms PayPal Commerce\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: %s - WPForms.com documentation page URL.
+#: wpforms-paypal-commerce.php:134
+msgid "The WPForms PayPal Commerce plugin has been deactivated. Your site is running an outdated version of PHP that is no longer supported and is not compatible with the PayPal Commerce plugin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a> for additional information."
+msgstr ""
+
+#: wpforms-paypal-commerce.php:162
+msgid "The WPForms PayPal Commerce plugin has been deactivated, because it requires WPForms v1.7.7 or later to work."
+msgstr ""
+
+#: src/Frontend.php:161
+msgid "PayPal.js failed to load properly."
+msgstr ""
+
+#: src/Frontend.php:162
+msgid "PayPal payment was canceled."
+msgstr ""
+
+#: src/Frontend.php:163
+msgid "There was an error processing this payment. Please contact the site administrator."
+msgstr ""
+
+#: src/Frontend.php:164
+msgid "API error:"
+msgstr ""
+
+#: src/Frontend.php:165
+msgid "The payment was not processed because the payment amount is empty."
+msgstr ""
+
+#: src/Frontend.php:166
+msgid "There was an error creating this subscription. Please contact the site administrator."
+msgstr ""
+
+#: src/Frontend.php:167
+msgid "This payment cannot be processed because there was an error with 3D Secure authentication."
+msgstr ""
+
+#: src/Frontend.php:168
+msgid "is not supported. Please enter the details for a supported credit card."
+msgstr ""
+
+#: src/Frontend.php:169
+msgid "Please enter a valid card number."
+msgstr ""
+
+#: src/Frontend.php:170
+msgid "Please enter a valid date."
+msgstr ""
+
+#: src/Frontend.php:171
+msgid "Please enter the CVV number."
+msgstr ""
+
+#: src/Frontend.php:355, src/Fields/PaypalCommerce.php:823
+msgid "Card Number"
+msgstr ""
+
+#: src/Frontend.php:356, src/Fields/PaypalCommerce.php:824
+msgid "Expiration Date"
+msgstr ""
+
+#: src/Frontend.php:357, src/Fields/PaypalCommerce.php:825
+msgid "Security Code"
+msgstr ""
+
+#: src/Frontend.php:359, src/Fields/PaypalCommerce.php:826
+msgid "Card Holder Name"
+msgstr ""
+
+#. translators: %d - choice number.
+#. translators: %d - Choice ID.
+#: src/Frontend.php:510, src/Process/ProcessSingleAjax.php:245
+msgid "Choice %d"
+msgstr ""
+
+#: src/Admin/Builder.php:74
+msgid "<p>You must connect to PayPal Commerce before using the PayPal Commerce field.</p><p>To connect your account, please go to <strong>WPForms Settings » Payments » PayPal Commerce</strong> and press <strong>Connect with PayPal Commerce</strong> button.</p>"
+msgstr ""
+
+#: src/Admin/Builder.php:82
+msgid "<p>PayPal Commerce Payments must be enabled when using the PayPal Commerce field.</p><p>To proceed, please go to <strong>Payments » PayPal Commerce</strong> and select <strong>payment option</strong>.</p>"
+msgstr ""
+
+#: src/Admin/Builder.php:90
+msgid "<p>AJAX form submissions are required when using the PayPal Commerce field.</p><p>To proceed, please go to <strong>Settings » General</strong> and check <strong>Enable AJAX form submission</strong>.</p>"
+msgstr ""
+
+#: src/Admin/Builder.php:97
+msgid "The plan name can’t be changed once you save it. Please create a new plan."
+msgstr ""
+
+#: src/Admin/Builder.php:98
+msgid "The product type can’t be changed once you save it. Please create a new plan."
+msgstr ""
+
+#: src/Admin/Builder.php:99
+msgid "The recurring plan can’t be changed once you save it. Please create a new plan."
+msgstr ""
+
+#: src/Admin/Builder.php:123
+msgid "Enable for PayPal Commerce completed payments"
+msgstr ""
+
+#: src/Admin/Builder.php:130
+msgid "When enabled this notification will <em>only</em> be sent when a PayPal Commerce payment has been successfully <strong>completed</strong>."
+msgstr ""
+
+#: src/Admin/Builder.php:138
+msgid "PayPal Commerce completed payments"
+msgstr ""
+
+#: src/Admin/Connect.php:258, src/Process/ProcessSingleAjax.php:37, src/Process/ProcessSubscriptionAjax.php:39
+msgid "You are not allowed to perform this action."
+msgstr ""
+
+#: src/Admin/Entries.php:72, src/Admin/Settings.php:195, src/Fields/PaypalCommerce.php:24
+msgid "PayPal Commerce"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:79
+msgid "To use PayPal Commerce, first add the PayPal Commerce field to your form."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:97
+msgid "The PayPal Commerce addon can't be activated while PayPal Standard is in use. Please deactivate the PayPal Standard addon and try again."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:128
+msgid "Name"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:132, src/Admin/PaypalCommercePayment.php:147, src/Admin/PaypalCommercePayment.php:162, src/Admin/PaypalCommercePayment.php:177, src/Admin/PaypalCommercePayment.php:343
+msgid "--- Select a Field ---"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:133
+msgid "Select the field that contains the buyer's name. This field is optional."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:143
+msgid "Email"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:148
+msgid "Select the field that contains the buyer's email address. This field is optional."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:158
+msgid "Billing Address"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:163
+msgid "Select the field that contains the buyer's address. This field is optional."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:173, src/Admin/PaypalCommercePayment.php:337
+msgid "Shipping Address"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:178, src/Admin/PaypalCommercePayment.php:344
+msgid "Select the field that contains the buyer's shipping address. This field is optional."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:188
+msgid "Payment Description"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:191
+msgid "Enter a description for this payment."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:203, src/Admin/PaypalCommercePayment.php:373
+msgid "Process"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:205, src/Admin/PaypalCommercePayment.php:375
+msgid "Process this charge if"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:206
+msgid "PayPal Commerce One-Time payment"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:260
+msgid "Plan Name"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:265
+msgid "Enter a name for the recurring plan. Leave this field blank to use the default name."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:276
+msgid "Product Type"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:283
+msgid "Digital"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:284
+msgid "Physical"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:285
+msgid "Service"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:287
+msgid "Select the type of product that this subscription is for."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:297
+msgid "Recurring Times"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:304
+msgid "Weekly"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:305
+msgid "Monthly"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:306
+msgid "Quarterly"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:307
+msgid "Semi-Yearly"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:308
+msgid "Yearly"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:310, src/Admin/PaypalCommercePayment.php:327
+msgid "Select how often you would like the charge to recur."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:320
+msgid "Total Cycles"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:326
+msgid "Infinite"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:354
+msgid "Try to bill the customer again if the payment fails on the first attempt."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:376
+msgid "PayPal Commerce Recurring payment"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:393
+msgid "Credit card fields are not supported for subscriptions and will not display on your form."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:398
+msgid "It's not possible to process multiple plans at the same time. If your conditional logic matches more than one plan, the form will process the first plan that matches your conditions."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:418
+msgid "Connect to your PayPal account and start receiving payments today."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:424
+msgid "Connect to PayPal"
+msgstr ""
+
+#. translators: %s - the WPForms Payments settings page URL.
+#: src/Admin/PaypalCommercePayment.php:445
+msgid "Heads up! PayPal Commerce payments can't be processed because there's a problem with the connection to PayPal. Please visit the <a href='%2$s'>WPForms Settings</a> page to resolve the issue before trying again."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:452, src/Admin/Settings.php:300
+msgid "Sandbox"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:452, src/Admin/Settings.php:300
+msgid "Production"
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:473
+msgid "Connect WPForms to PayPal."
+msgstr ""
+
+#: src/Admin/PaypalCommercePayment.php:486
+msgid "Learn more about our PayPal Commerce integration."
+msgstr ""
+
+#: src/Admin/Settings.php:70
+msgid "<p>Switching sandbox/live modes requires PayPal Commerce account reconnection.</p><p>Press the <em>\"Connect with PayPal Commerce\"</em> button after saving the settings to reconnect.</p>"
+msgstr ""
+
+#: src/Admin/Settings.php:79
+msgid "Something went wrong while performing the authorization request."
+msgstr ""
+
+#: src/Admin/Settings.php:109
+msgid "Connection Status"
+msgstr ""
+
+#: src/Admin/Settings.php:118
+msgid "Test Mode"
+msgstr ""
+
+#. translators: %s - WPForms.com URL for PayPal Commerce payment with more details.
+#: src/Admin/Settings.php:121
+msgid "Check this option to prevent PayPal Commerce from processing live transactions. Please see our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">PayPal Commerce documentation</a> for full details."
+msgstr ""
+
+#: src/Admin/Settings.php:174
+msgid "Heads up! Your connection to PayPal Commerce is not complete. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#: src/Admin/Settings.php:180
+msgid "Heads up! Your connection to PayPal Commerce is not valid. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#. translators: %s - WPForms.com PayPal Commerce documentation article URL.
+#: src/Admin/Settings.php:198
+msgid "Easily collect PayPal Checkout and credit card payments with PayPal Commerce. To get started, see our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">PayPal Commerce documentation</a>."
+msgstr ""
+
+#. translators: %s - PayPal Commerce mode.
+#: src/Admin/Settings.php:295
+msgid "Connected to PayPal in <strong>%s</strong> mode."
+msgstr ""
+
+#. translators: %s - WPForms Payments page URL.
+#: src/Admin/Settings.php:320
+msgid "There’s a temporary problem with the connection to PayPal Commerce. Please click <a href=\"%s\" rel=\"noopener noreferrer\">here</a> to try again."
+msgstr ""
+
+#. translators: %s - WPForms.com PayPal Commerce documentation article URL.
+#: src/Admin/Settings.php:343
+msgid "Securely connect to PayPal Commerce with just a few clicks to begin accepting payments! <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more</a> about connecting with PayPal Commerce."
+msgstr ""
+
+#: src/Admin/Settings.php:368
+msgid "Your connection to PayPal Commerce is not complete. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#: src/Admin/Settings.php:382
+msgid "Your PayPal Commerce access token is not valid. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#: src/Admin/Settings.php:396
+msgid "Your PayPal Commerce client token is not valid. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#: src/Admin/Settings.php:423
+msgid "Payments are disabled."
+msgstr ""
+
+#: src/Admin/Settings.php:427
+msgid "Primary email unconfirmed."
+msgstr ""
+
+#: src/Admin/Settings.php:431
+msgid "Credit Card field support is disabled."
+msgstr ""
+
+#: src/Admin/Settings.php:435
+msgid "PayPal Checkout support is disabled."
+msgstr ""
+
+#: src/Admin/Settings.php:438
+msgid "Your PayPal Commerce connection is not valid. Please reconnect your PayPal Commerce account."
+msgstr ""
+
+#: src/Admin/Settings.php:458
+msgid "Connect PayPal Commerce account"
+msgstr ""
+
+#: src/Admin/Settings.php:459
+msgid "Connect with PayPal Commerce"
+msgstr ""
+
+#: src/Admin/Settings.php:480
+msgid "Disconnect PayPal Commerce account"
+msgstr ""
+
+#: src/Admin/Settings.php:481
+msgid "Disconnect"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:374
+msgid "Button Size"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:375
+msgid "PayPal checkout button size."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:387
+msgid "Responsive"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:388
+msgid "Small"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:389
+msgid "Medium"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:390
+msgid "Large"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:420
+msgid "Button Shape"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:421
+msgid "PayPal checkout button shape."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:433
+msgid "Pill"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:434
+msgid "Rectangle"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:464
+msgid "Button Color"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:465
+msgid "PayPal checkout button color."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:477
+msgid "Blue"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:478
+msgid "Black"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:479
+msgid "White"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:480
+msgid "Gold"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:481
+msgid "Silver"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:511
+msgid "Supported Payment Methods"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:512
+msgid "Select payment methods to enable."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:523, src/Fields/PaypalCommerce.php:568, src/Fields/PaypalCommerce.php:846, src/Fields/PaypalCommerce.php:1169, src/Process/Process.php:169
+msgid "PayPal Checkout"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:535, src/Fields/PaypalCommerce.php:569, src/Fields/PaypalCommerce.php:846, src/Fields/PaypalCommerce.php:1170, src/Process/Process.php:169
+msgid "Credit Card"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:555
+msgid "Default Payment Method"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:556
+msgid "Select the default payment method."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:600
+msgid "Supported Credit Cards"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:601
+msgid "Select supported credit cards."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:612
+msgid "American Express"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:624
+msgid "Discover"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:636
+msgid "Maestro"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:648
+msgid "Mastercard"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:660
+msgid "Visa"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:693
+msgid "Sublabels"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:694
+msgid "Additional credit card fields."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:860
+msgid "Please enable at least one payment method."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:861
+msgid "PayPal Checkout is enabled. The form’s submit button has been replaced by PayPal’s smart buttons."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:862
+msgid "Credit card fields will only be displayed when you select credit card as the payment method."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:866
+msgid "Please enable at least one credit card type."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1079
+msgid "Loading"
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1097
+msgid "This page is not secure. PayPal Commerce payments should be used for testing purposes only."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1105
+msgid "PayPal Commerce payments are disabled. Please set up a connection with PayPal in your form’s settings."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1113
+msgid "PayPal Commerce payments are disabled because your connection is not set up correctly. Please ask your site administrator to check the connection settings."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1121
+msgid "PayPal Commerce payments are not enabled in the form settings."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1129
+msgid "PayPal Commerce payments are disabled. Please enable at least one payment method in the form settings."
+msgstr ""
+
+#: src/Fields/PaypalCommerce.php:1137
+msgid "PayPal Commerce payments are disabled because details are missing from one of the recurring plans. Please ask your site administrator to check the form settings."
+msgstr ""
+
+#: src/Process/Base.php:88
+msgid "This payment cannot be processed because the account connection is missing."
+msgstr ""
+
+#: src/Process/Base.php:97
+msgid "This payment cannot be processed because the payment amount is not set, or is set to an invalid amount."
+msgstr ""
+
+#: src/Process/Process.php:117
+msgid "This payment cannot be processed because there was an error with the capture order API call."
+msgstr ""
+
+#: src/Process/Process.php:146
+msgid "This subscription cannot be activated because there was an error with the activation API call."
+msgstr ""
+
+#: src/Process/Process.php:175
+msgid "Payment Source: "
+msgstr ""
+
+#: src/Process/ProcessSingleAjax.php:43, src/Process/ProcessSubscriptionAjax.php:45
+msgid "Something went wrong. Please contact site administrator."
+msgstr ""
+
+#: src/Process/ProcessSingleAjax.php:56
+msgid "This order cannot be created because there was an error with the create order API call."
+msgstr ""
+
+#. translators: %d - Field ID.
+#: src/Process/ProcessSingleAjax.php:222
+msgid "Field #%d"
+msgstr ""
+
+#. translators: %d - Form ID.
+#: src/Process/ProcessSingleAjax.php:275
+msgid "Form #%d"
+msgstr ""
+
+#: src/Process/ProcessSubscriptionAjax.php:58
+msgid "This subscription cannot be created because there was an error with the create subscription API call."
+msgstr ""
+
+#: src/Process/ProcessSubscriptionAjax.php:96
+msgid "This subscription cannot be processed because there was an error with the subscription processing API call."
+msgstr ""
