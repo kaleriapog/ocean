@@ -10,14 +10,9 @@ $image = $fields['image'];
         <div class="section-hero-donate__image-inner">
             <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
         </div>
-        <ul class="donuts">
-            <li class="donut">
-                <div class="donut-inner"></div>
-            </li>
-            <li class="donut">
-                <div class="donut-inner"></div>
-            </li>
-        </ul>
+        <div class="section-hero-donate__image-mask">
+            <img src="<?php echo get_template_directory_uri() ?>/images/subtract.png" alt="subtract">
+        </div>
     </div>
     <div class="size-main">
         <div class="section-hero-donate__wrapper">
