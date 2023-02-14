@@ -2492,7 +2492,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 		z-index: 100;
 		padding: 40px 20px;
 		max-width: 400px;
-		width: 100%;
+		width: 100vw;
 		clip-path: inset(0 0 0 100%);
 		transition: clip-path .6s;
 	}
