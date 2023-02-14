@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(openMenu) {
         openMenu.addEventListener('click', () => {
             headerNavigation.style.right = '0'
+            headerNavigation.style.left = '0'
 
             setTimeout(() => {
                 headerNavigation.classList.add('open')
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 setTimeout(() => {
                     headerNavigation.style.right = '-100%'
+                    headerNavigation.style.left = '100%'
                 }, 800)
             })
         }
