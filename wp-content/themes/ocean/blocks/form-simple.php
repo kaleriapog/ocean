@@ -4,12 +4,22 @@ $headline = $fields['headline'];
 $title = $headline['title'];
 $text = $headline['text'];
 $icon_before_title = $headline['icon_before_title'];
+$image = $fields ['image'];
 
 ?>
 
 <section class="section section-form-simple">
     <div class="size-main">
         <div class="section-form-simple__wrapper">
+
+            <?php if(!empty($image)) { ?>
+
+            <div class="section-form-simple__image">
+                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+            </div>
+
+            <?php } ?>
+
             <div class="section-form-simple__headline">
                 <h2 class="section-form-simple__title title-hero">
 

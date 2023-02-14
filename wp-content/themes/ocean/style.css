@@ -6017,6 +6017,17 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	transition: opacity .8s ease;
 }
 
+.section-form-simple__image {
+	max-width: 450px;
+	margin: 0 auto 60px;
+}
+
+@media (max-width: 767px) {
+	.section-form-simple__image {
+		max-width: 300px;
+	}
+}
+
 .section-slider-bubble {
 	background-color: #0F1010;
 	color: #fff;
