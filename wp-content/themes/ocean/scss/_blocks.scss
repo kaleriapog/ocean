@@ -536,10 +536,6 @@
   &__text {
     max-width: 285px;
 
-    @include media-tablet {
-      max-width: 100%;
-    }
-
     @include media-mobile {
       color: #fff;
       max-width: 315px;
