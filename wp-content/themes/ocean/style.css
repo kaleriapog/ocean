@@ -2508,7 +2508,6 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 @media (max-width: 767px) {
 	.header__navigation {
-		left: 0;
 		padding: 25px 15px 25px 50px;
 		max-width: 100vw;
 	}
