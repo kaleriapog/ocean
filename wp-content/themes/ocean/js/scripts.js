@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selects = document.querySelectorAll('select')
     let triggerOpenFormSimple = document.querySelector('.trigger-open-form-simple')
     let sectionHeroDonateImage = document.querySelector('.section-hero-donate__image')
+    let swiperBubbleArr = document.querySelectorAll('.swiper-bubble')
 
     // media
     let mediaMobile = (window.innerWidth < 768)
@@ -341,6 +342,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // .addIndicators({name: "section-interactive"})
             .addTo(controller)
             .reverse(true);
+    }
+
+    if(swiperBubbleArr) {
+        swiperBubbleArr.forEach((swiperBubble) => {
+
+            setTimeout(() => {
+                let swiperBubbles = new Swiper(swiperBubble, {
+                    direction: 'horizontal',
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    loop: !mediaMobile,
+                    speed: 10000,
+                    autoplay: {
+                        delay: 1,
+                    },
+                });
+
+                if(mediaMobile) {
+                    swiperBubbles.disable()
+                }
+
+            }, 500)
+        })
     }
 })
 
