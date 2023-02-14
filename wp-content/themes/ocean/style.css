@@ -6037,6 +6037,12 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	margin-bottom: 80px;
 }
 
+@media (max-width: 767px) {
+	.section-slider-bubble__headline {
+		margin-bottom: 50px;
+	}
+}
+
 .section-slider-bubble__item {
 	max-width: 480px;
 	text-align: center;
@@ -6100,6 +6106,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	}
 }
 
+.section-our-impact {
+	padding-bottom: 0;
+}
+
 .section-our-impact__title {
 	margin-bottom: 80px;
 	text-align: center;
@@ -6115,6 +6125,12 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 @media (max-width: 767px) {
 	.section-our-impact__title {
 		font-size: 30px;
+	}
+}
+
+@media (max-width: 350px) {
+	.section-our-impact__title {
+		margin-bottom: 70px;
 	}
 }
 
@@ -6170,7 +6186,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 @media (max-width: 1024px) {
 	.section-our-impact__items {
 		flex-wrap: nowrap;
-		overflow-x: scroll;
+		overflow: scroll;
 		justify-content: start;
 		gap: 50px;
 	}

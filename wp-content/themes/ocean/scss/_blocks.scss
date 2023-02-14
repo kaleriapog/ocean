@@ -2955,6 +2955,10 @@
     max-width: 500px;
     width: 100%;
     margin-bottom: 80px;
+
+    @include media-mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -3016,6 +3020,8 @@
 
 //section-our-impact
 .section-our-impact {
+  padding-bottom: 0;
+
   &__title {
     margin-bottom: 80px;
     text-align: center;
@@ -3027,6 +3033,10 @@
 
     @include media-mobile {
       font-size: 30px;
+    }
+
+    @include media-mobile-small {
+      margin-bottom: 70px;
     }
   }
 
@@ -3074,7 +3084,7 @@
 
     @include media-laptop {
       flex-wrap: nowrap;
-      overflow-x: scroll;
+      overflow: scroll;
       justify-content: start;
       gap: 50px;
     }
