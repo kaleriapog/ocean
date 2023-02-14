@@ -2487,6 +2487,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 		position: fixed;
 		top: 0;
 		right: -100%;
+		left: 100%;
 		bottom: 0;
 		background-color: #0F1010;
 		z-index: 100;
