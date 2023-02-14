@@ -3295,12 +3295,6 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	max-width: 285px;
 }
 
-@media (max-width: 991px) {
-	.section-vertical-sliders__text {
-		max-width: 100%;
-	}
-}
-
 @media (max-width: 767px) {
 	.section-vertical-sliders__text {
 		color: #fff;
