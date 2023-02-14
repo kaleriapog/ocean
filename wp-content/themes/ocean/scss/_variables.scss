@@ -28,7 +28,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
 
 //for menu mobile
 @mixin media-mobile-menu {
-  @media (max-width: 1300px) {
+  @media (max-width: 1250px) {
     @content;
   }
 }
@@ -102,6 +102,10 @@ $mediaWidthDesktopExtraSmall: 1200px;
   font-weight: 500;
   line-height: 1;
   color: #fff;
+
+  @include media-desktop-small {
+    font-size: 14px;
+  }
 
   @include media-mobile-menu {
     font-size: 24px;
