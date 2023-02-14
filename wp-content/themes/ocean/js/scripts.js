@@ -33,14 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(openMenu) {
         openMenu.addEventListener('click', () => {
-            headerNavigation.classList.add('open')
-            body.classList.add('open-menu')
+            headerNavigation.style.right = '0'
+
+            setTimeout(() => {
+                headerNavigation.classList.add('open')
+                body.classList.add('open-menu')
+            }, 10)
         })
 
         if(closeMenu) {
             closeMenu.addEventListener('click', () => {
                 headerNavigation.classList.remove('open')
                 body.classList.remove('open-menu')
+
+                setTimeout(() => {
+                    headerNavigation.style.right = '-100%'
+                }, 800)
             })
         }
     }

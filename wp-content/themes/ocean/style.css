@@ -2486,7 +2486,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	.header__navigation {
 		position: fixed;
 		top: 0;
-		right: 0;
+		right: -100%;
 		bottom: 0;
 		background-color: #0F1010;
 		z-index: 100;
@@ -2494,7 +2494,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 		max-width: 400px;
 		width: 100%;
 		clip-path: inset(0 0 0 100%);
-		transition: all .6s;
+		transition: clip-path .6s;
 	}
 }
 
@@ -6136,6 +6136,13 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 
 .section-our-impact__content {
 	position: relative;
+}
+
+@media (max-width: 767px) {
+	.section-our-impact__content {
+		overflow-y: scroll;
+		z-index: 10;
+	}
 }
 
 .section-our-impact__image {

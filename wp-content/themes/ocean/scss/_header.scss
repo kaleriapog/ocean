@@ -159,7 +159,7 @@
     @include media-mobile-menu {
       position: fixed;
       top: 0;
-      right: 0;
+      right: -100%;
       bottom: 0;
       background-color: $color-black;
       z-index: 100;
@@ -167,7 +167,7 @@
       max-width: 400px;
       width: 100%;
       clip-path: inset(0 0 0 100%);
-      transition: all .6s;
+      transition: clip-path .6s;
     }
 
     @include media-laptop {

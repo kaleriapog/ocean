@@ -3042,6 +3042,11 @@
 
   &__content {
     position: relative;
+
+    @include media-mobile {
+      overflow-y: scroll;
+      z-index: 10;
+    }
   }
 
   &__image {
