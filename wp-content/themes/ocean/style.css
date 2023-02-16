@@ -2311,6 +2311,68 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	line-height: 120%;
 }
 
+.wpforms-form .regular-payment {
+	position: absolute;
+	right: 0;
+	top: 140px;
+}
+
+@media (max-width: 1024px) {
+	.wpforms-form .regular-payment {
+		position: static;
+	}
+}
+
+.wpforms-form .regular-payment ul {
+	display: flex;
+	gap: 20px 8px;
+}
+
+@media (max-width: 1024px) {
+	.wpforms-form .regular-payment ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+.wpforms-form .regular-payment li {
+	position: relative;
+	min-width: 230px;
+	display: inline-block;
+	background: #fff;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+.wpforms-form .regular-payment li.wpforms-selected input[type=radio] {
+	background-color: #5092A4;
+	background-image: none;
+}
+
+.wpforms-form .regular-payment li.wpforms-selected label {
+	color: #fff;
+}
+
+.wpforms-form .regular-payment label {
+	padding: 20px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	transition: color .3s;
+}
+
+.wpforms-form .regular-payment input[type=radio] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
 .wpforms-confirmation-container {
 	font-size: 48px;
 	line-height: 120%;

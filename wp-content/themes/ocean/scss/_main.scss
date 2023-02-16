@@ -1406,6 +1406,66 @@ form {
     font-weight: 600;
     line-height: 120%;
   }
+
+  .regular-payment {
+    position: absolute;
+    right: 0;
+    top: 140px;
+
+    @include media-laptop {
+      position: static;
+    }
+
+    ul {
+      display: flex;
+      gap: 20px 8px;
+
+      @include media-laptop {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    li {
+      position: relative;
+      min-width: 230px;
+      display: inline-block;
+      background: #fff;
+      border-radius: 100px;
+      overflow: hidden;
+
+      &.wpforms-selected input[type=radio] {
+        background-color: #5092A4;
+        background-image: none;
+      }
+
+      &.wpforms-selected {
+        label {
+          color: #fff;
+        }
+      }
+    }
+
+    label {
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      transition: color .3s;
+    }
+
+    input[type=radio] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .wpforms-confirmation-container {
