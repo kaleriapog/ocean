@@ -51,6 +51,17 @@ $slider_right = $sliders['slider_right'];
                                 </div>
 
                             <?php } ?>
+                            <?php foreach ($slider_left as $key=>$item) {
+                                $image = $item['image'];
+                                ?>
+
+                                <div class="swiper-slide vertical-slider__item">
+                                    <div class="vertical-slider__slide-inner">
+                                        <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                    </div>
+                                </div>
+
+                            <?php } ?>
 
                         </div>
                     </div>
@@ -61,6 +72,17 @@ $slider_right = $sliders['slider_right'];
                     <div class="slider-right vertical-slider vertical-slider-right swiper">
                         <div class="swiper-wrapper">
 
+                            <?php foreach ($slider_right as $item) {
+                                $image = $item['image'];
+                                ?>
+
+                                <div class="swiper-slide vertical-slider__item">
+                                    <div class="vertical-slider__slide-inner">
+                                        <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                    </div>
+                                </div>
+
+                            <?php } ?>
                             <?php foreach ($slider_right as $item) {
                                 $image = $item['image'];
                                 ?>

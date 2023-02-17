@@ -3494,6 +3494,16 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	max-height: 450px;
 }
 
+.section-vertical-sliders .vertical-slider__item img {
+	height: 450px;
+}
+
+@media (max-width: 1200px) {
+	.section-vertical-sliders .vertical-slider__item img {
+		height: 370px;
+	}
+}
+
 @media (max-width: 1200px) {
 	.section-vertical-sliders .vertical-slider__item {
 		max-height: 370px;

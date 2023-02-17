@@ -569,8 +569,15 @@
       max-width: 340px;
       max-height: 450px;
 
+      img {
+        height: 450px;
+
+        @include media-large-laptop {
+          height: 370px;
+        }
+      }
+
       @include media-large-laptop {
-        //max-width: 280px;
         max-height: 370px;
       }
     }
