@@ -79,9 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         sliderAchievementsSwiper.autoplay.stop()
 
-
         new ScrollMagic.Scene({triggerElement: '.section-slider', duration: '100%', triggerHook: 'onLeave' })
-            .addIndicators({name: 'section-slider'})
+            // .addIndicators({name: 'section-slider'})
             .addTo(controller)
             .on('start end', (e) => {
                 if(e.state === 'DURING' && e.type === 'start') {
