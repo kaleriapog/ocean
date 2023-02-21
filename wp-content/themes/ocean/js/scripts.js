@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(openMenu) {
         openMenu.addEventListener('click', () => {
             headerNavigation.style.right = '0'
-            headerNavigation.style.left = '0'
+            headerNavigation.style.left = 'auto'
 
             setTimeout(() => {
                 headerNavigation.classList.add('open')

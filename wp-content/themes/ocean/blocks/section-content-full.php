@@ -7,9 +7,11 @@ $link = $fields['link'];
 $items = $fields['items'];
 $subtitle = $fields['subtitle'];
 $use_pop_up = $fields['use_pop_up'];
+$id = $fields['id'];
+
 ?>
 
-<section style="" class="section section-content-full section-with-pop-up">
+<section style="" class="section section-content-full section-with-pop-up" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-content-full__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>

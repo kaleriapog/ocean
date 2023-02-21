@@ -5,10 +5,11 @@ $text = $fields['text'];
 $sliders = $fields['team'];
 $slider_left = $sliders['slider_left'];
 $slider_right = $sliders['slider_right'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-team">
+<section class="section section-team" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-team__wrapper">
             <div class="section-team__headline">

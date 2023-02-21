@@ -4,9 +4,11 @@ $title = $fields['title'];
 $subtitle = $fields['subtitle'];
 $video = $fields['video'];
 $cards = $fields['cards'];
+$id = $fields['id'];
+
 ?>
 
-<section class="section section-video-and-cards">
+<section class="section section-video-and-cards" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-video-and-cards__wrapper">
             <div class="section-video-and-cards__headline">

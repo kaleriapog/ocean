@@ -6,10 +6,11 @@ $link = $fields['link'];
 $sliders = $fields['sliders'];
 $slider_left = $sliders['slider_left'];
 $slider_right = $sliders['slider_right'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-vertical-sliders">
+<section class="section-vertical-sliders" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-vertical-sliders__wrapper">
             <div class="section-vertical-sliders__headline">

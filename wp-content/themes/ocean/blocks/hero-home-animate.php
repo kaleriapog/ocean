@@ -4,10 +4,11 @@ $title = $fields['title'];
 $text = $fields['text'];
 $image = $fields['image'];
 $link = $fields['link'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-hero-animate">
+<section class="section-hero-animate" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="section-hero-animate__bg" style="background-image: url('<?php echo $image['url'] ?>')">
     </div>
     <div class="section-hero-animate__content">

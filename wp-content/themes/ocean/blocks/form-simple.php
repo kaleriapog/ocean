@@ -5,10 +5,11 @@ $title = $headline['title'];
 $text = $headline['text'];
 $icon_before_title = $headline['icon_before_title'];
 $image = $fields ['image'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-form-simple">
+<section class="section section-form-simple" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-form-simple__wrapper">
 

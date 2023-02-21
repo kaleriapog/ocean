@@ -3,10 +3,11 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $text = $fields['text'];
 $video = $fields['video'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-hero section-hero-video">
+<section class="section-hero section-hero-video" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-hero-video__wrapper">
             <div class="section-hero-video__headline">

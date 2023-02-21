@@ -1,10 +1,11 @@
 <?php
 $fields = $args['fields'];
 $title = $fields['title'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-decorative-title">
+<section class="section-decorative-title" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-decorative-title__wrapper">
             <div class="section-decorative-title__title desktop">

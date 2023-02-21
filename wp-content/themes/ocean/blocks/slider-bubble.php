@@ -3,10 +3,11 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $slides = $fields['items'];
 $text = $fields['text'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-slider-bubble">
+<section class="section section-slider-bubble" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-slider-bubble__wrapper">
             <div class="section-slider-bubble__headline">

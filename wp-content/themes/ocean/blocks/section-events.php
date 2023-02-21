@@ -8,9 +8,11 @@ $benefit = $fields['benefit'];
 $benefit_title = $benefit['title'];
 $benefit_list = $benefit['list'];
 $workshop = $fields['workshop'];
+$id = $fields['id'];
+
 ?>
 
-<section class="section section-full-events">
+<section class="section section-full-events" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-full-events__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>

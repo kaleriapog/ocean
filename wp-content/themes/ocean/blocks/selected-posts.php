@@ -3,6 +3,7 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $text = $fields['text'];
 $link = $fields['link'];
+$posts = $fields['posts'];
 $id = $fields['id'];
 
 ?>
@@ -13,52 +14,35 @@ $id = $fields['id'];
 
             <?php if(!empty($title) || !empty($text)) { ?>
 
-            <div class="section-recent-posts__headline">
+                <div class="section-recent-posts__headline">
 
-                <?php if(!empty($title)) { ?>
+                    <?php if(!empty($title)) { ?>
 
-                    <h2 class="title"><?php echo $title?></h2>
+                        <h2 class="title"><?php echo $title?></h2>
 
-                <?php } ?>
-                <?php if(!empty($text)) { ?>
+                    <?php } ?>
+                    <?php if(!empty($text)) { ?>
 
-                    <div class=" section-recent-posts__text text"><?php echo $text?></div>
+                        <div class=" section-recent-posts__text text"><?php echo $text?></div>
 
-                <?php } ?>
+                    <?php } ?>
 
-            </div>
+                </div>
 
             <?php } ?>
 
             <div class="section-recent-posts__posts">
                 <div class="section-recent-posts__posts-left">
 
-                    <?php
-                    $result = wp_get_recent_posts( [
-                        'numberposts'      => 1,
-                        'offset'           => 0,
-                        'category'         => 0,
-                        'orderby'          => 'post_date',
-                        'order'            => 'DESC',
-                        'include'          => '',
-                        'exclude'          => '',
-                        'meta_key'         => '',
-                        'meta_value'       => '',
-                        'post_type'        => 'post',
-                        'post_status'      => 'publish',
-                        'suppress_filters' => true,
-                    ], OBJECT );
+                    <?php foreach($posts as $key=>$post) {
+                        $title = $post['post']->post_title;
+                        $author = get_the_author_meta('display_name', $post['post']->post_author);
+                        $data = $post['post']->post_date;
+                        $excerpt = $post['post']->post_excerpt;
+                        $thumbnail = get_the_post_thumbnail_url($post['post']);
+                        $permalink = get_post_permalink($post['post']);
 
-                    foreach($result as $key=>$post) {
-                        setup_postdata( $post );
-                        $title = get_the_title();
-                        $author = get_the_author();
-                        $data = get_the_date();
-                        $excerpt = get_the_excerpt();
-                        $thumbnail = get_the_post_thumbnail_url();
-                        $permalink = get_permalink();
-
-                        wp_reset_postdata();
+                        if($key === 0) {
 
                         ?>
 
@@ -74,36 +58,19 @@ $id = $fields['id'];
                             <div class="post-big__text text"><?php echo $excerpt ?></div>
                         </a>
 
-                    <?php } ?>
+                    <?php }} ?>
 
                 </div>
                 <div class="section-recent-posts__right">
 
-                    <?php
-                    $result = wp_get_recent_posts( [
-                        'numberposts'      => 3,
-                        'offset'           => 1,
-                        'category'         => 0,
-                        'orderby'          => 'post_date',
-                        'order'            => 'DESC',
-                        'include'          => '',
-                        'exclude'          => '',
-                        'meta_key'         => '',
-                        'meta_value'       => '',
-                        'post_type'        => 'post',
-                        'post_status'      => 'publish',
-                        'suppress_filters' => true,
-                    ], OBJECT );
+                    <?php foreach($posts as $key=>$post) {
+                        $title = $post['post']->post_title;
+                        $author = get_the_author_meta('display_name', $post['post']->post_author);
+                        $data = $post['post']->post_date;
+                        $excerpt = $post['post']->post_excerpt;
+                        $permalink = get_post_permalink($post['post']);
 
-                    foreach($result as $key=>$post) {
-                        setup_postdata( $post );
-                        $title = get_the_title();
-                        $author = get_the_author();
-                        $data = get_the_date();
-                        $excerpt = get_the_excerpt();
-                        $permalink = get_permalink();
-
-                        wp_reset_postdata();
+                        if($key > 0) {
                         ?>
 
                         <a class="post-regular" href="<?php echo $permalink ?>">
@@ -115,7 +82,7 @@ $id = $fields['id'];
                             <div class="post-regular__text text"><?php echo $excerpt ?></div>
                         </a>
 
-                    <?php } ?>
+                    <?php }} ?>
 
                 </div>
             </div>

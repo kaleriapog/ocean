@@ -3,10 +3,11 @@ $fields = $args['fields'];
 $cards = $fields['cards'];
 $bg_color = $fields['background_color'];
 $endorsed = $fields['endorsed'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-cards-samples" style="background-color: <?php echo $bg_color ?>">
+<section class="section-cards-samples" style="background-color: <?php echo $bg_color ?>" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <ul class="section-cards-samples__list">
 

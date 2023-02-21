@@ -6,10 +6,11 @@ $image = $fields['image'];
 $main_title = $fields['main_title'];
 $cards = $fields['cards'];
 $bg_color = $fields['background_color'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-hero-animate-image">
+<section class="section section-hero-animate-image" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-hero-animate-image__wrapper">
             <h1 class="section-hero-animate-image__title title-hero"><?php echo $title ?></h1>

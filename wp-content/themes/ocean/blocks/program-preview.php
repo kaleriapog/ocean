@@ -1,9 +1,11 @@
 <?php
 $fields = $args['fields'];
 $cards = $fields['cards'];
+$id = $fields['id'];
+
 ?>
 
-<section class="section section-program-preview">
+<section class="section section-program-preview" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-small">
         <div class="section-program-preview__wrapper">
             <ul class="section-program-preview__list">

@@ -4,10 +4,11 @@ $title = $fields['title'];
 $subtitle = $fields['subtitle'];
 $text = $fields['text'];
 $endorsed = $fields['endorsed'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-mission">
+<section class="section section-mission" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-mission__wrapper">
             <div class="section-mission__subtitle">

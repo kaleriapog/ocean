@@ -2,10 +2,11 @@
 $fields = $args['fields'];
 $title = $fields['title'];
 $image = $fields['image'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-hero-donate">
+<section class="section-hero-donate" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="section-hero-donate__image">
         <div class="section-hero-donate__image-inner">
             <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">

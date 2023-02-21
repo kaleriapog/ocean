@@ -6,10 +6,11 @@ $text = $fields['text'];
 $image = $fields['image'];
 $decor_title = $fields['decor_title'];
 $color_bg = $fields['background_color'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section-basic" style="background-color: <?php echo $color_bg ?>">
+<section class="section-basic" style="background-color: <?php echo $color_bg ?>" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-basic__wrapper">
             <div class="section-basic__content">
@@ -54,5 +55,4 @@ $color_bg = $fields['background_color'];
 
         </div>
     </div>
-
 </section>

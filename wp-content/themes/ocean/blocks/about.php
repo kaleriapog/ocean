@@ -5,9 +5,11 @@ $title = $fields['title'];
 $link = $fields['link'];
 $text = $fields['text'];
 $endorsed = $fields['endorsed'];
+$id = $fields['id'];
+
 ?>
 
-<section class="section section-about">
+<section class="section section-about" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-about__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>

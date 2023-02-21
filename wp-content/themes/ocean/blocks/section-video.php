@@ -7,9 +7,11 @@ $video = $fields['video'];
 $position_text = $fields['position_text'];
 $link = $fields['link'];
 $endorsed = $fields['endorsed'];
+$id = $fields['id'];
+
 ?>
 
-<section class="section section-video">
+<section class="section section-video" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-video__wrapper <?php if($position_text === true) { echo 'text-order';} ?>">
             <span class="subtitle"><?php echo $subtitle?></span>

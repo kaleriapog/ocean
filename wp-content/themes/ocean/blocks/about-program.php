@@ -7,10 +7,11 @@ $image = $fields['image'];
 $image_decor = $fields['decor_image'];
 $author = $fields['message']['author'];
 $message = $fields['message']['text'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-about-program">
+<section class="section section-about-program" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-about-program__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>

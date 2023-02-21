@@ -4,10 +4,11 @@ $subtitle = $fields['subtitle'];
 $title = $fields['title'];
 $text = $fields['text'];
 $images = $fields['images'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-slider-horizontal">
+<section class="section section-slider-horizontal" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-slider-horizontal__wrapper">
 

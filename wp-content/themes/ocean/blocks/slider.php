@@ -3,10 +3,11 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $subtitle = $fields['subtitle'];
 $slides = $fields['slides'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-slider">
+<section class="section section-slider" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-slider__wrapper">
             <span class="subtitle"><?php echo $subtitle?></span>

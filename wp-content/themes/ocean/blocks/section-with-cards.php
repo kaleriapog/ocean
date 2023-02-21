@@ -4,10 +4,11 @@ $subtitle = $fields['subtitle'];
 $title = $fields['title'];
 $text = $fields['text'];
 $cards = $fields['cards'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-with-cards">
+<section class="section section-with-cards" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-with-cards__wrapper">
             <div class="section-with-cards__headline">

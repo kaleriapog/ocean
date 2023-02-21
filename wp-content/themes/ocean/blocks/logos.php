@@ -2,10 +2,11 @@
 $fields = $args['fields'];
 $title = $fields['title'];
 $items = $fields['items'];
+$id = $fields['id'];
 
 ?>
 
-<section class="section section-logos">
+<section class="section section-logos" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-logos__wrapper">
             <div class="section-logos__headline">
