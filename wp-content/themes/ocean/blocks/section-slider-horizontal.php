@@ -54,6 +54,18 @@ $id = $fields['id'];
                     </li>
 
                 <?php } ?>
+                <?php foreach ($images as $item) {
+                    $image = $item['image'];
+
+                    ?>
+
+                    <li class="section-slider-horizontal__item swiper-slide">
+                        <div class="section-slider-horizontal__item-image">
+                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                        </div>
+                    </li>
+
+                <?php } ?>
 
             </ul>
             <div class="button-slider">

@@ -3845,7 +3845,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 @media (max-width: 991px) {
 	.section-cards-samples__list {
 		flex-direction: column-reverse;
-		gap: 40px;
+		gap: 70px;
 	}
 }
 
@@ -3863,7 +3863,7 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 @media (max-width: 991px) {
 	.section-cards-samples__item {
 		max-width: 100%;
-		padding-top: 20px;
+		padding-top: 70px;
 		border-top: 1px solid #0F1010;
 	}
 }

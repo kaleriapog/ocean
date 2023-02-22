@@ -264,8 +264,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let sectionSliderHorizontal = new Swiper('.section-slider-horizontal__items', {
             direction: 'horizontal',
             slidesPerView: 'auto',
+            observer: true,
+            loopedSlides: 5,
             spaceBetween: 40,
             loop: true,
+            observeParents: true,
+            resizeObserver: true,
+            observeSlideChildren: true,
             slidesOffsetBefore: -120,
             breakpoints: {
                 320: {
