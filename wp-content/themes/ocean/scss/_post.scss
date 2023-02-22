@@ -226,6 +226,12 @@
    }
 }
 
+.post-last {
+  .category-list {
+    justify-content: end;
+  }
+}
+
 .category-list {
   display: flex;
   gap: 10px;

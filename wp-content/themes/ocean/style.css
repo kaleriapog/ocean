@@ -6817,6 +6817,10 @@ select .wpcf7-form-control, .wpcf7-selct-multiselct, .wpcf7-selct_multiselct, .s
 	}
 }
 
+.post-last .category-list {
+	justify-content: end;
+}
+
 .category-list {
 	display: flex;
 	gap: 10px;
