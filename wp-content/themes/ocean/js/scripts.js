@@ -266,11 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 loop: true,
                 slidesPerView: 'auto',
                 loopedSlides: 2,
-                observer: true,
                 spaceBetween: 40,
-                observeParents: true,
-                resizeObserver: true,
-                observeSlideChildren: true,
                 slidesOffsetBefore: -120,
                 breakpoints: {
                     320: {
