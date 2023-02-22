@@ -3,7 +3,6 @@
 
 global $wp;
 $current_url = home_url( add_query_arg( NULL, NULL ) );
-//$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $all_cats = get_categories();
 $action = '/'.$post->post_name.'/?paged=1';
 
@@ -49,14 +48,14 @@ $current_number_of_posts = $query->found_posts;
 $selected_post = $args['fields']['selected_post'];
 $number_of_posts = wp_count_posts()->publish;
 
-$cats = get_the_category($post_last->ID);
-$cat_list = '';
-if (!empty($cats)) {
-    foreach ( $cats as $cat ) {
-        $cat_list .= $cat->name;
-    }
-}
-$cat_list = rtrim( $cat_list, ', ' );
+$categories = get_the_category($post_last);
+//$cat_list = '';
+//if (!empty($cats)) {
+//    foreach ( $cats as $cat ) {
+//        $cat_list .= $cat->name;
+//    }
+//}
+//$cat_list = rtrim( $cat_list, ', ' );
 
 $form_subscribe = get_field('form_subscribe', 'options');
 $form = $form_subscribe['form'];
@@ -106,15 +105,25 @@ get_header();
                                 </div>
                             </div>
 
-                            <?php if (!empty(get_the_category($post_last))): ?>
+                            <?php if(!empty($categories)) { ?>
 
-                                <div class="post-last__item-category category" <?php if (!empty(get_the_category($post_last)[0]->category_description)) {echo 'style="background-color: ' . get_the_category($post_last)[0]->category_description . ';"';} ?>>
+                                <ul class="category-list">
 
-                                    <?php echo $cat_list; ?>
+                                    <?php foreach ($categories as $key=>$cat) {
+                                        $category = $cat->cat_name;
+                                        $category_description = $cat->category_description?>
 
-                                </div>
+                                        <li class="post__category category" style="background-color: <?php echo $category_description ?>">
 
-                            <?php endif; ?>
+                                            <?php echo $category ?>
+
+                                        </li>
+
+                                    <?php } ?>
+
+                                </ul>
+
+                            <?php } ?>
 
                         </div>
                     </div>

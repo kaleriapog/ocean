@@ -9,9 +9,7 @@
 
 
 global $post;
-$category = get_the_category($post->ID)[0]->cat_name;
-$category_description = get_the_category($post->ID)[0]->category_description;
-
+$categories = get_the_category($post->ID);
 $fields = get_field('last_block_in_posts', 'options');
 $title = $fields['title'];
 $link = $fields['link'];
@@ -28,7 +26,27 @@ $color_bg = $fields['background_color'];
                 <span class="post__data"><?php the_date(); ?></span>
                 <span class="post__author"><?php the_author(); ?></span>
                 <div class="post__info-category">
-                    <span class="post__category category" style="background-color: <?php echo $category_description ?>"><?php echo $category ?></span>
+
+                    <?php if(!empty($categories)) { ?>
+
+                    <ul class="category-list">
+
+                        <?php foreach ($categories as $key=>$cat) {
+                            $category = $cat->cat_name;
+                            $category_description = $cat->category_description?>
+
+                        <li class="post__category category" style="background-color: <?php echo $category_description ?>">
+
+                            <?php echo $category ?>
+
+                        </li>
+
+                        <?php } ?>
+
+                    </ul>
+
+                    <?php } ?>
+
                 </div>
             </div>
             <h1 class="post__title title"><?php the_title(); ?></h1>
