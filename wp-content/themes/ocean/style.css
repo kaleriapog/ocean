@@ -2048,6 +2048,10 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 	}
 }
 
+.wpforms-form .wpforms-page.last .wpforms-pagebreak-left {
+	display: none;
+}
+
 @media (max-width: 767px) {
 	.wpforms-form .wpforms-page.last .wpforms-pagebreak-left {
 		padding-top: 44px;
@@ -2425,6 +2429,12 @@ form .select2.select2-container.select2-container--open .select2-selection__arro
 
 .wpforms-confirmation-container a {
 	margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+	.wpforms-container .wpforms-form .wpforms-field-layout .wpforms-layout-column {
+		padding: 0 10px !important;
+	}
 }
 
 .select2-container .select2-dropdown {

@@ -1144,6 +1144,8 @@ form {
       }
 
       .wpforms-pagebreak-left {
+        display: none;
+
         @include media-mobile {
           padding-top: 44px;
         }
@@ -1521,6 +1523,12 @@ form {
 
   a {
     margin-top: 40px;
+  }
+}
+
+.wpforms-container .wpforms-form .wpforms-field-layout .wpforms-layout-column {
+  @include media-mobile {
+    padding: 0 10px!important;
   }
 }
 
