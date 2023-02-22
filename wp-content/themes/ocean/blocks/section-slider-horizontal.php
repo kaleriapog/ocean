@@ -68,7 +68,7 @@ $id = $fields['id'];
                 <?php } ?>
 
             </ul>
-            <div class="button-slider">
+            <div class="button-slider" style="cursor: auto">
                 <span class="button-slider__drag">Drag</span>
             </div>
         </div>

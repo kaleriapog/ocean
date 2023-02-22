@@ -261,35 +261,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(sliderHorizontalItems) {
-        let sectionSliderHorizontal = new Swiper('.section-slider-horizontal__items', {
-            direction: 'horizontal',
-            slidesPerView: 'auto',
-            observer: true,
-            loopedSlides: 5,
-            spaceBetween: 40,
-            loop: true,
-            observeParents: true,
-            resizeObserver: true,
-            observeSlideChildren: true,
-            slidesOffsetBefore: -120,
-            breakpoints: {
-                320: {
-                    spaceBetween: 20,
-                    slidesOffsetBefore: -80,
+            let sectionSliderHorizontal = new Swiper('.section-slider-horizontal__items', {
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: 'auto',
+                loopedSlides: 2,
+                observer: true,
+                spaceBetween: 40,
+                observeParents: true,
+                resizeObserver: true,
+                observeSlideChildren: true,
+                slidesOffsetBefore: -120,
+                breakpoints: {
+                    320: {
+                        spaceBetween: 20,
+                        slidesOffsetBefore: -80,
+                    },
+                    768: {
+                        spaceBetween: 40,
+                        slidesOffsetBefore: -120,
+                    },
                 },
-                768: {
-                    spaceBetween: 40,
-                    slidesOffsetBefore: -120,
-                },
-            }
-        });
 
-        sectionSliderHorizontal.on('slideChange', function () {
-            let button = document.querySelector('.section-slider-horizontal__items .button-slider')
+            });
 
-            button.style.display = 'none'
-        });
-    }
+            sectionSliderHorizontal.on('slideChange', function () {
+                let button = document.querySelector('.section-slider-horizontal__items .button-slider')
+
+                button.style.display = 'none'
+            });
+        }
 
     if(sharePostCopy) {
         let urlCurrentPost = location.href
