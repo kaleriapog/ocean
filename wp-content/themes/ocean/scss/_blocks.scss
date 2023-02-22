@@ -1423,11 +1423,7 @@
         }
 
         @include media-mobile {
-          border-width: 17vw;
-        }
-
-        @include media-mobile-regular {
-          border-width: 16vw;
+          border-width: 15.5vw;
         }
       }
     }
@@ -2492,6 +2488,10 @@
   .button-video {
     @extend %button-circle;
 
+    &.opacity {
+      opacity: 0;
+    }
+
     &:hover {
       -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6px);
@@ -2499,7 +2499,11 @@
 
     &.play {
       &:hover {
-        opacity: 1!important;
+        opacity: 1;
+
+        @include media-laptop {
+          opacity: 1;
+        }
       }
       .button-video__play {
         display: none;
@@ -2507,6 +2511,12 @@
 
       .button-video__pause {
         display: block;
+      }
+    }
+
+    &.opacity.play {
+      @include media-laptop {
+        opacity: 0;
       }
     }
 

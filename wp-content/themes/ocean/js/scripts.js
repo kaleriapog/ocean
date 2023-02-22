@@ -220,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(buttonsVideo) {
-
         buttonsVideo.forEach((buttonVideo) => {
             let video = buttonVideo.closest('.button-video').previousElementSibling
 
@@ -242,13 +241,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     button.classList.add('play')
 
                     setTimeout(() => {
-                        button.style.opacity = '0'
+                        button.classList.add('opacity')
                     }, 2000)
 
                 } else {
                     video.pause();
                     button.classList.remove('play')
-                    button.style.opacity = '1'
+                    button.classList.remove('opacity')
                 }
                 return false;
             })
@@ -256,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
             video.addEventListener('ended', (elem) => {
                 let buttonPlay = elem.target.nextElementSibling
                 buttonPlay.classList.remove('play')
-                buttonPlay.style.opacity = '1'
+                buttonPlay.classList.remove('opacity')
             })
         })
     }
