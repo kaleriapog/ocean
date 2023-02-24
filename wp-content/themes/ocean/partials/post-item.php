@@ -23,7 +23,7 @@ $categories = get_the_category($p);
         </div>
         <div class="posts__item-bottom">
             <div class="posts__item-info">
-                <time>
+                <time datetime="<?php echo get_the_date('j.  m.  Y', $p); ?>">
 
                     <?php echo get_the_date('j.  m.  Y', $p); ?>
 

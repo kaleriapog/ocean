@@ -11,8 +11,18 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-hero-video__wrapper">
             <div class="section-hero-video__headline">
-                <h2 class="section-hero-video__title title-hero"><?php echo $title?></h2>
-                <div class="section-hero-video__text text-hero"><?php echo $text?></div>
+
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="section-hero-video__title title-hero"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+                <?php if(!empty($text)) { ?>
+
+                    <div class="section-hero-video__text text-hero"><?php echo $text?></div>
+
+                <?php } ?>
+
             </div>
 
             <?php if(!empty($video)) { ?>

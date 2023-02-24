@@ -13,8 +13,19 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-team__wrapper">
             <div class="section-team__headline">
-                <h2 class="title"><?php echo $title ?></h2>
-                <div class="section-team__text text-medium"><?php echo $text ?></div>
+
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+
+                <?php if(!empty($text)) { ?>
+
+                    <div class="section-team__text text-medium"><?php echo $text ?></div>
+
+                <?php } ?>
+
             </div>
             <div class="section-team__sliders">
 
@@ -34,12 +45,28 @@ $id = $fields['id'];
 
                                     <div class="swiper-slide team-slider__item">
                                         <div class="team-slider__slide-inner">
-                                            <div class="team-slider__slide-image">
-                                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                                            </div>
+
+                                            <?php if(!empty($image)) { ?>
+
+                                                <div class="team-slider__slide-image">
+                                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                                </div>
+
+                                            <?php } ?>
+
                                             <div class="team-slider__slide-text">
-                                                <span class="team-slider__slide-name"><?php echo $name ?></span>
-                                                <span class="team-slider__slide-position text"><?php echo $position ?></span>
+
+                                                <?php if(!empty($name)) { ?>
+
+                                                    <span class="team-slider__slide-name"><?php echo $name ?></span>
+
+                                                <?php } ?>
+                                                <?php if(!empty($position)) { ?>
+
+                                                    <span class="team-slider__slide-position text"><?php echo $position ?></span>
+
+                                                <?php } ?>
+
                                             </div>
                                         </div>
                                     </div>
@@ -66,12 +93,28 @@ $id = $fields['id'];
 
                                 <div class="swiper-slide team-slider__item">
                                     <div class="team-slider__slide-inner">
-                                        <div class="team-slider__slide-image">
-                                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                                        </div>
+
+                                        <?php if(!empty($image)) { ?>
+
+                                            <div class="team-slider__slide-image">
+                                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                            </div>
+
+                                        <?php } ?>
+
                                         <div class="team-slider__slide-text">
-                                            <span class="team-slider__slide-name"><?php echo $name ?></span>
-                                            <span class="team-slider__slide-position text"><?php echo $position ?></span>
+
+                                            <?php if(!empty($name)) { ?>
+
+                                                <span class="team-slider__slide-name"><?php echo $name ?></span>
+
+                                            <?php } ?>
+                                            <?php if(!empty($position)) { ?>
+
+                                                <span class="team-slider__slide-position text"><?php echo $position ?></span>
+
+                                            <?php } ?>
+
                                         </div>
                                     </div>
                                 </div>

@@ -15,19 +15,25 @@ $id = $fields['id'];
 
             <?php if(!empty($image)) { ?>
 
-            <div class="section-form-simple__image">
-                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-            </div>
+                <div class="section-form-simple__image">
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                </div>
 
             <?php } ?>
 
             <div class="section-form-simple__headline">
-                <h2 class="section-form-simple__title title-hero">
 
-                    <?php echo $title?>
+                <?php if(!empty($title)) { ?>
 
-                    <img class="section-form-simple__title-image" src="<?php echo $icon_before_title['url'] ?>" alt="<?php echo $icon_before_title['title'] ?>">
-                </h2>
+                    <h2 class="section-form-simple__title title-hero">
+
+                        <?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?>
+
+                        <img class="section-form-simple__title-image" src="<?php echo $icon_before_title['url'] ?>" alt="<?php echo $icon_before_title['title'] ?>">
+                    </h2>
+
+                <?php } ?>
+
             </div>
             <div class="section-form-simple__content">
                 <div class="section-form-simple__form form-regular">

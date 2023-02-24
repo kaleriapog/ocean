@@ -14,11 +14,16 @@ $id = $fields['id'];
 <section style="" class="section section-content-full section-with-pop-up" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-content-full__wrapper">
-            <span class="subtitle"><?php echo $subtitle?></span>
+
+            <?php if(!empty( $subtitle)) { ?>
+
+                <span class="subtitle"><?php echo $subtitle?></span>
+
+            <?php } ?>
 
             <?php if(!empty($title)) { ?>
 
-                <h1 class="section-content-full__title title"><?php echo $title ?></h1>
+                <h2 class="section-content-full__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
             <?php } ?>
 
@@ -86,7 +91,7 @@ $id = $fields['id'];
 
                         <li class="section-content-full__item">
                             <span class="section-content-full__item-title-big"><?php echo $title_big ?></span>
-                            <h3 class="section-content-full__item-title-regular"><?php echo $title_regular ?></h3>
+                            <h3 class="section-content-full__item-title-regular"><?php echo strip_tags($title_regular, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
                             <span class="section-content-full__item-description text"><?php echo $description ?></span>
                         </li>
 

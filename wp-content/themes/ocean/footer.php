@@ -31,7 +31,10 @@ $text = $footer['text'];
                         <?php echo do_shortcode( '[contact-form-7 id="71" html_class="footer__form" title="Subscribe form"]' ); ?>
                     </div>
                     <div class="footer__social social-desktop">
-                        <ul class="social-list">
+
+                        <?php if(!empty($social)) { ?>
+
+                            <ul class="social-list">
                             <?php foreach($social as $key=>$item) :
                                 $url = $item['link'];
                                 $icon = $item['icon'];
@@ -63,6 +66,9 @@ $text = $footer['text'];
 
                             <?php endforeach; ?>
                         </ul>
+
+                        <?php } ?>
+
                     </div>
                 </div>
                 <div class="footer__content">
@@ -71,13 +77,22 @@ $text = $footer['text'];
                             <a class="footer-logo footer-logo-desktop" href="<?php echo get_option('home') ?>">
                                 <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
                             </a>
-                            <div class="address-text">
 
-                                <?php echo $address; ?>
+                            <?php if(!empty($address)) { ?>
 
-                            </div>
+                                <address class="address-text">
+
+                                    <?php echo strip_tags($address, '<br>'); ?>
+
+                                </address>
+
+                            <?php } ?>
+
                         </div>
-                        <ul class="footer__content-emails">
+
+                        <?php if(!empty($emails)) { ?>
+
+                            <ul class="footer__content-emails">
 
                             <?php foreach($emails as $key=>$item) {
                                 $email = $item['email'];
@@ -86,20 +101,34 @@ $text = $footer['text'];
 
                                 <li class="footer-email">
                                     <span class="footer-email__title"><?php echo $title; ?></span>
-                                    <a href="mailto: <?php echo $email; ?>" class="footer-email__link"><?php echo $email; ?></a>
+                                    <a href="mailto:<?php echo $email; ?>" class="footer-email__link"><?php echo $email; ?></a>
                                 </li>
 
                             <?php } ?>
 
                         </ul>
+
+                        <?php } ?>
+
                         <div class="footer__bottom">
-                            <div class="footer__endorsed">
+
+                            <?php if(!empty($endorsed)) { ?>
+
+                                <div class="footer__endorsed">
                                 <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
                                 <div class="endorsed-image">
                                     <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
                                 </div>
                             </div>
-                            <div class="footer__text"><?php echo $text ?></div>
+
+                            <?php } ?>
+
+                            <?php if(!empty($text )) { ?>
+
+                                <div class="footer__text"><?php echo $text ?></div>
+
+                            <?php } ?>
+
                         </div>
                     </div>
                     <div class="footer__content-right">
@@ -118,6 +147,9 @@ $text = $footer['text'];
                         </nav>
                     </div>
                     <div class="footer__social social-mobile">
+
+                        <?php if(!empty($social)) { ?>
+
                         <ul class="social-list">
                             <?php foreach($social as $key=>$item) :
                                 $url = $item['link'];
@@ -150,6 +182,9 @@ $text = $footer['text'];
 
                             <?php endforeach; ?>
                         </ul>
+
+                        <?php } ?>
+
                     </div>
                 </div>
             </div>

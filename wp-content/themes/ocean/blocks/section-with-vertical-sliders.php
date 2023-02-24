@@ -14,8 +14,17 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-vertical-sliders__wrapper">
             <div class="section-vertical-sliders__headline">
-                <h2 class="title"><?php echo $title?></h2>
-                <div class="section-vertical-sliders__text text"><?php echo $text?></div>
+
+                <?php if(!empty($title)) { ?>
+
+                <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+                <?php if(!empty($text)) { ?>
+
+                    <div class="section-vertical-sliders__text text"><?php echo $text ?></div>
+
+                <?php } ?>
 
                 <?php if(!empty($link)) { ?>
                     <div class="section-vertical-sliders__link">
@@ -104,5 +113,4 @@ $id = $fields['id'];
             </div>
         </div>
     </div>
-
 </section>

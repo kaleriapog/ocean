@@ -93,7 +93,7 @@ get_header();
                         </div>
                         <div class="post-last__item-left">
                             <div class="post-last__item-info">
-                                <time>
+                                <time datetime="<?php echo get_the_date('Y-m-j', $post_last); ?>">
 
                                     <?php echo get_the_date('j. m. Y', $post_last); ?>
 

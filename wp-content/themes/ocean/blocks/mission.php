@@ -12,23 +12,43 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-mission__wrapper">
             <div class="section-mission__subtitle">
-                <span class="subtitle"><?php echo $subtitle ?></span>
+
+                <?php if(!empty($subtitle)) { ?>
+
+                    <span class="subtitle"><?php echo $subtitle ?></span>
+
+                <?php } ?>
+
             </div>
             <div class="section-mission__content">
-                <h2 class="section-mission__title title"><?php echo $title ?></h2>
+
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="section-mission__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+
                 <div class="section-mission__description">
-                    <div class="section-mission__endorsed">
-                        <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
-                        <div class="endorsed-image">
-                            <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+
+                    <?php if(!empty($endorsed)) { ?>
+
+                        <div class="section-mission__endorsed">
+                            <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
+                            <div class="endorsed-image">
+                                <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+                            </div>
                         </div>
-                    </div>
+
+                    <?php } ?>
+
                     <div class="section-mission__text text">
-                        <div class="section-mission__text-inner content-for-show-more">
 
-                            <?php echo $text ?>
+                        <?php if(!empty($text)) { ?>
 
-                        </div>
+                            <div class="section-mission__text-inner content-for-show-more"><?php echo $text ?></div>
+
+                        <?php } ?>
+
                         <div class="show-more">
                             <span class="show-more__name">
                                 <span class="show-more__name-more">Show more</span>

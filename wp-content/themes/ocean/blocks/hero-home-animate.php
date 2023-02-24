@@ -9,7 +9,7 @@ $id = $fields['id'];
 ?>
 
 <section class="section-hero-animate" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
-    <div class="section-hero-animate__bg" style="background-image: url('<?php echo $image['url'] ?>')">
+    <div class="section-hero-animate__bg" <?php if(!empty($image)) { ?>style="background-image: url('<?php echo $image['url'] ?>')"><?php } ?>
     </div>
     <div class="section-hero-animate__content">
         <div class="size-main">

@@ -253,7 +253,7 @@ $mediaWidthDesktopExtraSmall: 1200px;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-20.75deg);
   cursor: pointer;
-  transition: all .3s linear;
+  transition: color, background-color, opacity, border 0.3s linear;
 
   @include media-mobile {
     width: 100px;

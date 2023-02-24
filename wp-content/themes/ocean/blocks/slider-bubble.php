@@ -14,7 +14,7 @@ $id = $fields['id'];
 
                 <?php if(!empty($title)) { ?>
 
-                    <h2 class="section-slider-bubble__title title"><?php echo $title ?></h2>
+                    <h2 class="section-slider-bubble__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
                 <?php } ?>
                 <?php if(!empty($text)) { ?>
@@ -52,7 +52,7 @@ $id = $fields['id'];
 
                             <?php if(!empty($title)) { ?>
 
-                                <h3 class="slider-bubble__title slide-title"><?php echo $title?></h3>
+                                <h3 class="slider-bubble__title slide-title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
 
                             <?php } ?>
                             <?php if(!empty($text)) { ?>

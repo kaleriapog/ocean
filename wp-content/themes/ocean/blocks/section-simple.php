@@ -16,7 +16,7 @@ $id = $fields['id'];
 
                     <?php if(!empty($title)) { ?>
 
-                        <h2 class="section-simple__title title"><?php echo $title?></h2>
+                        <h2 class="section-simple__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
                     <?php } ?>
                     <?php if(!empty($text)) { ?>

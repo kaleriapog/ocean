@@ -12,8 +12,18 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-video-and-cards__wrapper">
             <div class="section-video-and-cards__headline">
-                <span class="subtitle"><?php echo $subtitle?></span>
-                <h2 class="title"><?php echo $title?></h2>
+
+                <?php if(!empty($subtitle)) { ?>
+
+                    <span class="subtitle"><?php echo $subtitle?></span>
+
+                <?php } ?>
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+
             </div>
 
             <?php if(!empty($video)) : ?>

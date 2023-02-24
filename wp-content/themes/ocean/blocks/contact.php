@@ -19,7 +19,7 @@ $id = $fields['id'];
 
                         <h2 class="section-contact__title title-hero">
 
-                            <?php echo $title?>
+                            <?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?>
 
                             <img class="section-contact__title-image" src="<?php echo get_template_directory_uri() ?>/images/hand.png" alt="hand">
                         </h2>

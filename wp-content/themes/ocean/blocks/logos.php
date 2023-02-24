@@ -10,7 +10,13 @@ $id = $fields['id'];
     <div class="size-main">
         <div class="section-logos__wrapper">
             <div class="section-logos__headline">
-                <h2 class="title"><?php echo $title ?></h2>
+
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+               <?php } ?>
+
             </div>
 
                 <?php if(!empty($items)) { ?>
@@ -23,9 +29,15 @@ $id = $fields['id'];
                         ?>
 
                         <li class="section-logos__item">
-                            <div class="section-logos__item-image">
-                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                            </div>
+
+                            <?php if(!empty($image)) { ?>
+
+                                <div class="section-logos__item-image">
+                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                </div>
+
+                            <?php } ?>
+
                         </li>
 
                     <?php } ?>

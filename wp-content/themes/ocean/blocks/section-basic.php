@@ -10,17 +10,23 @@ $id = $fields['id'];
 
 ?>
 
-<section class="section-basic" style="background-color: <?php echo $color_bg ?>" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
+<section class="section-basic" <?php if(!empty($color_bg)) { ?>style="background-color: <?php echo $color_bg ?>;"<?php } ?><?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-basic__wrapper">
             <div class="section-basic__content">
                 <div class="section-basic__headline">
-                    <h2 class="title"><?php echo $title ?></h2>
 
+                    <?php if(!empty($title)) { ?>
+
+                        <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                    <?php } ?>
                     <?php if(!empty($decor_title)) { ?>
+
                         <div class="section-basic__decor-title">
                             <img src="<?php echo $decor_title['url'] ?>" alt="<?php echo $decor_title['title'] ?>">
                         </div>
+
                     <?php } ?>
 
                 </div>

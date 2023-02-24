@@ -128,7 +128,7 @@ function wpcf7_admin_enqueue_scripts( $hook_suffix ) {
 	}
 
 	wp_enqueue_script( 'wpcf7-admin',
-		wpcf7_plugin_url( 'admin/js/scripts.js' ),
+		wpcf7_plugin_url( 'admin/js/scripts.min.js' ),
 		array( 'jquery', 'jquery-ui-tabs' ),
 		WPCF7_VERSION, true
 	);

@@ -13,12 +13,33 @@ $id = $fields['id'];
         <div class="section-with-cards__wrapper">
             <div class="section-with-cards__headline">
                 <div class="section-with-cards__subtitle">
-                    <span class="subtitle"><?php echo $subtitle ?></span>
+
+                    <?php if(!empty($subtitle)) { ?>
+
+                        <span class="subtitle"><?php echo $subtitle ?></span>
+
+                    <?php } ?>
+
                 </div>
-                <h2 class="section-with-cards__title title"><?php echo $title ?></h2>
+
+                <?php if(!empty($title)) { ?>
+
+                    <h2 class="section-with-cards__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+
             </div>
-            <div class="section-with-cards__text text"><?php echo $text ?></div>
+
+            <?php if(!empty($text)) { ?>
+
+                <div class="section-with-cards__text text"><?php echo $text ?></div>
+
+            <?php } ?>
+
         </div>
+
+        <?php if(!empty($cards)) { ?>
+
         <ul class="section-with-cards__list">
 
             <?php foreach($cards as $key=>$card) {
@@ -29,14 +50,29 @@ $id = $fields['id'];
 
                 <li class="section-with-cards__item">
                     <div class="section-with-cards__item-title">
-                        <h3 class="title-big-card"><?php echo $title ?></h3>
+
+                        <?php if(!empty($title)) { ?>
+
+                            <h3 class="title-big-card"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
+
+                        <?php } ?>
+
                         <span class="card-line"></span>
                     </div>
-                    <div class="section-with-cards__item-text text"><?php echo $text ?></div>
+
+                    <?php if(!empty($text)) { ?>
+
+                        <div class="section-with-cards__item-text text"><?php echo $text ?></div>
+
+                    <?php } ?>
+
                 </li>
 
             <?php } ?>
 
         </ul>
+
+        <?php } ?>
+
     </div>
 </section>

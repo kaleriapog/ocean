@@ -8,7 +8,10 @@ $id = $fields['id'];
 <section class="section section-program-preview" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-small">
         <div class="section-program-preview__wrapper">
-            <ul class="section-program-preview__list">
+
+            <?php if(!empty($cards)) { ?>
+
+                <ul class="section-program-preview__list">
 
                 <?php foreach ($cards as $item) {
                     $image = $item['image'];
@@ -20,9 +23,20 @@ $id = $fields['id'];
 
                     <li class="section-program-preview__item">
                         <div class="section-program-preview__item-content">
-                            <h3 class="section-program-preview__title"><?php echo $title ?></h3>
-                            <div class="section-program-preview__text text"><?php echo $text ?></div>
-                            <a class="button-link" href="<?php echo $link['url'] ?>">
+
+                            <?php if(!empty($title)) { ?>
+
+                                <h3 class="section-program-preview__title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
+
+                            <?php } ?>
+                            <?php if(!empty($text)) { ?>
+
+                                <div class="section-program-preview__text text"><?php echo $text ?></div>
+
+                            <?php } ?>
+                            <?php if(!empty($link)) { ?>
+
+                                <a class="button-link" href="<?php echo $link['url'] ?>">
 
                                 <?php echo $link['title'] ?>
 
@@ -32,21 +46,36 @@ $id = $fields['id'];
                                     </svg>
                                 </div>
                             </a>
-                        </div>
-                        <div class="section-program-preview__item-image">
-                            <img class="item-image" src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
 
-                            <?php if(!empty($decor)) : ?>
+                            <?php } ?>
+
+                        </div>
+
+                        <?php if(!empty($image)) { ?>
+
+                            <div class="section-program-preview__item-image">
+                                <img class="item-image" src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+
+                                <?php if(!empty($decor)) : ?>
+
                                 <div class="section-program-preview__item-decor">
                                     <img src="<?php echo $decor['url'] ?>" alt="<?php echo $decor['title'] ?>">
                                 </div>
+
                             <?php endif ?>
-                        </div>
+
+                            </div>
+
+                        <?php } ?>
+
                     </li>
 
                 <?php } ?>
 
             </ul>
+
+            <?php } ?>
+
         </div>
     </div>
 </section>

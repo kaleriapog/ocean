@@ -25,7 +25,7 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s linear;
+  transition: color, background-color, opacity 0.3s linear;
 }
 
 img {
@@ -53,7 +53,7 @@ button {
 }
 
 svg path {
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 video {

@@ -17,7 +17,7 @@ $id = $fields['id'];
 
                 <?php if(!empty($title)) { ?>
 
-                    <h2 class="title"><?php echo $title?></h2>
+                    <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
                 <?php } ?>
                 <?php if(!empty($text)) { ?>
@@ -49,31 +49,58 @@ $id = $fields['id'];
                         'suppress_filters' => true,
                     ], OBJECT );
 
-                    foreach($result as $key=>$post) {
-                        setup_postdata( $post );
-                        $title = get_the_title();
-                        $author = get_the_author();
-                        $data = get_the_date();
-                        $excerpt = get_the_excerpt();
-                        $thumbnail = get_the_post_thumbnail_url();
-                        $permalink = get_permalink();
+                    if(!empty($result)) {
+                        foreach($result as $key=>$post) {
+                            setup_postdata( $post );
+                            $title = get_the_title();
+                            $author = get_the_author();
+                            $data = get_the_date();
+                            $excerpt = get_the_excerpt();
+                            $thumbnail = get_the_post_thumbnail_url();
+                            $permalink = get_permalink();
 
-                        wp_reset_postdata();
+                            wp_reset_postdata();
 
                         ?>
 
                         <a class="post-big" href="<?php echo $permalink ?>">
-                            <div class="post-big__image">
-                                <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>">
-                            </div>
+
+                            <?php if(!empty($thumbnail)) { ?>
+
+                                <div class="post-big__image">
+                                    <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>">
+                                </div>
+
+                            <?php } ?>
+
                             <div class="post-big__info">
-                                <span class="post-big__data"><?php echo $data ?></span>
-                                <span class="post-big__author"><?php echo $author ?></span>
+                                <time datetime="<?php echo get_the_date('Y-m-j', $data); ?>">
+
+                                    <?php echo get_the_date('j. m. Y', $data); ?>
+
+                                </time>
+
+                                <?php if(!empty($author)) { ?>
+
+                                    <span class="post-big__author"><?php echo $author ?></span>
+
+                                <?php } ?>
+
                             </div>
-                            <h3 class="post-big__title"><?php echo $title ?></h3>
-                            <div class="post-big__text text"><?php echo $excerpt ?></div>
+
+                            <?php if(!empty($title)) { ?>
+
+                                <h3 class="post-big__title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
+
+                            <?php } ?>
+                            <?php if(!empty($excerpt)) { ?>
+
+                                <div class="post-big__text text"><?php echo $excerpt ?></div>
+
+                            <?php } ?>
                         </a>
 
+                    <?php } ?>
                     <?php } ?>
 
                 </div>
@@ -95,26 +122,47 @@ $id = $fields['id'];
                         'suppress_filters' => true,
                     ], OBJECT );
 
-                    foreach($result as $key=>$post) {
-                        setup_postdata( $post );
-                        $title = get_the_title();
-                        $author = get_the_author();
-                        $data = get_the_date();
-                        $excerpt = get_the_excerpt();
-                        $permalink = get_permalink();
+                    if(!empty($result)) {
+                        foreach($result as $key=>$post) {
+                            setup_postdata( $post );
+                            $title = get_the_title();
+                            $author = get_the_author();
+                            $data = get_the_date();
+                            $excerpt = get_the_excerpt();
+                            $permalink = get_permalink();
 
-                        wp_reset_postdata();
+                            wp_reset_postdata();
                         ?>
 
                         <a class="post-regular" href="<?php echo $permalink ?>">
                             <div class="post-regular__info">
-                                <span class="post-regular__data"><?php echo $data ?></span>
-                                <span class="post-regular__author"><?php echo $author ?></span>
+                                <time datetime="<?php echo get_the_date('Y-m-j', $data); ?>">
+
+                                    <?php echo get_the_date('j. m. Y', $data); ?>
+
+                                </time>
+
+                            <?php if(!empty($author)) { ?>
+
+                                 <span class="post-regular__author"><?php echo $author ?></span>
+
+                            <?php } ?>
+
                             </div>
-                            <h3 class="post-regular__title"><?php echo $title ?></h3>
-                            <div class="post-regular__text text"><?php echo $excerpt ?></div>
+                            <?php if(!empty($title)) { ?>
+
+                                <h3 class="post-regular__title"><?php echo $title ?></h3>
+
+                            <?php } ?>
+                            <?php if(!empty($excerpt)) { ?>
+
+                                <div class="post-regular__text text"><?php echo $excerpt ?></div>
+
+                            <?php } ?>
+
                         </a>
 
+                    <?php } ?>
                     <?php } ?>
 
                 </div>
@@ -139,5 +187,4 @@ $id = $fields['id'];
 
         </div>
     </div>
-
 </section>

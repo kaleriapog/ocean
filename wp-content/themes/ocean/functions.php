@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'ocean_widgets_init' );
  */
 function ocean_scripts() {
     wp_enqueue_style( 'ocean-style-swiper-bundle', get_template_directory_uri() . '/swiper-bundle.min.css');
-	wp_enqueue_style( 'ocean-style', get_stylesheet_uri());
+	wp_enqueue_style( 'ocean-style', get_template_directory_uri() . '/style.min.css');
 	wp_style_add_data( 'ocean-style', 'rtl', 'replace' );
 
     wp_enqueue_script( 'ocean-swiper', get_template_directory_uri() . '/js/libraries/swiper-bundle.min.js', array('jquery'),null,false );
@@ -150,7 +150,7 @@ function ocean_scripts() {
     wp_enqueue_script('debugAddIndicators', get_template_directory_uri() . '/js/libraries/debug.addIndicators.min.js',array('jquery'),null,false);
     wp_enqueue_script('animationGsap', get_template_directory_uri() . '/js/libraries/animation.gsap.js',array('jquery'),null,false);
     wp_enqueue_script('select2', get_template_directory_uri() . '/js/libraries/select2.full.min.js',array(),null,false);
-    wp_enqueue_script( 'ocean-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),null,false);
+    wp_enqueue_script( 'ocean-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'),null,false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -19,7 +19,7 @@ $id = $fields['id'];
 
             <?php if(!empty($title)) { ?>
 
-                <h2 class="section-events__title title"><?php echo $title ?></h2>
+                <h2 class="section-events__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
             <?php } ?>
             <?php if(!empty($items)) { ?>
@@ -28,7 +28,7 @@ $id = $fields['id'];
 
                     <?php foreach ($items as $item) {
                         $title = $item['title'];
-                        $сontribution = $item['сontribution'];
+                        $contribution = $item['сontribution'];
                         $image = $item['image'];
                         $text = $item['text'];
                         $link = $item['link'];
@@ -36,16 +36,39 @@ $id = $fields['id'];
                         ?>
 
                         <li class="section-events__item">
-                            <div class="section-events__item-image">
-                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                            </div>
+
+                            <?php if(!empty($image)) { ?>
+
+                                <div class="section-events__item-image">
+                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                </div>
+
+                            <?php } ?>
+
                             <div class="section-events__item-content">
                                 <div class="section-events__item-content-inner">
                                     <div class="section-events__item-title">
-                                        <h3><?php echo $title ?></h3>
-                                        <span class="item-сontribution">$<?php echo $сontribution ?></span>
+
+                                        <?php if(!empty($title)) { ?>
+
+                                            <h3><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
+
+                                        <?php } ?>
+
+                                        <?php if(!empty($contribution)) { ?>
+
+                                            <span class="item-сontribution">$<?php echo $contribution ?></span>
+
+                                        <?php } ?>
+
                                     </div>
-                                    <div class="section-events__item-text text"><?php echo $text ?></div>
+
+                                    <?php if(!empty($text)) { ?>
+
+                                        <div class="section-events__item-text text"><?php echo $text ?></div>
+
+                                    <?php } ?>
+
                                 </div>
 
                                 <?php if(!empty($link)) { ?>

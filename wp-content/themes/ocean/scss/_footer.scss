@@ -1,55 +1,50 @@
 .footer {
-  background-color: $color-black;
-  color: #fff;
   position: relative;
-
+  color: #fff;
+  background-color: $color-black;
   &__top {
-    padding: 85px 0;
     display: flex;
+    padding: 85px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
     @include media-laptop {
       flex-direction: column;
-      align-items: start;
       padding-bottom: 30px;
+      align-items: start;
     }
 
     @include media-mobile {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
       padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, .15);
     }
   }
 
   &__form {
     max-width: 800px;
-
-    input[type="email"] {
-      background-color: transparent;
+    input[type='email'] {
+      font-size: 40px;
+      width: 100%;
       max-width: 690px;
       margin-right: 40px;
+      letter-spacing: .02em;
       color: #fff;
-      font-size: 40px;
-      //height: 74px;
-      letter-spacing: 0.02em;
-      width: 100%;
-
+      background-color: transparent;
       @include media-large-laptop {
-        max-width: 570px;
         font-size: 42px;
+        max-width: 570px;
       }
 
       @include media-mobile {
+        font-size: 22px;
         max-width: 280px;
         margin-right: 18px;
-        font-size: 22px;
       }
 
       @include media-mobile-large {
-        max-width: 71vw;
         font-size: 6vw;
+        max-width: 71vw;
       }
 
       &::placeholder {
@@ -57,18 +52,17 @@
       }
     }
 
-    input[type="submit"] {
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      opacity: 0;
+    input[type='submit'] {
       position: relative;
       z-index: 10;
+      display: flex;
+      width: 80px;
+      height: 80px;
       cursor: pointer;
-
+      opacity: 0;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
       @include media-mobile {
         width: 60px;
         height: 60px;
@@ -81,18 +75,17 @@
     }
 
     .fake-button-submit {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      width: 80px;
-      height: 80px;
       position: absolute;
-      border-radius: 50%;
       top: 0;
       left: 0;
-      transition: all .3s;
-
+      display: flex;
+      width: 80px;
+      height: 80px;
+      transition: color, background-color .3s;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .05);
+      align-items: center;
+      justify-content: center;
       @include media-mobile {
         width: 60px;
         height: 60px;
@@ -123,7 +116,6 @@
     .button-submit {
       &:hover .fake-button-submit {
         background-color: #fff;
-
         svg path {
           fill: $color-black;
         }
@@ -131,8 +123,8 @@
     }
 
     .wpcf7-response-output {
-      @extend %font-nav;
       border: none!important;
+      @extend %font-nav;
     }
 
     &.invalid .wpcf7-response-output {
@@ -146,10 +138,9 @@
 
     .wpcf7-response-output {
       position: absolute;
-      color: $color-blue;
       margin: 0!important;
       padding: 0!important;
-
+      color: $color-blue;
       @include media-mobile {
         position: static;
       }
@@ -161,11 +152,10 @@
   }
 
   &__content {
-    padding: 65px 0;
     display: flex;
+    padding: 65px 0;
     justify-content: space-between;
     gap: 20px;
-
     @include media-laptop {
       flex-direction: column;
       margin-bottom: 0;
@@ -179,14 +169,13 @@
 
   &__content-address {
     display: flex;
+    width: 100%;
+    max-width: 645px;
+    margin-bottom: 70px;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    max-width: 645px;
-    width: 100%;
-    margin-bottom: 70px;
     @extend %address;
-
     @include media-mobile {
       max-width: 350px;
       margin-bottom: 55px;
@@ -195,33 +184,31 @@
 
   &__content-emails {
     display: flex;
-    gap: 60px;
     margin-bottom: 80px;
-
+    gap: 60px;
     @include media-laptop {
       margin-bottom: 65px;
     }
 
     @include media-mobile {
       flex-direction: column;
-      gap: 34px;
       margin-bottom: 55px;
+      gap: 34px;
     }
 
     .footer-email {
       &__title {
-        @extend %footer-opacity;
         display: block;
         margin-bottom: 18px;
+        @extend %footer-opacity;
       }
 
       &__link {
-        font-family: Avenir;
+        font-family: 'Avenir', sans-serif;
         font-size: 24px;
         font-weight: 400;
         line-height: 1.08;
-        letter-spacing: -0.5px;
-
+        letter-spacing: -.5px;
         &:hover {
           opacity: .7;
         }
@@ -239,7 +226,6 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-
     @include media-laptop {
       display: none;
     }
@@ -251,10 +237,9 @@
 
   &__menu-list {
     display: flex;
-    gap: 97px;
     padding-top: 10px;
+    gap: 97px;
     @extend %footer-menu;
-
     @include media-large-laptop {
       gap: 50px;
     }
@@ -265,11 +250,10 @@
     }
 
     .sub-menu {
-      padding-top: 30px;
       display: flex;
-      gap: 30px;
       flex-direction: column;
-
+      padding-top: 30px;
+      gap: 30px;
       a:hover {
         color: rgba(255, 255, 255, .3);
       }
@@ -278,12 +262,11 @@
         position: absolute;
         bottom: 0;
         color: rgba(255, 255, 255, .3);
-
         @include media-laptop {
           display: none;
         }
 
-        & a:hover {
+        &a:hover {
           color: rgba(255, 255, 255, 1);
         }
       }
@@ -293,7 +276,6 @@
   &__content-right {
     position: relative;
     padding-bottom: 50px;
-
     @include media-mobile {
       padding-bottom: 60px;
     }
@@ -302,14 +284,13 @@
   &__content-left {
     width: 100%;
     max-width: 815px;
-
     @include media-large-laptop {
       max-width: 700px;
     }
 
     @include media-mobile {
-      flex-direction: column-reverse;
       display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -335,9 +316,8 @@
   }
 
   .footer-logo {
-    max-width: 200px;
     width: 100%;
-
+    max-width: 200px;
     @include media-mobile {
       margin: auto;
       padding: 90px 0 36px;
@@ -351,11 +331,9 @@
 
     &.footer-logo-mobile {
       display: none;
-
       @include media-mobile {
         display: block;
       }
     }
   }
-
 }

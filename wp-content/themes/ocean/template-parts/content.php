@@ -23,7 +23,12 @@ $color_bg = $fields['background_color'];
     <div class="section post__inner">
         <div class="size-main">
             <div class="post__info">
-                <span class="post__data"><?php the_date(); ?></span>
+                <time datetime="<?php echo get_the_date('Y-m-j'); ?>">
+
+                    <?php echo get_the_date('j. m. Y'); ?>
+
+                </time>
+<!--                <span class="post__data">--><?php //the_date(); ?><!--</span>-->
                 <span class="post__author"><?php the_author(); ?></span>
                 <div class="post__info-category">
 
@@ -156,7 +161,11 @@ $color_bg = $fields['background_color'];
                                 <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>">
                             </div>
                             <div class="post-big__info">
-                                <span class="post-big__data"><?php echo $data ?></span>
+                                <time datetime="<?php echo get_the_date('Y-m-j', $data); ?>">
+
+                                    <?php echo get_the_date('j. m. Y', $data); ?>
+
+                                </time>
                                 <span class="post-big__author"><?php echo $author ?></span>
                             </div>
                             <h3 class="post-big__title"><?php echo $title ?></h3>
@@ -197,7 +206,11 @@ $color_bg = $fields['background_color'];
 
                         <a class="post-regular" href="<?php echo $permalink ?>">
                             <div class="post-regular__info">
-                                <span class="post-regular__data"><?php echo $data ?></span>
+                                <time datetime="<?php echo get_the_date('Y-m-j', $data); ?>">
+
+                                    <?php echo get_the_date('j. m. Y', $data); ?>
+
+                                </time>
                                 <span class="post-regular__author"><?php echo $author ?></span>
                             </div>
                             <h3 class="post-regular__title"><?php echo $title ?></h3>

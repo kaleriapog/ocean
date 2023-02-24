@@ -12,13 +12,31 @@ $id = $fields['id'];
 <section class="section section-about" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-about__wrapper">
-            <span class="subtitle"><?php echo $subtitle?></span>
+
+            <?php if(!empty($subtitle)) { ?>
+
+                <span class="subtitle"><?php echo $subtitle ?></span>
+
+            <?php } ?>
+
             <div class="section-about__content">
-                <div class="section-about__headline">
-                    <h2 class="section-about__title title"><?php echo $title?></h2>
-                </div>
+
+                <?php if(!empty($title)) { ?>
+
+                    <div class="section-about__headline">
+                        <h2 class="section-about__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+                    </div>
+
+                <?php } ?>
+
                 <div class="section-about__text">
-                    <div class="text"><?php echo $text?></div>
+
+                    <?php if(!empty($text)) { ?>
+
+                        <div class="text"><?php echo $text?></div>
+
+                    <?php } ?>
+
                     <div class="section-about__bottom">
 
                         <?php if(!empty($link)) { ?>
@@ -35,13 +53,27 @@ $id = $fields['id'];
                         </a>
 
                         <?php } ?>
+                        <?php if(!empty($endorsed)) { ?>
 
-                        <div class="section-about__endorsed">
-                            <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
-                            <div class="endorsed-image">
-                                <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+                            <div class="section-about__endorsed">
+
+                                <?php if(!empty($endorsed['title'])) { ?>
+
+                                    <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
+
+                                <?php } ?>
+                                <?php if(!empty($endorsed['image'])) { ?>
+
+                                    <div class="endorsed-image">
+                                        <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+                                    </div>
+
+                                <?php } ?>
+
                             </div>
-                        </div>
+
+                        <?php } ?>
+
                     </div>
                 </div>
             </div>

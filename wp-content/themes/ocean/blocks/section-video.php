@@ -14,10 +14,21 @@ $id = $fields['id'];
 <section class="section section-video" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
         <div class="section-video__wrapper <?php if($position_text === true) { echo 'text-order';} ?>">
-            <span class="subtitle"><?php echo $subtitle?></span>
+
+            <?php if(!empty($subtitle)) { ?>
+
+                <span class="subtitle"><?php echo $subtitle?></span>
+
+            <?php } ?>
+
+            <?php if(!empty($title)) { ?>
+
             <div class="section-video__title">
-                <h2 class="title"><?php echo $title ?></h2>
+                <h2 class="title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
             </div>
+
+            <?php } ?>
+
 
             <?php if(!empty($video)) { ?>
 

@@ -18,11 +18,21 @@ $id = $fields['id'];
             ?>
 
                 <li class="section-cards-samples__item">
-                    <div class="section-cards-samples__title">
-                        <h3 class="title-card"><?php echo $title ?></h3>
-                        <span class="card-line"></span>
-                    </div>
-                    <div class="section-cards-samples__text text"><?php echo $text ?></div>
+
+                    <?php if(!empty($title)) { ?>
+
+                        <div class="section-cards-samples__title">
+                            <h3 class="title-card"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h3>
+                            <span class="card-line"></span>
+                        </div>
+
+                    <?php } ?>
+                    <?php if(!empty($text)) { ?>
+
+                        <div class="section-cards-samples__text text"><?php echo $text ?></div>
+
+                    <?php } ?>
+
                 </li>
 
             <?php } ?>
@@ -32,10 +42,24 @@ $id = $fields['id'];
         <?php if(!empty($endorsed['image'])) { ?>
 
         <div class="section-mission__endorsed">
-            <span class="endorsed-title"><?php echo $endorsed['title'] ?></span>
-            <div class="endorsed-image">
-                <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
-            </div>
+
+            <?php if(!empty($endorsed['title'])) { ?>
+
+                <span class="endorsed-title">
+
+                    <?php echo $endorsed['title'] ?>
+
+                </span>
+
+            <?php } ?>
+            <?php if(!empty($endorsed['image'])) { ?>
+
+                <div class="endorsed-image">
+                    <img src="<?php echo $endorsed['image']['url'] ?>" alt="<?php echo $endorsed['image']['title'] ?>">
+                </div>
+
+            <?php } ?>
+
         </div>
 
         <?php } ?>
