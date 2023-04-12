@@ -3,6 +3,7 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $subtitle = $fields['subtitle'];
 $video = $fields['video'];
+$show_mask_with_portholes = $fields['show_mask_with_portholes'];
 $cards = $fields['cards'];
 $id = $fields['id'];
 
@@ -33,7 +34,10 @@ $id = $fields['id'];
                     <video autoplay muted loop playsinline>
                         <source src="<?php echo $video['url'] ?>" type="video/mp4">
                     </video>
-                    <ul class="donuts">
+
+                    <?php if($show_mask_with_portholes === true) { ?>
+
+                        <ul class="donuts">
                         <li class="donut">
                             <div class="donut-inner"></div>
                         </li>
@@ -59,6 +63,9 @@ $id = $fields['id'];
                             <div class="donut-inner"></div>
                         </li>
                     </ul>
+
+                    <?php } ?>
+
                 </div>
             </div>
 
@@ -71,14 +78,17 @@ $id = $fields['id'];
                         $image = $item['icon'];
                         $title = $item['title'];
                         $text = $item['text'];
+                        $link = $item['link'];
                     ?>
 
                     <li class="cards-regular__item">
-                        <div class="cards-regular__icon">
-                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                        </div>
-                        <h3 class="cards-regular__title"><?php echo $title ?></h3>
-                        <div class="cards-regular__text"><?php echo $text ?></div>
+                        <a href="<?php echo $link ?>" class="cards-regular__link">
+                            <div class="cards-regular__icon">
+                                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                            </div>
+                            <h3 class="cards-regular__title"><?php echo $title ?></h3>
+                            <div class="cards-regular__text"><?php echo $text ?></div>
+                        </a>
                     </li>
 
                     <?php } ?>

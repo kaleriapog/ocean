@@ -1,6 +1,7 @@
 <?php
 $fields = $args['fields'];
 $title = $fields['title'];
+$description = $fields['description'];
 $items = $fields['items'];
 $image = $fields['image'];
 $id = $fields['id'];
@@ -15,6 +16,12 @@ $id = $fields['id'];
                 <?php if(!empty($title)) { ?>
 
                     <h2 class="section-our-impact__title title-big"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+
+                <?php } ?>
+
+                <?php if(!empty($description)) { ?>
+
+                    <div class="section-our-impact__text text"><?php echo $description?></div>
 
                 <?php } ?>
 

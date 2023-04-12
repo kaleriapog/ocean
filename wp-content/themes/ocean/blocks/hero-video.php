@@ -3,6 +3,7 @@ $fields = $args['fields'];
 $title = $fields['title'];
 $text = $fields['text'];
 $video = $fields['video'];
+$show_mask_with_portholes = $fields['show_mask_with_portholes'];
 $id = $fields['id'];
 
 ?>
@@ -32,14 +33,20 @@ $id = $fields['id'];
                         <video autoplay muted playsinline loop>
                             <source src="<?php echo $video['url'] ?>" type="video/mp4">
                         </video>
-                        <ul class="donuts">
-                            <li class="donut">
-                                <div class="donut-inner"></div>
-                            </li>
-                            <li class="donut">
-                                <div class="donut-inner"></div>
-                            </li>
-                        </ul>
+
+                        <?php if($show_mask_with_portholes === true) { ?>
+
+                            <ul class="donuts">
+                                <li class="donut">
+                                    <div class="donut-inner"></div>
+                                </li>
+                                <li class="donut">
+                                    <div class="donut-inner"></div>
+                                </li>
+                            </ul>
+
+                        <?php } ?>
+
                     </div>
                 </div>
 

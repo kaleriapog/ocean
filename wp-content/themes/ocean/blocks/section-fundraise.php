@@ -57,7 +57,7 @@ $id = $fields['id'];
 
                                         <?php if(!empty($contribution)) { ?>
 
-                                            <span class="item-сontribution">$<?php echo $contribution ?></span>
+                                            <span class="item-сontribution">£<?php echo $contribution ?></span>
 
                                         <?php } ?>
 

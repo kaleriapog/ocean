@@ -47,11 +47,8 @@
 
 .button-link {
   font-weight: 600;
-
   display: flex;
-
   cursor: pointer;
-
   align-items: center;
   gap: 30px;
   @extend %text-regular;
@@ -66,23 +63,6 @@
 
     svg path {
       fill: #fff;
-    }
-  }
-
-  &__icon {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    transition: color, background-color 0.3s;
-    border: 1px solid $color-black-light;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 100%;
-      max-width: 20px;
-      height: 100%;
     }
   }
 
@@ -105,6 +85,115 @@
           fill: $color-black;
         }
       }
+    }
+  }
+
+  &.hover-black-white {
+    .button-link__icon {
+      background-color: $color-black;
+      border-color: $color-black;
+    }
+
+    &:hover {
+      .button-link__icon {
+        background-color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  &.hover-white-black {
+    .button-link__icon {
+      background-color: #fff;
+      border-color: $color-black;
+
+      svg {
+        path {
+          fill: $color-black;
+        }
+      }
+    }
+
+    &:hover {
+      .button-link__icon {
+        background-color: $color-black;
+        border-color: $color-black;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &.hover-white-coral {
+    .button-link__icon {
+      background-color: #fff;
+      border-color: #fff;
+
+      svg {
+        path {
+          fill: $color-black;
+        }
+      }
+    }
+
+    &:hover {
+      .button-link__icon {
+        background-color: $color-red;
+        border-color: $color-red;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &.hover-coral-white {
+    .button-link__icon {
+      background-color: $color-red;
+      border-color: #fff;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &:hover {
+      .button-link__icon {
+        background-color: #fff;
+        border-color: #fff;
+
+        svg {
+          path {
+            fill: $color-black;
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    transition: color, background-color 0.3s;
+    border: 1px solid $color-black-light;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      max-width: 20px;
+      height: 100%;
     }
   }
 }
@@ -381,10 +470,10 @@ mark {
 //cards
 .cards-regular {
   display: flex;
-
   justify-content: space-between;
   gap: 30px 10px;
   flex-wrap: wrap;
+
   @include media-mobile {
     gap: 20px;
   }
@@ -392,8 +481,12 @@ mark {
   &__item {
     width: calc((100% - 30px) / 4);
     padding: 30px 24px 30px 25px;
-
     background: rgba(255, 255, 255, 0.03);
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: $color-blue;
+    }
 
     @include media-laptop {
       width: calc((100% - 30px) / 2);
@@ -1368,16 +1461,30 @@ form {
             font-size: 45px;
             font-weight: 900;
             line-height: 120%;
-
             position: absolute;
             top: 50%;
             left: 50%;
-
             display: flex;
-
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
             transform: translate(-50%, -50%);
-
             color: $color-black;
+
+            .purpose-of-payment {
+              display: block;
+              width: 100%;
+              padding: 10px;
+              text-align: center;
+              font-size: 14px;
+              line-height: 1.2;
+              font-weight: 700;
+              color: $color-red;
+
+              @include media-mobile {
+                font-size: 12px;
+              }
+            }
           }
 
           &.wpforms-selected {

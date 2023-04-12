@@ -7,13 +7,15 @@ $link = $fields['link'];
 $items = $fields['items'];
 $subtitle = $fields['subtitle'];
 $use_pop_up = $fields['use_pop_up'];
+$show_line_after_title = $fields['show_line_after_title'];
+$show_line_after_section = $fields['show_line_after_section'];
 $id = $fields['id'];
 
 ?>
 
 <section style="" class="section section-content-full section-with-pop-up" <?php if(!empty($id)) { ?> id="<?php echo $id ?>"<?php } ?>>
     <div class="size-main">
-        <div class="section-content-full__wrapper">
+        <div class="section-content-full__wrapper" style="<?php if($show_line_after_section === true) {?>border-bottom: 1px solid #1d252d; padding-bottom: 50px; margin-bottom: -50px;<?php } ?>">
 
             <?php if(!empty( $subtitle)) { ?>
 
@@ -23,7 +25,7 @@ $id = $fields['id'];
 
             <?php if(!empty($title)) { ?>
 
-                <h2 class="section-content-full__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+                <h2 class="section-content-full__title title" style="<?php if($show_line_after_title === false) {?>border-bottom: none;<?php } ?>"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
             <?php } ?>
 

@@ -25,18 +25,22 @@ $id = $fields['id'];
 
                     <?php foreach ($items as $key=>$item) {
                         $image = $item['item'];
+                        $link = $item['link'];
 
                         ?>
 
                         <li class="section-logos__item">
+                            <a class="section-logos__item-link" href="<?php echo $link ?>">
 
-                            <?php if(!empty($image)) { ?>
+                                <?php if(!empty($image)) { ?>
 
-                                <div class="section-logos__item-image">
-                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                                </div>
+                                    <div class="section-logos__item-image">
+                                        <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
+                                    </div>
 
-                            <?php } ?>
+                                <?php } ?>
+
+                            </a>
 
                         </li>
 
