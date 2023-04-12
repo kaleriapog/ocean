@@ -26,4 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
     });
   });
+
+  console.log('test')
 });
