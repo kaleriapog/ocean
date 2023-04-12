@@ -4,6 +4,7 @@ $subtitle = $fields['subtitle'];
 $title = $fields['title'];
 $text = $fields['text'];
 $video = $fields['video'];
+$has_fullscreen = $fields['fullscreen'];
 $position_text = $fields['position_text'];
 $link = $fields['link'];
 $endorsed = $fields['endorsed'];
@@ -40,6 +41,9 @@ $id = $fields['id'];
                         <span class="button-video__play">Play</span>
                         <span class="button-video__pause">Pause</span>
                     </div>
+                    <?php if ($has_fullscreen) : ?>
+                        <button class="button-fullscreen hidden"></button>
+                    <?php endif; ?>
                 </div>
 
             <?php } ?>

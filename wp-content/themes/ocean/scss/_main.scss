@@ -137,14 +137,11 @@
     width: 48px;
     height: 48px;
     padding: 16px;
-
-
-
     border: 1px solid #fff;
     border-radius: 50%;
-
     align-items: center;
     justify-content: center;
+    transition: color, background-color 0.3s;
     @extend %social;
     @include media-mobile {
       padding: 14px;
@@ -152,7 +149,6 @@
 
     &.social-list__item-link-text {
       width: auto;
-
       border-radius: 56px;
     }
 

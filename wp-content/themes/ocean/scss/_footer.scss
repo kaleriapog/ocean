@@ -254,8 +254,12 @@
       flex-direction: column;
       padding-top: 30px;
       gap: 30px;
-      a:hover {
-        color: rgba(255, 255, 255, .3);
+
+      a {
+        transition: color 0.3s;
+        &:hover {
+          color: rgba(255, 255, 255, .3);
+        }
       }
 
       li:last-child {

@@ -50,6 +50,10 @@
         padding-bottom: 0;
       }
 
+      & > a {
+        transition: color 0.3s;
+      }
+
       &:hover {
         & > a {
           color: rgba(255, 255, 255, .7);
@@ -136,6 +140,7 @@
   }
 
   &__social a {
+    transition: opacity 0.3s;
     &:hover {
       opacity: .7;
     }
