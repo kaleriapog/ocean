@@ -18,6 +18,7 @@ $id = $fields['id'];
                     $title = $item['title'];
                     $text = $item['text'];
                     $link = $item['link'];
+                    $color_hover_link = $item['color_hover_link'];
                     $decor = $item['decor_image'];
                     ?>
 
@@ -36,7 +37,11 @@ $id = $fields['id'];
                             <?php } ?>
                             <?php if(!empty($link)) { ?>
 
-                                <a class="button-link" href="<?php echo $link['url'] ?>">
+                                <a class="button-link <?php
+                                if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                                if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                                if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                                if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>" href="<?php echo $link['url'] ?>">
 
                                 <?php echo $link['title'] ?>
 

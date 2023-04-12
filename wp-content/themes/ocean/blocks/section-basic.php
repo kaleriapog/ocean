@@ -2,6 +2,7 @@
 $fields = $args['fields'];
 $title = $fields['title'];
 $link = $fields['link'];
+$color_hover_link = $fields['color_hover_link'];
 $text = $fields['text'];
 $image = $fields['image'];
 $decor_title = $fields['decor_title'];
@@ -34,7 +35,11 @@ $id = $fields['id'];
 
                     <?php if(!empty($link))  { ?>
 
-                        <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
+                        <a class="button-link button-link-white <?php
+                        if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                        if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                        if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                        if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>" href="<?php echo $link['url'] ?>">
 
                         <?php echo $link['title'] ?>
 

@@ -391,8 +391,10 @@
   &__content {
     width: 100%;
     max-width: 590px;
+    padding: 50px 0;
     @include media-tablet {
       max-width: 720px;
+      padding: 0;
     }
   }
 }

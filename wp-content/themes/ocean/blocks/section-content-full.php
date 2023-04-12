@@ -4,6 +4,7 @@ $title = $fields['title'];
 $text = $fields['text'];
 $image = $fields['image'];
 $link = $fields['link'];
+$color_hover_link = $fields['color_hover_link'];
 $items = $fields['items'];
 $subtitle = $fields['subtitle'];
 $use_pop_up = $fields['use_pop_up'];
@@ -42,7 +43,11 @@ $id = $fields['id'];
                 <?php if(!empty($link) && $use_pop_up === false) { ?>
 
                     <div class="section-content-full__link desktop">
-                        <a class="button-link" href="<?php echo $link['url'] ?>">
+                        <a class="button-link <?php
+                        if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                        if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                        if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                        if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>" href="<?php echo $link['url'] ?>">
 
                             <?php echo $link['title'] ?>
 
@@ -59,7 +64,11 @@ $id = $fields['id'];
                 <?php if($use_pop_up === true && !empty($link)) { ?>
 
                     <div class="section-content-full__link desktop">
-                        <div class="button-link button-link-pop-up">
+                        <div class="button-link button-link-pop-up <?php
+                        if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                        if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                        if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                        if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>">
 
                             <?php echo $link['title'] ?>
 
@@ -105,7 +114,11 @@ $id = $fields['id'];
                 <?php if(!empty($link) && $use_pop_up === false) { ?>
 
                     <div class="section-content-full__link mobile">
-                        <a class="button-link" href="<?php echo $link['url'] ?>">
+                        <a class="button-link <?php
+                        if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                        if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                        if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                        if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>" href="<?php echo $link['url'] ?>">
 
                             <span><?php echo $link['title'] ?></span>
 
@@ -120,7 +133,11 @@ $id = $fields['id'];
                     <?php } ?>
                     <?php if($use_pop_up === true) { ?>
                         <div class="section-content-full__link mobile">
-                            <div class="button-link button-link-pop-up">
+                            <div class="button-link button-link-pop-up <?php
+                            if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                            if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                            if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                            if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>">
 
                                 <?php echo $link['title'] ?>
 

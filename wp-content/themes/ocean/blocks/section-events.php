@@ -95,6 +95,7 @@ $id = $fields['id'];
                                 $title = $event['title'];
                                 $text = $event['text'];
                                 $link = $event['link'];
+                                $color_hover_link = $event['color_hover_link'];
                                 $followers = $event['followers'];
                                 $info = $event['info'];
                                 $data = $event['data'];
@@ -161,7 +162,11 @@ $id = $fields['id'];
                                         <?php if(!empty($link)) { ?>
 
                                             <div class="event-item__button">
-                                                <a class="button-link button-link-white" href="<?php echo $link['url'] ?>">
+                                                <a class="button-link button-link-white <?php
+                                                if($color_hover_link === 'Black => white') { ?>hover-black-white<?php } ?> <?php
+                                                if($color_hover_link === 'White => black') { ?>hover-white-black<?php } ?> <?php
+                                                if($color_hover_link === 'Coral => white') { ?>hover-coral-white<?php } ?> <?php
+                                                if($color_hover_link === 'White => coral') { ?>hover-white-coral<?php } ?>" href="<?php echo $link['url'] ?>">
 
                                                     <?php echo $link['title'] ?>
 

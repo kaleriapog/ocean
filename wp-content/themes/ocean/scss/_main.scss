@@ -91,7 +91,7 @@
   &.hover-black-white {
     .button-link__icon {
       background-color: $color-black;
-      border-color: $color-black;
+      border-color: #fff;
     }
 
     &:hover {
@@ -131,7 +131,7 @@
   &.hover-white-coral {
     .button-link__icon {
       background-color: #fff;
-      border-color: #fff;
+      border-color: $color-black;
 
       svg {
         path {

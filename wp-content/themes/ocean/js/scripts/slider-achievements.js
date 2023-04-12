@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesPerView: 'auto',
             spaceBetween: 100,
             allowTouchMove: false,
-            speed: 10000,
+            speed: 7000,
             autoplay: {
                 delay: 1,
             },
