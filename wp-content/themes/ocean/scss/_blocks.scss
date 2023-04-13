@@ -129,6 +129,29 @@
     }
   }
 
+  &__image {
+    img {
+      max-height: 636px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @include media-main-size {
+        height: 44.167vw;
+      }
+
+      @include media-laptop {
+        height: 54vw;
+      }
+
+      @include media-mobile {
+        max-width: 100%;
+        height: 185vw;
+        max-height: none;
+        margin: auto;
+      }
+    }
+  }
+
   .donuts .donut-inner {
     @include media-mobile {
       width: 66vw;
@@ -1359,6 +1382,12 @@
     .donuts .donut:nth-child(1),
     .donuts .donut:nth-child(2) {
       display: block;
+    }
+  }
+
+  &__image {
+    @include media-mobile {
+      max-height: 52vw;
     }
   }
 }

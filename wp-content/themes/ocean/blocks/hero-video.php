@@ -4,6 +4,9 @@ $title = $fields['title'];
 $text = $fields['text'];
 $video = $fields['video'];
 $show_mask_with_portholes = $fields['show_mask_with_portholes'];
+$use_image = $fields['use_image_instead_of_video'];
+$content_selection = $use_image['replace_image_instead_of_video'];
+$picture_instead_video = $use_image['image'];
 $bg = $fields['background'];
 $main_background_color = $bg['main_background_color'];
 $use_custom_bg = $bg['use_custom_background_color'];
@@ -47,9 +50,22 @@ $id = $fields['id'];
 
                 <div class="section-hero-video__video">
                     <div class="section-hero-video__video-inner">
+
+                        <?php if($content_selection === false) { ?>
+
                         <video autoplay muted playsinline loop>
                             <source src="<?php echo $video['url'] ?>" type="video/mp4">
                         </video>
+
+                        <?php } ?>
+
+                        <?php if($content_selection === true) { ?>
+
+                            <div class="section-hero-video__image">
+                                <img src="<?php echo $picture_instead_video['url'] ?>" alt="<?php echo $picture_instead_video['title'] ?>">
+                            </div>
+
+                        <?php } ?>
 
                         <?php if($show_mask_with_portholes === true) { ?>
 
