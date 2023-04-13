@@ -32,10 +32,26 @@ $id = $fields['id'];
                         $image = $item['image'];
                         $text = $item['text'];
                         $links = $item['links'];
+                        $bg = $item['background'];
+                        $main_background_color = $bg['main_background_color'];
+                        $use_custom_bg = $bg['use_custom_background_color'];
+                        $color_palette_bg = $bg['custom_color_palette'];
+                        $color_text = $item['color_text'];
+                        $main_color_text = $color_text['main_color'];
+                        $use_custom_color = $color_text['use_custom_color'];
+                        $color_palette_text = $color_text['custom_color_palette'];
 
                         ?>
 
-                        <li class="section-events__item">
+                        <li class="section-events__item <?php
+                        if($main_background_color === 'Black' && $use_custom_bg === false) {?>bg-black<?php } ?><?php
+                        if($main_background_color === 'White' && $use_custom_bg === false) {?>bg-white<?php } ?><?php
+                        if($main_background_color === 'Coral' && $use_custom_bg === false) {?>bg-coral<?php } ?>"
+                            style="<?php if($use_custom_bg === true) { ?>background-color:<?php echo $color_palette_bg; } ?>;
+                            <?php if($main_color_text === 'Black' && $use_custom_color === false) { ?>color: #0F1010;<?php } ?>;
+                            <?php if($main_color_text === 'White' && $use_custom_color === false) { ?>color: #fff;<?php } ?>;
+                            <?php if($main_color_text === 'Coral' && $use_custom_color === false) { ?>color: #DC6761;<?php } ?>;
+                            <?php if($use_custom_color === true) { ?>color:<?php echo $color_palette_text; } ?>;">
 
                             <?php if(!empty($image)) { ?>
 
@@ -56,7 +72,10 @@ $id = $fields['id'];
 
                                     <?php if(!empty($text)) { ?>
 
-                                        <div class="section-events__item-text text"><?php echo $text ?></div>
+                                        <div class="section-events__item-text text" style="<?php if($main_color_text === 'Black' && $use_custom_color === false) { ?>color: #0F1010;<?php } ?>;
+                                        <?php if($main_color_text === 'White' && $use_custom_color === false) { ?>color: #fff;<?php } ?>;
+                                        <?php if($main_color_text === 'Coral' && $use_custom_color === false) { ?>color: #DC6761;<?php } ?>;
+                                        <?php if($use_custom_color === true) { ?>color:<?php echo $color_palette_text; } ?>;"><?php echo $text ?></div>
 
                                     <?php } ?>
 

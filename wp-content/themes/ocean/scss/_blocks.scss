@@ -1271,14 +1271,12 @@
 
   .title-hero {
     margin-bottom: 35px;
-    color: #fff;
     @include media-mobile {
       margin-bottom: 30px;
     }
   }
 
   .text-hero {
-    color: #fff;
     @include media-mobile {
       font-size: 16px;
     }
@@ -2974,6 +2972,7 @@
       width: 100%;
       max-width: 344px;
       margin: auto;
+      color: #fff;
       @include media-mobile {
         padding: 0 15px;
       }
