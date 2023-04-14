@@ -3196,6 +3196,22 @@
   }
 }
 
+.section-simple-embed {
+  background-color: transparent;
+  padding: 100px 0;
+
+  @include media-mobile {
+    padding: 50px 0;
+  }
+
+  .custom-embed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+  }
+}
+
 @keyframes hero-animate-title {
   0% {
     transform: translateY(150%) skewY(6deg);
@@ -3205,3 +3221,5 @@
     transform: translateY(0) skewY(0);
   }
 }
+
+
