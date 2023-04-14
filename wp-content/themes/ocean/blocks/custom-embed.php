@@ -34,12 +34,20 @@ if($main_background_color === 'Coral' && $use_custom_bg === false) {?>bg-coral<?
 
                     <?php if(!empty($title)) { ?>
 
-                        <h2 class="section-simple__title title"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
+                        <h2 class="section-simple__title title"  style="<?php if($use_custom_bg === true) { ?>background-color:<?php echo $color_palette_bg; } ?>;
+                        <?php if($main_color_text === 'Black' && $use_custom_color === false) { ?>color: #0F1010;<?php } ?>;
+                        <?php if($main_color_text === 'White' && $use_custom_color === false) { ?>color: #fff;<?php } ?>;
+                        <?php if($main_color_text === 'Coral' && $use_custom_color === false) { ?>color: #DC6761;<?php } ?>;
+                        <?php if($use_custom_color === true) { ?>color:<?php echo $color_palette_text; } ?>;"><?php echo strip_tags($title, '<br>, <span>, <strong>, <mark>, <i>, <em>, <b>')?></h2>
 
                     <?php } ?>
                     <?php if(!empty($text)) { ?>
 
-                        <div class=" section-simple__text text"><?php echo $text?></div>
+                        <div class=" section-simple__text text"  style="<?php if($use_custom_bg === true) { ?>background-color:<?php echo $color_palette_bg; } ?>;
+                        <?php if($main_color_text === 'Black' && $use_custom_color === false) { ?>color: #0F1010;<?php } ?>;
+                        <?php if($main_color_text === 'White' && $use_custom_color === false) { ?>color: #fff;<?php } ?>;
+                        <?php if($main_color_text === 'Coral' && $use_custom_color === false) { ?>color: #DC6761;<?php } ?>;
+                        <?php if($use_custom_color === true) { ?>color:<?php echo $color_palette_text; } ?>;"><?php echo $text?></div>
 
                     <?php } ?>
 
